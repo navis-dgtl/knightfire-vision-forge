@@ -38,7 +38,7 @@ const ThermalShield = () => {
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                   <Link to="/contact">Request Quote</Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
+                <Button size="lg" variant="outline-light">
                   <Download className="h-5 w-5 mr-2" />
                   Download Brochure
                 </Button>

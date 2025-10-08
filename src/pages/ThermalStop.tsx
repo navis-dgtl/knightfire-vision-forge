@@ -50,7 +50,7 @@ const ThermalStop = () => {
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                   <Link to="/contact">Request Quote</Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
+                <Button size="lg" variant="outline-light">
                   <Download className="h-5 w-5 mr-2" />
                   Download Brochure
                 </Button>
@@ -278,7 +278,7 @@ const ThermalStop = () => {
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
               <Link to="/contact">Request a Quote</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
+            <Button asChild size="lg" variant="outline-light">
               <Link to="/contact">Schedule a Demo</Link>
             </Button>
           </div>

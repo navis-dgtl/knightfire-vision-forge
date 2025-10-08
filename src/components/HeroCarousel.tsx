@@ -109,8 +109,7 @@ const HeroCarousel = () => {
                   <Button 
                     asChild 
                     size="lg" 
-                    variant="outline"
-                    className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
+                    variant="outline-light"
                   >
                     <Link to={slide.secondaryCtaLink!}>{slide.secondaryCta}</Link>
                   </Button>

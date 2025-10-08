@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Shield, Flame, Leaf, Gauge, Users, Award, BadgeCheck, Droplet, Zap } from "lucide-react";
-import thermalStopProduct from "@/assets/thermal-stop-product.jpg";
-import thermalShieldProduct from "@/assets/thermal-shield-product.jpg";
+import thermalStopProduct1 from "@/assets/thermal-stop-1.jpg";
+import thermalStopProduct2 from "@/assets/thermal-stop-2.jpg";
+import thermalShieldProduct from "@/assets/thermal-shield-new.png";
 import lawEnforcementImg from "@/assets/law-enforcement.jpg";
 import fireServicesImg from "@/assets/fire-services.jpg";
 import truckingImg from "@/assets/trucking.jpg";
@@ -48,15 +49,17 @@ const Index = () => {
               </div>
             </div>
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="h-10 w-10 text-accent-foreground" />
-                  </div>
-                  <p className="text-lg font-semibold text-primary">Product Demo Video</p>
-                  <p className="text-sm text-muted-foreground">Coming Soon</p>
-                </div>
-              </div>
+              <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/4HARY7Go9Js?si=gZrVEIHqOQ_dAvks" 
+                title="KnightTek Product Demo Video" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
+                className="absolute inset-0"
+              />
             </div>
           </div>
         </div>
@@ -73,11 +76,16 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Thermal Stop Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
-              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+              <div className="aspect-square bg-muted flex items-center justify-center p-4 gap-2">
                 <img 
-                  src={thermalStopProduct} 
+                  src={thermalStopProduct1} 
                   alt="Thermal Stop Fire Extinguishing Agent" 
-                  className="w-full h-full object-contain"
+                  className="h-full object-contain flex-1"
+                />
+                <img 
+                  src={thermalStopProduct2} 
+                  alt="Thermal Stop Fire Extinguishing Agent" 
+                  className="h-full object-contain flex-1"
                 />
               </div>
               <CardContent className="p-6">

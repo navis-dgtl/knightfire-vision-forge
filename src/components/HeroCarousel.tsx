@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import heroBackground from "@/assets/hero-background.png";
 
 interface Slide {
   id: number;
@@ -85,8 +86,13 @@ const HeroCarousel = () => {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          {/* Background with overlay */}
-          <div className="absolute inset-0 hero-overlay" />
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroBackground})` }}
+          />
+          {/* Blue Overlay with reduced opacity */}
+          <div className="absolute inset-0 bg-primary/70" />
           
           {/* Content */}
           <div className="container mx-auto px-4 h-full flex items-center relative z-10">

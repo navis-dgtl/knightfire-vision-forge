@@ -39,7 +39,7 @@ const slides: Slide[] = [
   },
   {
     id: 4,
-    title: "Trusted by First Responders Nationwide",
+    title: "Trusted by First Responders Worldwide",
     subtitle: "Serving Law Enforcement, Fire Services, and Industry Professionals",
     cta: "Contact Us Today",
     ctaLink: "/contact",

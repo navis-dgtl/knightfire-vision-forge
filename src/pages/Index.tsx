@@ -8,9 +8,9 @@ import { Shield, Flame, Leaf, Gauge, Users, Award, BadgeCheck, Droplet, Zap } fr
 import thermalStopProduct1 from "@/assets/thermal-stop-1.jpg";
 import thermalStopProduct2 from "@/assets/thermal-stop-2.jpg";
 import thermalShieldProduct from "@/assets/thermal-shield-new.png";
-import lawEnforcementImg from "@/assets/law-enforcement.jpg";
-import fireServicesImg from "@/assets/fire-services.jpg";
-import truckingImg from "@/assets/trucking.jpg";
+import evFireImg from "@/assets/ev-fire-demo.jpg";
+import publicSafetyImg from "@/assets/fire-department-team.jpg";
+import policeImg from "@/assets/police-officer-demo.jpg";
 
 const Index = () => {
   return (
@@ -167,81 +167,81 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-[hsl(220,60%,20%)]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-sm text-accent font-semibold mb-2 uppercase tracking-wide">Why Choose KnightTek</p>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">The KnightTek Difference</h2>
+            <p className="text-sm text-[hsl(165,70%,70%)] font-semibold mb-2 uppercase tracking-wide">Why Choose KnightTek</p>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-[hsl(165,70%,70%)]">The KnightTek Difference</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/10">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Droplet className="h-8 w-8 text-accent" />
+                <div className="w-16 h-16 bg-[hsl(165,70%,70%)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Droplet className="h-8 w-8 text-[hsl(165,70%,70%)]" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-primary">Purpose-Built Technology</h3>
-                <p className="text-foreground/70">
+                <h3 className="text-xl font-heading font-bold mb-3 text-white">Purpose-Built Technology</h3>
+                <p className="text-white/80">
                   7+ years of R&D creating solutions specifically for lithium-ion battery fires—not repurposed products.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/10">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="h-8 w-8 text-accent" />
+                <div className="w-16 h-16 bg-[hsl(165,70%,70%)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="h-8 w-8 text-[hsl(165,70%,70%)]" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-primary">Proven Performance</h3>
-                <p className="text-foreground/70">
+                <h3 className="text-xl font-heading font-bold mb-3 text-white">Proven Performance</h3>
+                <p className="text-white/80">
                   100% success rate across hundreds of tests with all battery chemistries. NFPA 18 certified.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/10">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Leaf className="h-8 w-8 text-accent" />
+                <div className="w-16 h-16 bg-[hsl(165,70%,70%)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Leaf className="h-8 w-8 text-[hsl(165,70%,70%)]" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-primary">Environmentally Responsible</h3>
-                <p className="text-foreground/70">
+                <h3 className="text-xl font-heading font-bold mb-3 text-white">Environmentally Responsible</h3>
+                <p className="text-white/80">
                   EPA Safer Choice listed. PFAS and PFOS free. All-natural, plant-based formula.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/10">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Gauge className="h-8 w-8 text-accent" />
+                <div className="w-16 h-16 bg-[hsl(165,70%,70%)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Gauge className="h-8 w-8 text-[hsl(165,70%,70%)]" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-primary">Maximum Efficiency</h3>
-                <p className="text-foreground/70">
+                <h3 className="text-xl font-heading font-bold mb-3 text-white">Maximum Efficiency</h3>
+                <p className="text-white/80">
                   Stopped EV fires with as little as 1.5 gallons—saving costs and response time.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/10">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="h-8 w-8 text-accent" />
+                <div className="w-16 h-16 bg-[hsl(165,70%,70%)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-8 w-8 text-[hsl(165,70%,70%)]" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-primary">Dual Function</h3>
-                <p className="text-foreground/70">
+                <h3 className="text-xl font-heading font-bold mb-3 text-white">Dual Function</h3>
+                <p className="text-white/80">
                   Not only extinguishes fires but provides thermal shielding for storage and transport.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/10">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-8 w-8 text-accent" />
+                <div className="w-16 h-16 bg-[hsl(165,70%,70%)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-8 w-8 text-[hsl(165,70%,70%)]" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-primary">Made by Firefighters</h3>
-                <p className="text-foreground/70">
+                <h3 className="text-xl font-heading font-bold mb-3 text-white">Made by Firefighters</h3>
+                <p className="text-white/80">
                   Created by first responders who understand the real-world demands of fire suppression.
                 </p>
               </CardContent>
@@ -261,42 +261,45 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <Link to="/contact" className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]">
               <img 
-                src={lawEnforcementImg} 
-                alt="Law Enforcement Fire Safety" 
+                src={evFireImg} 
+                alt="EV & Mobility Fire Solutions" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent" />
               <div className="absolute inset-0 p-6 flex flex-col justify-end text-primary-foreground">
-                <h3 className="text-2xl font-heading font-bold mb-2">Law Enforcement</h3>
-                <p className="mb-4">Specifically engineered for law enforcement agencies</p>
+                <div className="bg-accent text-accent-foreground text-xs font-bold px-2 py-1 rounded w-fit mb-2">#1</div>
+                <h3 className="text-2xl font-heading font-bold mb-2">Maritime Imports</h3>
+                <p className="mb-4">Critical protection for port operations and shipping</p>
                 <span className="text-accent font-semibold group-hover:underline">Learn More →</span>
               </div>
             </Link>
 
             <Link to="/contact" className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]">
               <img 
-                src={fireServicesImg} 
-                alt="Fire Services Solutions" 
+                src={publicSafetyImg} 
+                alt="Public Safety - Fire & Police" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent" />
               <div className="absolute inset-0 p-6 flex flex-col justify-end text-primary-foreground">
-                <h3 className="text-2xl font-heading font-bold mb-2">Fire Services</h3>
-                <p className="mb-4">The next generation in fire fighting technology</p>
+                <div className="bg-accent text-accent-foreground text-xs font-bold px-2 py-1 rounded w-fit mb-2">#2</div>
+                <h3 className="text-2xl font-heading font-bold mb-2">Public Safety</h3>
+                <p className="mb-4">Fire departments & law enforcement agencies</p>
                 <span className="text-accent font-semibold group-hover:underline">Learn More →</span>
               </div>
             </Link>
 
             <Link to="/contact" className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]">
               <img 
-                src={truckingImg} 
-                alt="Trucking Industry Fire Safety" 
+                src={policeImg} 
+                alt="EV & Mobility Fire Safety" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent" />
               <div className="absolute inset-0 p-6 flex flex-col justify-end text-primary-foreground">
-                <h3 className="text-2xl font-heading font-bold mb-2">Trucking Industry</h3>
-                <p className="mb-4">Provide your fleet with the tools that save lives</p>
+                <div className="bg-accent text-accent-foreground text-xs font-bold px-2 py-1 rounded w-fit mb-2">#3</div>
+                <h3 className="text-2xl font-heading font-bold mb-2">EV & Mobility</h3>
+                <p className="mb-4">Advanced solutions for electric vehicle safety</p>
                 <span className="text-accent font-semibold group-hover:underline">Learn More →</span>
               </div>
             </Link>

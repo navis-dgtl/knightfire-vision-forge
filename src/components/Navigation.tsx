@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import knightTekIcon from "@/assets/knight-tek-icon.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +53,7 @@ const Navigation = () => {
         {/* Main navigation */}
         <div className="flex items-center justify-between py-4">
           <Link to="/" className="flex items-center gap-3">
+            <img src={knightTekIcon} alt="KnightTek Logo" className="h-10 w-10" />
             <div className="text-2xl font-heading font-bold text-primary-foreground">
               Knight<span className="text-accent">Tek</span>
             </div>

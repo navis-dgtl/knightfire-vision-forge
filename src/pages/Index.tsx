@@ -167,81 +167,81 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-[hsl(220,60%,20%)]">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-sm text-[hsl(165,70%,70%)] font-semibold mb-2 uppercase tracking-wide">Why Choose KnightTek</p>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-[hsl(165,70%,70%)]">The KnightTek Difference</h2>
+            <p className="text-sm text-primary font-semibold mb-2 uppercase tracking-wide">Why Choose KnightTek</p>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">The KnightTek Difference</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/10">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-card">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-[hsl(165,70%,70%)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Droplet className="h-8 w-8 text-[hsl(165,70%,70%)]" />
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Droplet className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-white">Purpose-Built Technology</h3>
-                <p className="text-white/80">
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">Purpose-Built Technology</h3>
+                <p className="text-foreground/80">
                   7+ years of R&D creating solutions specifically for lithium-ion battery fires—not repurposed products.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/10">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-card">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-[hsl(165,70%,70%)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="h-8 w-8 text-[hsl(165,70%,70%)]" />
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-white">Proven Performance</h3>
-                <p className="text-white/80">
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">Proven Performance</h3>
+                <p className="text-foreground/80">
                   100% success rate across hundreds of tests with all battery chemistries. NFPA 18 certified.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/10">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-card">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-[hsl(165,70%,70%)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Leaf className="h-8 w-8 text-[hsl(165,70%,70%)]" />
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Leaf className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-white">Environmentally Responsible</h3>
-                <p className="text-white/80">
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">Environmentally Responsible</h3>
+                <p className="text-foreground/80">
                   EPA Safer Choice listed. PFAS and PFOS free. All-natural, plant-based formula.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/10">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-card">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-[hsl(165,70%,70%)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Gauge className="h-8 w-8 text-[hsl(165,70%,70%)]" />
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Gauge className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-white">Maximum Efficiency</h3>
-                <p className="text-white/80">
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">Maximum Efficiency</h3>
+                <p className="text-foreground/80">
                   Stopped EV fires with as little as 1.5 gallons—saving costs and response time.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/10">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-card">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-[hsl(165,70%,70%)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="h-8 w-8 text-[hsl(165,70%,70%)]" />
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-white">Dual Function</h3>
-                <p className="text-white/80">
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">Dual Function</h3>
+                <p className="text-foreground/80">
                   Not only extinguishes fires but provides thermal shielding for storage and transport.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/10">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-card">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-[hsl(165,70%,70%)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-8 w-8 text-[hsl(165,70%,70%)]" />
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-white">Made by Firefighters</h3>
-                <p className="text-white/80">
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">Made by Firefighters</h3>
+                <p className="text-foreground/80">
                   Created by first responders who understand the real-world demands of fire suppression.
                 </p>
               </CardContent>

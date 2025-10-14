@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import ThermalStop from "./pages/ThermalStop";
 import ThermalShield from "./pages/ThermalShield";
 import ProductComparison from "./pages/ProductComparison";
+import Products from "./pages/Products";
+import Publications from "./pages/Publications";
 import Industries from "./pages/Industries";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -22,9 +24,11 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/products/thermal-stop" element={<ThermalStop />} />
           <Route path="/products/thermal-shield" element={<ThermalShield />} />
           <Route path="/products/comparison" element={<ProductComparison />} />
+          <Route path="/publications" element={<Publications />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

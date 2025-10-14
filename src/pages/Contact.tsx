@@ -33,7 +33,7 @@ const Contact = () => {
               <CardContent className="p-6">
                 <Mail className="h-12 w-12 text-accent mx-auto mb-4" />
                 <h3 className="font-heading font-bold mb-2">Email Us</h3>
-                <a href="mailto:info@knightfiretek.com" className="text-lg text-accent hover:underline break-all">info@knightfiretek.com</a>
+                <a href="mailto:info@ktekglobal.com" className="text-lg text-accent hover:underline break-all">info@ktekglobal.com</a>
               </CardContent>
             </Card>
 

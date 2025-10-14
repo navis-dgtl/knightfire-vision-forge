@@ -15,12 +15,14 @@ const Navigation = () => {
       name: "Products", 
       path: "/products",
       submenu: [
+        { name: "All Products", path: "/products" },
         { name: "Thermal Stop", path: "/products/thermal-stop" },
         { name: "Thermal Shield", path: "/products/thermal-shield" },
         { name: "Product Comparison", path: "/products/comparison" },
       ]
     },
     { name: "Industries", path: "/industries" },
+    { name: "Publications", path: "/publications" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
@@ -36,9 +38,9 @@ const Navigation = () => {
                 <Phone className="h-4 w-4" />
                 405-568-2742
               </a>
-              <a href="mailto:info@knightfiretek.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+              <a href="mailto:info@ktekglobal.com" className="flex items-center gap-2 hover:text-accent transition-colors">
                 <Mail className="h-4 w-4" />
-                info@knightfiretek.com
+                info@ktekglobal.com
               </a>
             </div>
             <div className="text-xs">

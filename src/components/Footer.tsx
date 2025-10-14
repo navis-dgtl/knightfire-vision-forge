@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Linkedin, Youtube } from "lucide-react";
+import knightTekIcon from "@/assets/knight-tek-icon.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,9 +11,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-heading font-bold mb-4">
-              Knight<span className="text-accent">Tek</span>
-            </h3>
+            <div className="flex items-center gap-2 mb-4">
+              <img src={knightTekIcon} alt="KnightTek Logo" className="h-8 w-8" />
+              <h3 className="text-2xl font-heading font-bold">
+                Knight<span className="text-accent">Tek</span>
+              </h3>
+            </div>
             <p className="text-sm text-primary-foreground/80 mb-4">
               Exclusive global distributor of Thermal Stop and Thermal Shield - revolutionary lithium-ion battery fire suppression solutions.
             </p>

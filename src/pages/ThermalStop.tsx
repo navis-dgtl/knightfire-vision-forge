@@ -51,9 +51,11 @@ const ThermalStop = () => {
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                   <Link to="/contact">Request Quote</Link>
                 </Button>
-                <Button size="lg" variant="outline-light">
-                  <Download className="h-5 w-5 mr-2" />
-                  Download Brochure
+                <Button asChild size="lg" variant="outline-light">
+                  <a href="/brochures/thermal-stop-thermal-shield-brochure.pdf" download>
+                    <Download className="h-5 w-5 mr-2" />
+                    Download Brochure
+                  </a>
                 </Button>
               </div>
             </div>

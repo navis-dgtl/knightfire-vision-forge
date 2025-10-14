@@ -1,7 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import stephenKnight from "@/assets/stephen-knight.jpg";
 
 const About = () => {
   return (
@@ -27,6 +29,28 @@ const About = () => {
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
             <Link to="/contact">Partner With Us</Link>
           </Button>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl font-heading font-bold mb-12 text-center text-primary">Our Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="text-center">
+              <CardContent className="pt-6">
+                <img 
+                  src={stephenKnight} 
+                  alt="Stephen Knight" 
+                  className="w-32 h-32 rounded-full object-cover mx-auto mb-4"
+                />
+                <h3 className="text-xl font-heading font-bold mb-2 text-primary">Stephen Knight</h3>
+                <p className="text-sm text-muted-foreground mb-3">Founder & CEO</p>
+                <p className="text-sm text-foreground/80">
+                  Stephen is the founder and CEO of KnightTek, LLC - has over 30 years of experience in fire fighting within the oil and gas industry. As an engineer Stephen has designed and implemented many unique innovative solutions and holds many product patents of his designs.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 

@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import ThermalStop from "./pages/ThermalStop";
 import ThermalShield from "./pages/ThermalShield";
 import ProductComparison from "./pages/ProductComparison";
+import Industries from "./pages/Industries";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/products/thermal-stop" element={<ThermalStop />} />
           <Route path="/products/thermal-shield" element={<ThermalShield />} />
           <Route path="/products/comparison" element={<ProductComparison />} />
+          <Route path="/industries" element={<Industries />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

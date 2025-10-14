@@ -256,10 +256,13 @@ const Index = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary">Industries We Serve</h2>
             <p className="text-xl text-foreground/70">Trusted by professionals across critical sectors</p>
+            <Link to="/industries" className="text-accent font-semibold hover:underline inline-flex items-center gap-1">
+              View All Industries →
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <Link to="/contact" className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]">
+            <Link to="/industries" className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]">
               <img 
                 src={evFireImg} 
                 alt="EV & Mobility Fire Solutions" 
@@ -274,9 +277,9 @@ const Index = () => {
               </div>
             </Link>
 
-            <Link to="/contact" className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]">
+            <Link to="/industries" className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]">
               <img 
-                src={publicSafetyImg} 
+                src={publicSafetyImg}
                 alt="Public Safety - Fire & Police" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -289,9 +292,9 @@ const Index = () => {
               </div>
             </Link>
 
-            <Link to="/contact" className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]">
+            <Link to="/industries" className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]">
               <img 
-                src={policeImg} 
+                src={policeImg}
                 alt="EV & Mobility Fire Safety" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />

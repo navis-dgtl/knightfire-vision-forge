@@ -5,7 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { BadgeCheck, Shield, Snowflake, Download, ChevronRight } from "lucide-react";
-import thermalStopProduct from "@/assets/thermal-stop-product.jpg";
+import thermalStopProduct1 from "@/assets/thermal-stop-1.jpg";
+import thermalStopProduct2 from "@/assets/thermal-stop-2.jpg";
 
 const ThermalStop = () => {
   return (
@@ -57,11 +58,16 @@ const ThermalStop = () => {
               </div>
             </div>
 
-            <div className="bg-background rounded-lg p-8">
+            <div className="bg-background rounded-lg p-8 space-y-4">
               <img 
-                src={thermalStopProduct} 
+                src={thermalStopProduct1} 
                 alt="Thermal Stop Fire Extinguisher" 
-                className="w-full h-auto"
+                className="w-full h-auto rounded-lg"
+              />
+              <img 
+                src={thermalStopProduct2} 
+                alt="Thermal Stop Product Range" 
+                className="w-full h-auto rounded-lg"
               />
             </div>
           </div>
@@ -240,6 +246,48 @@ const ThermalStop = () => {
               </Card>
             </TabsContent>
           </Tabs>
+        </div>
+      </section>
+
+      {/* Q&A Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl font-heading font-bold mb-8 text-center text-primary">Frequently Asked Questions</h2>
+          
+          <div className="space-y-6">
+            <Card className="border-2">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">
+                  Q: How do you get Thermal Stop into the batteries?
+                </h3>
+                <p className="text-foreground/80">
+                  Responding fire departments typically arrive on scene within 5-8 minutes. By that time, the battery has often burned through the floorboard. Handle the situation as a normal vehicle fire—suppress the flames, and once knocked down, inject Thermal Stop's patented plant-based solution into the burned area. Less than 5 gallons of Thermal Stop has been proven to stop EV thermal runaway.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">
+                  Q: How can we handle runoff after contact with hazardous materials?
+                </h3>
+                <p className="text-foreground/80">
+                  Thermal Stop's efficiency means that typically 5 gallons or less is needed to handle EV thermal runaway events. Standard absorbents carried on fire apparatus will be more than enough for cleanup.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">
+                  Q: Can Thermal Stop be used in engine AB tanks?
+                </h3>
+                <p className="text-foreground/80">
+                  Absolutely. As EVs become more common and regulations phase out internal combustion vehicles, fire departments may want to designate or add a "C" tank for Thermal Stop. It can also be used in your existing A or B tanks as EV demographics shift across the U.S.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 

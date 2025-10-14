@@ -52,10 +52,10 @@ const ThermalStop = () => {
                   <Link to="/contact">Request Quote</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline-light">
-                  <a href="/brochures/thermal-stop-thermal-shield-brochure.pdf" download>
+                  <Link to="/contact?brochure=true">
                     <Download className="h-5 w-5 mr-2" />
                     Download Brochure
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -143,7 +143,7 @@ const ThermalStop = () => {
                 </div>
                 <h3 className="text-xl font-heading font-bold mb-3 text-primary">1. Suppress</h3>
                 <p className="text-foreground/70">
-                  Rapidly blocks dangerous off-gassing and encapsulates harmful PFAS chemicals found in some lithium-ion batteries.
+                  Rapidly extinguishes the fire as well as blocks dangerous off-gassing and encapsulates harmful PFAS chemicals found in some lithium-ion batteries.
                 </p>
               </CardContent>
             </Card>
@@ -155,7 +155,7 @@ const ThermalStop = () => {
                 </div>
                 <h3 className="text-xl font-heading font-bold mb-3 text-primary">2. Cool</h3>
                 <p className="text-foreground/70">
-                  Superior endothermic properties provide super-fast cooling, effectively halting thermal runaway within just 30 seconds.
+                  Superior endothermic properties provide super-fast cooling within just 30 seconds.
                 </p>
               </CardContent>
             </Card>
@@ -165,9 +165,9 @@ const ThermalStop = () => {
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <BadgeCheck className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-primary">3. Seal</h3>
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">3. Stops</h3>
                 <p className="text-foreground/70">
-                  Neutralizes the chemical reaction within the electrolyte solution and forms a porous barrier, condensing toxic gases.
+                  Effectively halts thermal runaway. Neutralizes the chemical reaction within the electrolyte solution and forms a porous barrier, condensing toxic gases.
                 </p>
               </CardContent>
             </Card>
@@ -190,17 +190,36 @@ const ThermalStop = () => {
               <Card>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-heading font-bold mb-4 text-primary">Available Sizes</h3>
-                  <ul className="space-y-2 text-foreground/80">
-                    <li>• 12 oz Rapid Deployment Can</li>
-                    <li>• 2.5 gallon canister</li>
-                    <li>• 5 gallon container</li>
-                    <li>• Bulk concentrate options</li>
-                  </ul>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold mb-3 text-primary">Fire Extinguishers</h4>
+                    <ul className="space-y-2 text-foreground/80">
+                      <li>• 12 oz Rapid Deployment Aerosol Can - Perfect for personal and vehicle use</li>
+                      <li>• 2.5 lb Handheld Fire Extinguisher - Compact and portable for quick response</li>
+                      <li>• 5 lb Fire Extinguisher - Increased capacity for larger incidents</li>
+                      <li>• 10 lb Fire Extinguisher - Professional-grade for first responders</li>
+                      <li>• 20 lb Wheeled Unit - Heavy-duty mobile solution for industrial settings</li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="font-semibold mb-3 text-primary">Bulk Containers</h4>
+                    <ul className="space-y-2 text-foreground/80">
+                      <li>• 2.5 Gallon Pail - Ideal for refilling smaller units and local response</li>
+                      <li>• 5 Gallon Pail - Standard size for fire department apparatus</li>
+                      <li>• 55 Gallon Drum - Large-scale operations and facility protection</li>
+                      <li>• 275 Gallon Tote - Industrial and commercial facility use</li>
+                      <li>• Bulk Tanker Quantities - Available for large-scale deployments</li>
+                    </ul>
+                  </div>
+
                   <h3 className="text-xl font-heading font-bold mt-6 mb-4 text-primary">Specifications</h3>
                   <ul className="space-y-2 text-foreground/80">
-                    <li>• Extended shelf life with proper storage</li>
-                    <li>• Multiple concentrate mixing ratios available</li>
-                    <li>• Store in cool, dry location</li>
+                    <li>• Extended shelf life (5+ years) with proper storage</li>
+                    <li>• Multiple concentrate mixing ratios available (1:1, 3:1, 5:1)</li>
+                    <li>• Store in cool, dry location away from direct sunlight</li>
+                    <li>• Compatible with standard firefighting equipment</li>
+                    <li>• Temperature range: 32°F to 120°F (0°C to 49°C)</li>
                   </ul>
                 </CardContent>
               </Card>

@@ -50,6 +50,21 @@ const About = () => {
                 </p>
               </CardContent>
             </Card>
+            
+            {[1, 2, 3, 4, 5].map((index) => (
+              <Card key={index} className="text-center">
+                <CardContent className="pt-6">
+                  <div className="w-32 h-32 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
+                    <span className="text-4xl text-muted-foreground">?</span>
+                  </div>
+                  <h3 className="text-xl font-heading font-bold mb-2 text-primary">Coming Soon</h3>
+                  <p className="text-sm text-muted-foreground mb-3">Team Member</p>
+                  <p className="text-sm text-foreground/80">
+                    More team members to be announced soon.
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Linkedin, Youtube } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Linkedin, Youtube, Instagram, Twitter } from "lucide-react";
 import knightTekIcon from "@/assets/knight-tek-icon.png";
 
 const Footer = () => {
@@ -21,14 +21,20 @@ const Footer = () => {
               Exclusive global distributor of Thermal Stop and Thermal Shield - revolutionary lithium-ion battery fire suppression solutions.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="https://www.facebook.com/knightfirespecialists" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="https://www.linkedin.com/company/knight-fire-specialists-llc" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="https://www.youtube.com/@knightfirespecialists" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                 <Youtube className="h-5 w-5" />
+              </a>
+              <a href="https://www.instagram.com/knightfirespecialists" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="https://www.twitter.com/knightfireunits" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                <Twitter className="h-5 w-5" />
               </a>
             </div>
           </div>

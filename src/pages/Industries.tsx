@@ -27,48 +27,6 @@ const Industries = () => {
     {
       id: 1,
       rank: "#1",
-      icon: Ship,
-      title: "Maritime Imports",
-      description: "Critical fire protection solutions for port operations, shipping containers, and cargo handling. Specialized systems designed for the unique challenges of maritime battery transport and storage.",
-      features: [
-        "Port facility protection",
-        "Cargo container fire suppression",
-        "Lithium battery shipment safety",
-        "Compliance with maritime regulations"
-      ],
-      image: maritimeImg
-    },
-    {
-      id: 2,
-      rank: "#2",
-      icon: ShieldAlert,
-      title: "Public Safety",
-      description: "Comprehensive solutions for fire departments and law enforcement agencies. Purpose-built equipment to protect first responders facing lithium-ion battery fire emergencies.",
-      features: [
-        "Fire department response equipment",
-        "Law enforcement vehicle protection",
-        "Training and support programs",
-        "Rapid deployment systems"
-      ],
-      image: publicSafetyImg
-    },
-    {
-      id: 3,
-      rank: "#3",
-      icon: Car,
-      title: "EV & Mobility",
-      description: "Advanced fire suppression for electric vehicles, e-bikes, and personal mobility devices. Proven effectiveness across all battery chemistries with minimal agent usage.",
-      features: [
-        "Electric vehicle fire suppression",
-        "E-bike and scooter protection",
-        "Dealership and service center safety",
-        "Transportation and storage solutions"
-      ],
-      image: evFireImg
-    },
-    {
-      id: 4,
-      rank: "#4",
       icon: Plane,
       title: "Aviation",
       description: "Flight-safe fire suppression solutions for aircraft and airport operations. Meeting stringent aviation safety standards while protecting passengers, crew, and aircraft.",
@@ -81,8 +39,81 @@ const Industries = () => {
       image: aviationImg
     },
     {
+      id: 2,
+      rank: "#2",
+      icon: Car,
+      title: "EV & Mobility",
+      description: "Advanced fire suppression for electric vehicles, e-bikes, and personal mobility devices. Proven effectiveness across all battery chemistries with minimal agent usage.",
+      features: [
+        "Electric vehicle fire suppression",
+        "E-bike and scooter protection",
+        "Dealership and service center safety",
+        "Transportation and storage solutions"
+      ],
+      image: evFireImg
+    },
+    {
+      id: 3,
+      rank: "#3",
+      icon: Factory,
+      title: "Industrial & Commercial",
+      description: "Broad-spectrum protection for manufacturing, warehousing, and commercial facilities including electronics manufacturing plants. Comprehensive solutions for any operation utilizing lithium-ion battery technology.",
+      features: [
+        "Manufacturing facility protection",
+        "Electronics manufacturing plants",
+        "Warehouse and distribution safety",
+        "Commercial building systems",
+        "Custom industrial solutions"
+      ],
+      image: industrialImg
+    },
+    {
+      id: 4,
+      rank: "#4",
+      icon: Ship,
+      title: "Maritime",
+      description: "Critical fire protection solutions for port operations, shipping containers, and cargo handling. Specialized systems designed for the unique challenges of maritime battery transport and storage on RORO (Roll on Roll off) and PCTC (Pure Car and Truck Carrier) vessels.",
+      features: [
+        "Port facility protection",
+        "RORO & PCTC vessel safety",
+        "Cargo container fire suppression",
+        "Lithium battery shipment safety",
+        "Compliance with maritime regulations"
+      ],
+      image: maritimeImg
+    },
+    {
       id: 5,
       rank: "#5",
+      icon: BatteryCharging,
+      title: "Power Storage",
+      description: "Advanced fire suppression and monitoring solutions for Battery Energy Storage Systems (BESS) and large-scale energy storage facilities. Purpose-built protection for grid-scale lithium-ion installations.",
+      features: [
+        "BESS facility protection",
+        "Grid-scale battery safety",
+        "Energy storage system monitoring",
+        "Utility-scale fire suppression",
+        "Emergency response planning"
+      ],
+      image: industrialImg
+    },
+    {
+      id: 6,
+      rank: "#6",
+      icon: ShieldAlert,
+      title: "Public Safety",
+      description: "Comprehensive solutions for fire departments and law enforcement agencies. Purpose-built equipment to protect first responders facing lithium-ion battery fire emergencies.",
+      features: [
+        "Fire department response equipment",
+        "Law enforcement vehicle protection",
+        "Training and support programs",
+        "Rapid deployment systems"
+      ],
+      image: publicSafetyImg
+    },
+    {
+      id: 7,
+      rank: "#7",
       icon: TrainFront,
       title: "Rail",
       description: "Comprehensive fire safety for rail transportation including passenger trains, freight operations, and maintenance facilities. Protection for the growing use of battery-powered rail systems.",
@@ -95,32 +126,35 @@ const Industries = () => {
       image: railImg
     },
     {
-      id: 6,
-      rank: "#6",
-      icon: TruckIcon,
-      title: "Towing & Recovery",
-      description: "Essential safety equipment for tow operators and recovery services handling disabled electric vehicles and lithium battery incidents. Protect your crew and equipment.",
+      id: 8,
+      rank: "#8",
+      icon: Factory,
+      title: "Recycling",
+      description: "Essential fire protection for battery recycling facilities and waste management operations. Specialized solutions for the unique hazards of lithium-ion battery processing and disposal.",
       features: [
+        "Recycling facility protection",
+        "Battery sorting and processing safety",
+        "Waste management facility systems",
+        "Material recovery operations",
+        "Environmental compliance support"
+      ],
+      image: industrialImg
+    },
+    {
+      id: 9,
+      rank: "#9",
+      icon: TruckIcon,
+      title: "Transport",
+      description: "Essential safety equipment for trucking, auto haulers, towing operators and recovery services handling disabled electric vehicles and lithium battery incidents. Comprehensive protection for the transport industry.",
+      features: [
+        "Auto hauler safety equipment",
         "EV towing safety equipment",
         "Recovery vehicle protection",
+        "Trucking fleet protection",
         "Storage yard fire prevention",
         "Operator training support"
       ],
       image: towingImg
-    },
-    {
-      id: 7,
-      rank: "#7",
-      icon: Factory,
-      title: "Industrial & Commercial",
-      description: "Broad-spectrum protection for manufacturing, warehousing, and commercial facilities. Comprehensive solutions for any operation utilizing lithium-ion battery technology.",
-      features: [
-        "Manufacturing facility protection",
-        "Warehouse and distribution safety",
-        "Commercial building systems",
-        "Custom industrial solutions"
-      ],
-      image: industrialImg
     }
   ];
 

@@ -10,7 +10,7 @@ import thermalStopProduct2 from "@/assets/thermal-stop-2.jpg";
 import thermalShieldProduct from "@/assets/thermal-shield-new.png";
 import evFireImg from "@/assets/ev-fire-demo.jpg";
 import publicSafetyImg from "@/assets/fire-department-team.jpg";
-import policeImg from "@/assets/police-officer-demo.jpg";
+import maritimeImg from "@/assets/maritime-port.jpg";
 
 const Index = () => {
   return (
@@ -264,8 +264,8 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <Link to="/industries" className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]">
               <img 
-                src={evFireImg} 
-                alt="EV & Mobility Fire Solutions" 
+                src={maritimeImg} 
+                alt="Maritime Imports Fire Solutions"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent" />
@@ -294,8 +294,8 @@ const Index = () => {
 
             <Link to="/industries" className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]">
               <img 
-                src={policeImg}
-                alt="EV & Mobility Fire Safety" 
+                src={evFireImg} 
+                alt="EV & Mobility Fire Safety"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent" />

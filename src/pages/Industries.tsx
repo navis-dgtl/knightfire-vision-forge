@@ -16,7 +16,11 @@ import {
 } from "lucide-react";
 import evFireImg from "@/assets/ev-fire-demo.jpg";
 import publicSafetyImg from "@/assets/fire-department-team.jpg";
-import policeImg from "@/assets/police-officer-demo.jpg";
+import maritimeImg from "@/assets/maritime-port.jpg";
+import aviationImg from "@/assets/aviation-industry.jpg";
+import railImg from "@/assets/rail-industry.jpg";
+import towingImg from "@/assets/towing-industry.jpg";
+import industrialImg from "@/assets/industrial-commercial.jpg";
 
 const Industries = () => {
   const industries = [
@@ -32,7 +36,7 @@ const Industries = () => {
         "Lithium battery shipment safety",
         "Compliance with maritime regulations"
       ],
-      image: evFireImg
+      image: maritimeImg
     },
     {
       id: 2,
@@ -60,24 +64,11 @@ const Industries = () => {
         "Dealership and service center safety",
         "Transportation and storage solutions"
       ],
-      image: policeImg
+      image: evFireImg
     },
     {
       id: 4,
       rank: "#4",
-      icon: BatteryCharging,
-      title: "BESS - Battery Energy Storage Systems",
-      description: "Specialized protection for large-scale battery energy storage installations. Safeguarding critical infrastructure and preventing catastrophic energy storage failures.",
-      features: [
-        "Grid-scale battery protection",
-        "Energy storage facility safety",
-        "Thermal runaway prevention",
-        "24/7 monitoring compatibility"
-      ]
-    },
-    {
-      id: 5,
-      rank: "#5",
       icon: Plane,
       title: "Aviation",
       description: "Flight-safe fire suppression solutions for aircraft and airport operations. Meeting stringent aviation safety standards while protecting passengers, crew, and aircraft.",
@@ -86,11 +77,12 @@ const Industries = () => {
         "Airport cargo facility safety",
         "Passenger device incident response",
         "Aviation authority certified"
-      ]
+      ],
+      image: aviationImg
     },
     {
-      id: 6,
-      rank: "#6",
+      id: 5,
+      rank: "#5",
       icon: TrainFront,
       title: "Rail",
       description: "Comprehensive fire safety for rail transportation including passenger trains, freight operations, and maintenance facilities. Protection for the growing use of battery-powered rail systems.",
@@ -99,11 +91,12 @@ const Industries = () => {
         "Freight cargo protection",
         "Rail yard and depot safety",
         "Battery-electric locomotive protection"
-      ]
+      ],
+      image: railImg
     },
     {
-      id: 7,
-      rank: "#7",
+      id: 6,
+      rank: "#6",
       icon: TruckIcon,
       title: "Towing & Recovery",
       description: "Essential safety equipment for tow operators and recovery services handling disabled electric vehicles and lithium battery incidents. Protect your crew and equipment.",
@@ -112,11 +105,12 @@ const Industries = () => {
         "Recovery vehicle protection",
         "Storage yard fire prevention",
         "Operator training support"
-      ]
+      ],
+      image: towingImg
     },
     {
-      id: 8,
-      rank: "#8",
+      id: 7,
+      rank: "#7",
       icon: Factory,
       title: "Industrial & Commercial",
       description: "Broad-spectrum protection for manufacturing, warehousing, and commercial facilities. Comprehensive solutions for any operation utilizing lithium-ion battery technology.",
@@ -125,7 +119,8 @@ const Industries = () => {
         "Warehouse and distribution safety",
         "Commercial building systems",
         "Custom industrial solutions"
-      ]
+      ],
+      image: industrialImg
     }
   ];
 

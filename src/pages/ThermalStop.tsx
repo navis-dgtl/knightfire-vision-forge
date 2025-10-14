@@ -58,16 +58,16 @@ const ThermalStop = () => {
               </div>
             </div>
 
-            <div className="bg-background rounded-lg p-8 space-y-4">
+            <div className="aspect-square bg-muted rounded-lg flex items-center justify-center gap-4 p-4">
               <img 
                 src={thermalStopProduct1} 
                 alt="Thermal Stop Fire Extinguisher" 
-                className="w-full h-auto rounded-lg"
+                className="h-full object-contain flex-1"
               />
               <img 
                 src={thermalStopProduct2} 
                 alt="Thermal Stop Product Range" 
-                className="w-full h-auto rounded-lg"
+                className="h-full object-contain flex-1"
               />
             </div>
           </div>

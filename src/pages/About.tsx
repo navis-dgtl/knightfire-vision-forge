@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import stephenKnight from "@/assets/stephen-knight.jpg";
 import mattHill from "@/assets/matt-hill.avif";
+import mirandaKnight from "@/assets/miranda-knight.png";
 
 const About = () => {
   return (
@@ -69,13 +70,15 @@ const About = () => {
             
             <Card className="text-center">
               <CardContent className="pt-6">
-                <div className="w-32 h-32 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
-                  <span className="text-4xl text-muted-foreground">?</span>
-                </div>
-                <h3 className="text-xl font-heading font-bold mb-2 text-primary">Miranda</h3>
-                <p className="text-sm text-muted-foreground mb-3">Team Member</p>
+                <img 
+                  src={mirandaKnight} 
+                  alt="Miranda Knight" 
+                  className="w-32 h-32 rounded-full object-cover mx-auto mb-4"
+                />
+                <h3 className="text-xl font-heading font-bold mb-2 text-primary">Miranda Knight</h3>
+                <p className="text-sm text-muted-foreground mb-3">Customer Relations/Marketing</p>
                 <p className="text-sm text-foreground/80">
-                  More information coming soon.
+                  With a background in emergency medical services and dentistry, Miranda brings hands-on safety experience and leadership to KnightTek. Holding a Bachelor's degree in Human Resource Management, she embodies KnightTek's commitment to Safety Through Innovative Solutions while leading customer service operations, ensuring every client experience reflects our top priority — our customers.
                 </p>
               </CardContent>
             </Card>

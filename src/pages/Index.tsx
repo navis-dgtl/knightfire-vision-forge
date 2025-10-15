@@ -16,7 +16,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      
+
       {/* Hero Carousel */}
       <section className="pt-20 lg:pt-28">
         <HeroCarousel />
@@ -31,13 +31,17 @@ const Index = () => {
                 Protecting Lives with Advanced Fire Suppression Technology
               </h2>
               <p className="text-lg mb-4 text-foreground/80">
-                KnightTek is the exclusive global distributor of Thermal Stop and Thermal Shield, revolutionary lithium-ion battery fire suppression solutions developed through 7+ years of dedicated research and development.
+                KnightTek is the exclusive global distributor of Thermal Stop and Thermal Shield, revolutionary
+                lithium-ion battery fire suppression solutions developed through 7+ years of dedicated research and
+                development.
               </p>
               <p className="text-lg mb-4 text-foreground/80">
-                Our products are specifically designed—not repurposed—to combat lithium-ion battery thermal runaway fires with a 100% success rate across all battery chemistries.
+                Our products are specifically designed—not repurposed—to combat lithium-ion battery thermal runaway
+                fires with a 100% success rate across all battery chemistries.
               </p>
               <p className="text-lg mb-6 text-foreground/80">
-                With NFPA 18 certification and EPA Safer Choice listing, we provide the most advanced, environmentally responsible fire suppression solutions for first responders and industry professionals.
+                With NFPA 18 certification and EPA Safer Choice listing, we provide the most advanced, environmentally
+                responsible fire suppression solutions for first responders and industry professionals.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
@@ -49,14 +53,14 @@ const Index = () => {
               </div>
             </div>
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
-              <iframe 
-                width="100%" 
-                height="100%" 
-                src="https://www.youtube.com/embed/4HARY7Go9Js?si=gZrVEIHqOQ_dAvks" 
-                title="KnightTek Product Demo Video" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerPolicy="strict-origin-when-cross-origin" 
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/4HARY7Go9Js?si=gZrVEIHqOQ_dAvks"
+                title="KnightTek Product Demo Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
                 className="absolute inset-0"
               />
@@ -77,14 +81,14 @@ const Index = () => {
             {/* Thermal Stop Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
               <div className="aspect-square bg-muted flex items-center justify-center p-4 gap-2">
-                <img 
-                  src={thermalStopProduct1} 
-                  alt="Thermal Stop Fire Extinguishing Agent" 
+                <img
+                  src={thermalStopProduct1}
+                  alt="Thermal Stop Fire Extinguishing Agent"
                   className="h-full object-contain flex-1"
                 />
-                <img 
-                  src={thermalStopProduct2} 
-                  alt="Thermal Stop Fire Extinguishing Agent" 
+                <img
+                  src={thermalStopProduct2}
+                  alt="Thermal Stop Fire Extinguishing Agent"
                   className="h-full object-contain flex-1"
                 />
               </div>
@@ -121,9 +125,9 @@ const Index = () => {
             {/* Thermal Shield Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
               <div className="aspect-square bg-muted flex items-center justify-center p-8">
-                <img 
-                  src={thermalShieldProduct} 
-                  alt="Thermal Shield Containment Solution" 
+                <img
+                  src={thermalShieldProduct}
+                  alt="Thermal Shield Containment Solution"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -262,45 +266,60 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <Link to="/industries" className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]">
-              <img 
-                src={maritimeImg} 
+            <Link
+              to="/industries"
+              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]"
+            >
+              <img
+                src={maritimeImg}
                 alt="Maritime Imports Fire Solutions"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent" />
               <div className="absolute inset-0 p-6 flex flex-col justify-end text-primary-foreground">
-                <div className="bg-accent text-accent-foreground text-xs font-bold px-2 py-1 rounded w-fit mb-2">#1</div>
-                <h3 className="text-2xl font-heading font-bold mb-2">Maritime Imports</h3>
+                <div className="bg-accent text-accent-foreground text-xs font-bold px-2 py-1 rounded w-fit mb-2">
+                  #1
+                </div>
+                <h3 className="text-2xl font-heading font-bold mb-2">Maritime</h3>
                 <p className="mb-4">Critical protection for port operations and shipping</p>
                 <span className="text-accent font-semibold group-hover:underline">Learn More →</span>
               </div>
             </Link>
 
-            <Link to="/industries" className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]">
-              <img 
+            <Link
+              to="/industries"
+              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]"
+            >
+              <img
                 src={publicSafetyImg}
-                alt="Public Safety - Fire & Police" 
+                alt="Public Safety - Fire & Police"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent" />
               <div className="absolute inset-0 p-6 flex flex-col justify-end text-primary-foreground">
-                <div className="bg-accent text-accent-foreground text-xs font-bold px-2 py-1 rounded w-fit mb-2">#2</div>
+                <div className="bg-accent text-accent-foreground text-xs font-bold px-2 py-1 rounded w-fit mb-2">
+                  #2
+                </div>
                 <h3 className="text-2xl font-heading font-bold mb-2">Public Safety</h3>
                 <p className="mb-4">Fire departments & law enforcement agencies</p>
                 <span className="text-accent font-semibold group-hover:underline">Learn More →</span>
               </div>
             </Link>
 
-            <Link to="/industries" className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]">
-              <img 
-                src={evFireImg} 
+            <Link
+              to="/industries"
+              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow aspect-[4/3]"
+            >
+              <img
+                src={evFireImg}
                 alt="EV & Mobility Fire Safety"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent" />
               <div className="absolute inset-0 p-6 flex flex-col justify-end text-primary-foreground">
-                <div className="bg-accent text-accent-foreground text-xs font-bold px-2 py-1 rounded w-fit mb-2">#3</div>
+                <div className="bg-accent text-accent-foreground text-xs font-bold px-2 py-1 rounded w-fit mb-2">
+                  #3
+                </div>
                 <h3 className="text-2xl font-heading font-bold mb-2">EV & Mobility</h3>
                 <p className="mb-4">Advanced solutions for electric vehicle safety</p>
                 <span className="text-accent font-semibold group-hover:underline">Learn More →</span>
@@ -328,7 +347,10 @@ const Index = () => {
             </Button>
           </div>
           <p className="mt-6 text-primary-foreground/90">
-            Or call us at <a href="tel:405-568-2742" className="text-accent font-semibold hover:underline">405-568-2742</a>
+            Or call us at{" "}
+            <a href="tel:405-568-2742" className="text-accent font-semibold hover:underline">
+              405-568-2742
+            </a>
           </p>
         </div>
       </section>

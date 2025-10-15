@@ -194,11 +194,11 @@ const ThermalStop = () => {
                   <div className="mb-6">
                     <h4 className="font-semibold mb-3 text-primary">Fire Extinguishers</h4>
                     <ul className="space-y-2 text-foreground/80">
-                      <li>• 12 oz Rapid Deployment Aerosol Can - Perfect for personal and vehicle use</li>
-                      <li>• 2.5 lb Handheld Fire Extinguisher - Compact and portable for quick response</li>
-                      <li>• 5 lb Fire Extinguisher - Increased capacity for larger incidents</li>
-                      <li>• 10 lb Fire Extinguisher - Professional-grade for first responders</li>
-                      <li>• 20 lb Wheeled Unit - Heavy-duty mobile solution for industrial settings</li>
+                      <li>• 12 oz Quick Strike Aerosol Can - Perfect for personal and vehicle use</li>
+                      <li>• 1 liter (1/4 gallon) Handheld Fire Extinguisher - Compact and portable for quick response</li>
+                      <li>• 2 liter (1/2 gallon) Fire Extinguisher - Increased capacity for larger incidents</li>
+                      <li>• 6 liter (1.5 gallon) Fire Extinguisher - Professional-grade for first responders</li>
+                      <li>• 10 liter (2.5 gallon) Wheeled Unit - Heavy-duty mobile solution for industrial settings</li>
                     </ul>
                   </div>
 

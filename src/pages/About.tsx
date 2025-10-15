@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import stephenKnight from "@/assets/stephen-knight.jpg";
+import mattHill from "@/assets/matt-hill.avif";
 
 const About = () => {
   return (
@@ -50,21 +51,73 @@ const About = () => {
                 </p>
               </CardContent>
             </Card>
+
+            <Card className="text-center">
+              <CardContent className="pt-6">
+                <img 
+                  src={mattHill} 
+                  alt="Matt Hill" 
+                  className="w-32 h-32 rounded-full object-cover mx-auto mb-4"
+                />
+                <h3 className="text-xl font-heading font-bold mb-2 text-primary">Matt Hill</h3>
+                <p className="text-sm text-muted-foreground mb-3">Vice President</p>
+                <p className="text-sm text-foreground/80">
+                  Matt Hill serves as Vice President of KnightTek, bringing two decades of extensive experience in the Oil and Gas industry. As a recognized Safety Leader, Matt holds board positions with prestigious organizations including AADE, SPE, IADC, Oilfield Christian Fellowship, and API. He is a dynamic entrepreneur and sought-after speaker who hosts a popular industry podcast while leading business development initiatives. His expertise spans automation, research, and technology innovation, and he is passionate about energy advocacy and event planning that brings the industry together.
+                </p>
+              </CardContent>
+            </Card>
             
-            {[1, 2, 3, 4, 5].map((index) => (
-              <Card key={index} className="text-center">
-                <CardContent className="pt-6">
-                  <div className="w-32 h-32 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
-                    <span className="text-4xl text-muted-foreground">?</span>
-                  </div>
-                  <h3 className="text-xl font-heading font-bold mb-2 text-primary">Coming Soon</h3>
-                  <p className="text-sm text-muted-foreground mb-3">Team Member</p>
-                  <p className="text-sm text-foreground/80">
-                    More team members to be announced soon.
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+            <Card className="text-center">
+              <CardContent className="pt-6">
+                <div className="w-32 h-32 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
+                  <span className="text-4xl text-muted-foreground">?</span>
+                </div>
+                <h3 className="text-xl font-heading font-bold mb-2 text-primary">Miranda</h3>
+                <p className="text-sm text-muted-foreground mb-3">Team Member</p>
+                <p className="text-sm text-foreground/80">
+                  More information coming soon.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardContent className="pt-6">
+                <div className="w-32 h-32 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
+                  <span className="text-4xl text-muted-foreground">?</span>
+                </div>
+                <h3 className="text-xl font-heading font-bold mb-2 text-primary">Brandon Alvarez</h3>
+                <p className="text-sm text-muted-foreground mb-3">Team Member</p>
+                <p className="text-sm text-foreground/80">
+                  More information coming soon.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardContent className="pt-6">
+                <div className="w-32 h-32 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
+                  <span className="text-4xl text-muted-foreground">?</span>
+                </div>
+                <h3 className="text-xl font-heading font-bold mb-2 text-primary">Simon</h3>
+                <p className="text-sm text-muted-foreground mb-3">International Team</p>
+                <p className="text-sm text-foreground/80">
+                  More information coming soon.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardContent className="pt-6">
+                <div className="w-32 h-32 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
+                  <span className="text-4xl text-muted-foreground">?</span>
+                </div>
+                <h3 className="text-xl font-heading font-bold mb-2 text-primary">Alistair Newton</h3>
+                <p className="text-sm text-muted-foreground mb-3">International Team</p>
+                <p className="text-sm text-foreground/80">
+                  Coming soon.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import stephenKnight from "@/assets/stephen-knight.jpg";
 import mattHill from "@/assets/matt-hill.avif";
 import mirandaKnight from "@/assets/miranda-knight.png";
+import brandonAlvarez from "@/assets/brandon-alvarez.jpg";
 
 const About = () => {
   return (
@@ -79,6 +80,21 @@ const About = () => {
                 <p className="text-sm text-muted-foreground mb-3">Customer Relations/Marketing</p>
                 <p className="text-sm text-foreground/80">
                   With a background in emergency medical services and dentistry, Miranda brings hands-on safety experience and leadership to KnightTek. Holding a Bachelor's degree in Human Resource Management, she embodies KnightTek's commitment to Safety Through Innovative Solutions while leading customer service operations, ensuring every client experience reflects our top priority — our customers.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardContent className="pt-6">
+                <img 
+                  src={brandonAlvarez} 
+                  alt="Brandon Alvarez" 
+                  className="w-32 h-32 rounded-full object-cover mx-auto mb-4"
+                />
+                <h3 className="text-xl font-heading font-bold mb-2 text-primary">Brandon Alvarez</h3>
+                <p className="text-sm text-muted-foreground mb-3">Sales Director</p>
+                <p className="text-sm text-foreground/80">
+                  Sales Professional with over 15 years of success driving revenue and leading strategic growth across diverse industries. Brandon is results-driven with deep expertise in navigating dynamic sales cycles, optimizing pipelines, and contributing to the expansion of early-stage and growth-phase companies. He is dedicated to KnightTek's North Star - our customers.
                 </p>
               </CardContent>
             </Card>

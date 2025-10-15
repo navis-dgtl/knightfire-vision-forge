@@ -7,6 +7,12 @@ import thermalShieldProduct from "@/assets/thermal-shield-new.png";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Snowflake, Lock, Wind } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import thermalStop2ltr from "@/assets/thermal-stop-2ltr.png";
+import thermalStop5gal from "@/assets/thermal-stop-5gal.png";
+import thermalStop6ltr from "@/assets/thermal-stop-6ltr.png";
+import thermalStop9ltr from "@/assets/thermal-stop-9ltr.png";
+import thermalStop55gal from "@/assets/thermal-stop-55gal.png";
 
 const ThermalShield = () => {
   return (
@@ -168,12 +174,64 @@ const ThermalShield = () => {
               <Card>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-heading font-bold mb-4 text-primary">Available Sizes</h3>
-                  <ul className="space-y-2 text-foreground/80">
-                    <li>• 32 oz bottle for immediate deployment</li>
-                    <li>• 1 gallon container</li>
-                    <li>• 5 gallon bulk container</li>
-                    <li>• Custom sizing available for large-scale operations</li>
-                  </ul>
+                  <p className="text-sm text-foreground/60 mb-4">Click on each size to view product image</p>
+                  
+                  <Accordion type="single" collapsible className="w-full mb-6">
+                    <AccordionItem value="2ltr">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        2 Liter
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop2ltr} alt="Thermal Shield 2 Liter" className="h-64 w-auto object-contain" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                    
+                    <AccordionItem value="5gal">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        5 Gallon
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop5gal} alt="Thermal Shield 5 Gallon" className="h-64 w-auto object-contain" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                    
+                    <AccordionItem value="6ltr">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        6 Liter
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop6ltr} alt="Thermal Shield 6 Liter" className="h-64 w-auto object-contain" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                    
+                    <AccordionItem value="9ltr">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        9 Liter
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop9ltr} alt="Thermal Shield 9 Liter" className="h-64 w-auto object-contain" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                    
+                    <AccordionItem value="55gal">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        55 Gallon
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop55gal} alt="Thermal Shield 55 Gallon" className="h-64 w-auto object-contain" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                   <h3 className="text-xl font-heading font-bold mt-6 mb-4 text-primary">Storage & Handling</h3>
                   <ul className="space-y-2 text-foreground/80">
                     <li>• Extended shelf life with proper storage</li>

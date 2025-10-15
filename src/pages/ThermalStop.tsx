@@ -7,6 +7,12 @@ import { Link } from "react-router-dom";
 import { BadgeCheck, Shield, Snowflake, Download, ChevronRight } from "lucide-react";
 import thermalStopProduct1 from "@/assets/thermal-stop-1.jpg";
 import thermalStopProduct2 from "@/assets/thermal-stop-2.jpg";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import thermalStop2ltr from "@/assets/thermal-stop-2ltr.png";
+import thermalStop5gal from "@/assets/thermal-stop-5gal.png";
+import thermalStop6ltr from "@/assets/thermal-stop-6ltr.png";
+import thermalStop9ltr from "@/assets/thermal-stop-9ltr.png";
+import thermalStop55gal from "@/assets/thermal-stop-55gal.png";
 
 const ThermalStop = () => {
   return (
@@ -190,28 +196,64 @@ const ThermalStop = () => {
               <Card>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-heading font-bold mb-4 text-primary">Available Sizes</h3>
+                  <p className="text-sm text-foreground/60 mb-4">Click on each size to view product image</p>
                   
-                  <div className="mb-6">
-                    <h4 className="font-semibold mb-3 text-primary">Fire Extinguishers</h4>
-                    <ul className="space-y-2 text-foreground/80">
-                      <li>• 12 oz Quick Strike Aerosol Can - Perfect for personal and vehicle use</li>
-                      <li>• 1 liter (1/4 gallon) Handheld Fire Extinguisher - Compact and portable for quick response</li>
-                      <li>• 2 liter (1/2 gallon) Fire Extinguisher - Increased capacity for larger incidents</li>
-                      <li>• 6 liter (1.5 gallon) Fire Extinguisher - Professional-grade for first responders</li>
-                      <li>• 10 liter (2.5 gallon) Wheeled Unit - Heavy-duty mobile solution for industrial settings</li>
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="font-semibold mb-3 text-primary">Bulk Containers</h4>
-                    <ul className="space-y-2 text-foreground/80">
-                      <li>• 2.5 Gallon Pail - Ideal for refilling smaller units and local response</li>
-                      <li>• 5 Gallon Pail - Standard size for fire department apparatus</li>
-                      <li>• 55 Gallon Drum - Large-scale operations and facility protection</li>
-                      <li>• 275 Gallon Tote - Industrial and commercial facility use</li>
-                      <li>• Bulk Tanker Quantities - Available for large-scale deployments</li>
-                    </ul>
-                  </div>
+                  <Accordion type="single" collapsible className="w-full">
+                    <AccordionItem value="2ltr">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        2 Liter
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop2ltr} alt="Thermal Stop 2 Liter" className="h-64 w-auto object-contain" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                    
+                    <AccordionItem value="5gal">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        5 Gallon
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop5gal} alt="Thermal Stop 5 Gallon" className="h-64 w-auto object-contain" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                    
+                    <AccordionItem value="6ltr">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        6 Liter
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop6ltr} alt="Thermal Stop 6 Liter" className="h-64 w-auto object-contain" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                    
+                    <AccordionItem value="9ltr">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        9 Liter
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop9ltr} alt="Thermal Stop 9 Liter" className="h-64 w-auto object-contain" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                    
+                    <AccordionItem value="55gal">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        55 Gallon
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop55gal} alt="Thermal Stop 55 Gallon" className="h-64 w-auto object-contain" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
 
                   <h3 className="text-xl font-heading font-bold mt-6 mb-4 text-primary">Specifications</h3>
                   <ul className="space-y-2 text-foreground/80">

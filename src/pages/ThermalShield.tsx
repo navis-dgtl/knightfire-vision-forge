@@ -188,17 +188,6 @@ const ThermalShield = () => {
                       </AccordionContent>
                     </AccordionItem>
                     
-                    <AccordionItem value="5gal">
-                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
-                        5 Gallon
-                      </AccordionTrigger>
-                      <AccordionContent>
-                        <div className="flex justify-center py-4">
-                          <img src={thermalStop5gal} alt="Thermal Shield 5 Gallon" className="h-64 w-auto object-contain" />
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                    
                     <AccordionItem value="6ltr">
                       <AccordionTrigger className="text-foreground/80 hover:text-primary">
                         6 Liter
@@ -217,6 +206,17 @@ const ThermalShield = () => {
                       <AccordionContent>
                         <div className="flex justify-center py-4">
                           <img src={thermalStop9ltr} alt="Thermal Shield 9 Liter" className="h-64 w-auto object-contain" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                    
+                    <AccordionItem value="5gal">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        5 Gallon
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop5gal} alt="Thermal Shield 5 Gallon" className="h-64 w-auto object-contain" />
                         </div>
                       </AccordionContent>
                     </AccordionItem>

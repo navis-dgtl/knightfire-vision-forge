@@ -83,44 +83,6 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <div className="w-32 h-32 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
-                  <span className="text-4xl text-muted-foreground">?</span>
-                </div>
-                <h3 className="text-xl font-heading font-bold mb-2 text-primary">Brandon Alvarez</h3>
-                <p className="text-sm text-muted-foreground mb-3">Team Member</p>
-                <p className="text-sm text-foreground/80">
-                  More information coming soon.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <div className="w-32 h-32 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
-                  <span className="text-4xl text-muted-foreground">?</span>
-                </div>
-                <h3 className="text-xl font-heading font-bold mb-2 text-primary">Simon</h3>
-                <p className="text-sm text-muted-foreground mb-3">International Team</p>
-                <p className="text-sm text-foreground/80">
-                  More information coming soon.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <div className="w-32 h-32 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
-                  <span className="text-4xl text-muted-foreground">?</span>
-                </div>
-                <h3 className="text-xl font-heading font-bold mb-2 text-primary">Alistair Newton</h3>
-                <p className="text-sm text-muted-foreground mb-3">International Team</p>
-                <p className="text-sm text-foreground/80">
-                  Coming soon.
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

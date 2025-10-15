@@ -62,7 +62,7 @@ const About = () => {
                 <h3 className="text-xl font-heading font-bold mb-2 text-primary">Matt Hill</h3>
                 <p className="text-sm text-muted-foreground mb-3">Vice President</p>
                 <p className="text-sm text-foreground/80">
-                  Matt Hill serves as Vice President of KnightTek, bringing two decades of extensive experience in the Oil and Gas industry. As a recognized Safety Leader, Matt holds board positions with prestigious organizations including AADE, SPE, IADC, Oilfield Christian Fellowship, and API. He is a dynamic entrepreneur and sought-after speaker who hosts a popular industry podcast while leading business development initiatives. His expertise spans automation, research, and technology innovation, and he is passionate about energy advocacy and event planning that brings the industry together.
+                  Matt serves as Vice President with over 20 years of experience in the Oil and Gas industry. As a Safety Leader and board member of AADE, SPE, IADC, Oilfield Christian Fellowship, and API, he is an entrepreneur, podcast host, and speaker specializing in business development, automation, research, and energy advocacy.
                 </p>
               </CardContent>
             </Card>

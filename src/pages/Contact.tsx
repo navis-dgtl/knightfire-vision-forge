@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Mail, Download } from "lucide-react";
+import { Phone, Mail, Download, Clock } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
@@ -73,9 +73,7 @@ const Contact = () => {
 
             <Card className="border-0 shadow-lg text-center">
               <CardContent className="p-6">
-                <div className="h-12 w-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⏰</span>
-                </div>
+                <Clock className="h-12 w-12 text-accent mx-auto mb-4" />
                 <h3 className="font-heading font-bold mb-2">Business Hours</h3>
                 <p className="text-foreground/70">Mon-Fri: 8AM-5PM CST</p>
               </CardContent>

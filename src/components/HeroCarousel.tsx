@@ -21,7 +21,7 @@ const slides: Slide[] = [
     subtitle: "NFPA 18 Certified. EPA Safer Choice Listed. 100% Success Rate.",
     cta: "Explore Products",
     ctaLink: "/products/thermal-stop",
-    secondaryCta: "Request Demo",
+    secondaryCta: "Request Consultation",
     secondaryCtaLink: "/contact",
   },
   {
@@ -87,36 +87,23 @@ const HeroCarousel = () => {
           }`}
         >
           {/* Background Image */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${heroBackground})` }}
-          />
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroBackground})` }} />
           {/* Blue Overlay with reduced opacity */}
           <div className="absolute inset-0 bg-primary/70" />
-          
+
           {/* Content */}
           <div className="container mx-auto px-4 h-full flex items-center relative z-10">
             <div className="max-w-3xl text-primary-foreground">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
                 {slide.title}
               </h1>
-              <p className="text-lg md:text-xl mb-8 text-primary-foreground/90">
-                {slide.subtitle}
-              </p>
+              <p className="text-lg md:text-xl mb-8 text-primary-foreground/90">{slide.subtitle}</p>
               <div className="flex flex-wrap gap-4">
-                <Button 
-                  asChild 
-                  size="lg" 
-                  className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
-                >
+                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
                   <Link to={slide.ctaLink}>{slide.cta}</Link>
                 </Button>
                 {slide.secondaryCta && (
-                  <Button 
-                    asChild 
-                    size="lg" 
-                    variant="outline-light"
-                  >
+                  <Button asChild size="lg" variant="outline-light">
                     <Link to={slide.secondaryCtaLink!}>{slide.secondaryCta}</Link>
                   </Button>
                 )}
@@ -149,9 +136,7 @@ const HeroCarousel = () => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all ${
-              index === currentSlide
-                ? "bg-accent w-8"
-                : "bg-primary-foreground/30 hover:bg-primary-foreground/50"
+              index === currentSlide ? "bg-accent w-8" : "bg-primary-foreground/30 hover:bg-primary-foreground/50"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

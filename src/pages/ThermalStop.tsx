@@ -383,9 +383,6 @@ const ThermalStop = () => {
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
               <Link to="/contact">Request a Quote</Link>
             </Button>
-            <Button asChild size="lg" variant="outline-light">
-              <Link to="/contact">Schedule a Demo</Link>
-            </Button>
           </div>
           <p className="mt-6 text-primary-foreground/90">
             Or call us at <a href="tel:1-833-466-5835" className="text-accent font-semibold hover:underline">1-833-ion-ktek</a>

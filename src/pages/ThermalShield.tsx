@@ -125,7 +125,7 @@ const ThermalShield = () => {
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Snowflake className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-primary">1. Cool</h3>
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">1. Cools</h3>
                 <p className="text-foreground/70">
                   Delivers instant surface cooling on contact with damaged battery packs, rapidly reducing temperature.
                 </p>
@@ -137,7 +137,7 @@ const ThermalShield = () => {
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lock className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-primary">2. Seal</h3>
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">2. Seals</h3>
                 <p className="text-foreground/70">
                   Seals breaches in battery casings to stop ongoing chemical activity and prevent oxygen exposure.
                 </p>
@@ -149,7 +149,7 @@ const ThermalShield = () => {
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Wind className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-primary">3. Trap</h3>
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">3. Traps</h3>
                 <p className="text-foreground/70">
                   Traps hazardous PFAS vapors and toxic gases, preventing them from escaping into the environment.
                 </p>
@@ -327,9 +327,6 @@ const ThermalShield = () => {
           <div className="flex flex-wrap gap-4 justify-center">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
               <Link to="/contact">Request a Quote</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline-light">
-              <Link to="/contact">Schedule a Demo</Link>
             </Button>
           </div>
           <p className="mt-6 text-primary-foreground/90">

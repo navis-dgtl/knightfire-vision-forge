@@ -24,7 +24,7 @@ const About = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-heading font-bold mb-6 text-primary">Our Mission</h2>
           <p className="text-lg text-foreground/80 mb-4">
-            KnightTek, LLC is the exclusive global distributor for Redline Fire Solutions' Thermal Stop and Thermal Shield products. We are dedicated to providing the most advanced lithium-ion battery fire suppression solutions to first responders and industry professionals worldwide.
+            KnightTek, LLC is the exclusive global distributor for Thermal Stop and Thermal Shield. We are dedicated to providing the most advanced lithium-ion battery fire suppression solutions to first responders and industry professionals worldwide.
           </p>
           <p className="text-lg text-foreground/80 mb-8">
             With 7+ years of R&D, our products represent purpose-built technology specifically engineered for lithium-ion battery fires—achieving a 100% success rate across all battery chemistries.
@@ -89,7 +89,7 @@ const About = () => {
                 <img 
                   src={brandonAlvarez} 
                   alt="Brandon Alvarez" 
-                  className="w-32 h-32 rounded-full object-cover mx-auto mb-4"
+                  className="w-32 h-32 rounded-full object-cover object-top mx-auto mb-4"
                 />
                 <h3 className="text-xl font-heading font-bold mb-2 text-primary">Brandon Alvarez</h3>
                 <p className="text-sm text-muted-foreground mb-3">Director of Innovative Sales Solutions</p>
@@ -100,6 +100,17 @@ const About = () => {
             </Card>
 
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl font-heading font-bold mb-8 text-center text-primary">Advisory Board</h2>
+          <Card className="border-2 border-accent/20 bg-gradient-to-br from-accent/5 to-primary/5">
+            <CardContent className="p-12 text-center">
+              <p className="text-xl text-foreground/70">Coming Soon</p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

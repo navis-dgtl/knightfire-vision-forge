@@ -58,24 +58,24 @@ const Contact = () => {
             <Card className="border-0 shadow-lg text-center">
               <CardContent className="p-6">
                 <Phone className="h-12 w-12 text-accent mx-auto mb-4" />
-                <h3 className="font-heading font-bold mb-2">Call Us</h3>
-                <a href="tel:405-568-2742" className="text-lg text-accent hover:underline">405-568-2742</a>
+                <h3 className="font-heading font-bold mb-2 text-primary">Call Us</h3>
+                <a href="tel:405-568-2742" className="text-lg text-primary hover:text-accent hover:underline">405-568-2742</a>
               </CardContent>
             </Card>
 
             <Card className="border-0 shadow-lg text-center">
               <CardContent className="p-6">
                 <Mail className="h-12 w-12 text-accent mx-auto mb-4" />
-                <h3 className="font-heading font-bold mb-2">Email Us</h3>
-                <a href="mailto:info@ktekglobal.com" className="text-lg text-accent hover:underline break-all">info@ktekglobal.com</a>
+                <h3 className="font-heading font-bold mb-2 text-primary">Email Us</h3>
+                <a href="mailto:info@ktekglobal.com" className="text-lg text-primary hover:text-accent hover:underline break-all">info@ktekglobal.com</a>
               </CardContent>
             </Card>
 
             <Card className="border-0 shadow-lg text-center">
               <CardContent className="p-6">
                 <Clock className="h-12 w-12 text-accent mx-auto mb-4" />
-                <h3 className="font-heading font-bold mb-2">Business Hours</h3>
-                <p className="text-foreground/70">Mon-Fri: 8AM-5PM CST</p>
+                <h3 className="font-heading font-bold mb-2 text-primary">Business Hours</h3>
+                <p className="text-primary/80">Mon-Fri: 8AM-5PM CST</p>
               </CardContent>
             </Card>
           </div>

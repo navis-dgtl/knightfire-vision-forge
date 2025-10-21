@@ -128,6 +128,19 @@ const Products = () => {
             </Card>
           </div>
 
+          {/* Coming Soon Products */}
+          <div className="max-w-6xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8 text-center text-primary">
+              New Products Coming Soon
+            </h2>
+            <Card className="border-2 border-accent/20 bg-gradient-to-br from-accent/5 to-primary/5">
+              <CardContent className="p-12 text-center">
+                <p className="text-xl text-foreground/70 mb-4">Expanding Our Fire Safety Solutions</p>
+                <p className="text-foreground/60">Stay tuned for exciting new additions to our product lineup</p>
+              </CardContent>
+            </Card>
+          </div>
+
           {/* Comparison CTA */}
           <div className="max-w-4xl mx-auto text-center">
             <Card className="border-2 border-accent/20 bg-gradient-to-br from-accent/5 to-primary/5">

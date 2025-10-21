@@ -147,7 +147,7 @@ const ThermalStop = () => {
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-primary">1. Suppress</h3>
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">1. Suppresses</h3>
                 <p className="text-foreground/70">
                   Rapidly extinguishes the fire as well as blocks dangerous off-gassing and encapsulates harmful PFAS chemicals found in some lithium-ion batteries.
                 </p>
@@ -159,7 +159,7 @@ const ThermalStop = () => {
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Snowflake className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-primary">2. Cool</h3>
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">2. Cools</h3>
                 <p className="text-foreground/70">
                   Superior endothermic properties provide super-fast cooling within just 30 seconds.
                 </p>

@@ -54,8 +54,13 @@ const Navigation = () => {
         <div className="flex items-center justify-between py-4">
           <Link to="/" className="flex items-center gap-3">
             <img src={knightTekIcon} alt="KnightTek Logo" className="h-10 w-10" />
-            <div className="text-2xl font-heading font-bold text-primary-foreground">
-              Knight<span className="text-accent">Tek</span>
+            <div>
+              <div className="text-2xl font-heading font-bold text-primary-foreground">
+                Knight<span className="text-accent">Tek</span>
+              </div>
+              <div className="text-xs text-primary-foreground/80 -mt-1">
+                Safety Through Innovative Solutions
+              </div>
             </div>
           </Link>
 

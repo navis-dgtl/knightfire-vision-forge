@@ -4,9 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Shield, Flame, BadgeCheck, ArrowRight } from "lucide-react";
-import thermalStopProduct1 from "@/assets/thermal-stop-1.jpg";
-import thermalStopProduct2 from "@/assets/thermal-stop-2.jpg";
-import thermalShieldProduct from "@/assets/thermal-shield-new.png";
+import extinguishersGroup from "@/assets/extinguishers-group.png";
+import thermalShieldProduct from "@/assets/thermal-shield-new.jpg";
 
 const Products = () => {
   return (
@@ -36,16 +35,11 @@ const Products = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
             {/* Thermal Stop Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow group">
-              <div className="aspect-square bg-muted flex items-center justify-center p-4 gap-2">
+              <div className="aspect-square bg-muted flex items-center justify-center p-8">
                 <img 
-                  src={thermalStopProduct1} 
-                  alt="Thermal Stop Fire Extinguishing Agent" 
-                  className="h-full object-contain flex-1"
-                />
-                <img 
-                  src={thermalStopProduct2} 
-                  alt="Thermal Stop Fire Extinguishing Agent" 
-                  className="h-full object-contain flex-1"
+                  src={extinguishersGroup} 
+                  alt="Thermal Stop and Thermal Shield Extinguisher Range" 
+                  className="w-full h-full object-contain"
                 />
               </div>
               <CardContent className="p-6">

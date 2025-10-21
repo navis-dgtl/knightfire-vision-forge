@@ -5,8 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { BadgeCheck, Shield, Snowflake, Download, ChevronRight } from "lucide-react";
-import thermalStopProduct1 from "@/assets/thermal-stop-1.jpg";
-import thermalStopProduct2 from "@/assets/thermal-stop-2.jpg";
+import extinguishersGroup from "@/assets/extinguishers-group.png";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import thermalStop2ltr from "@/assets/thermal-stop-2ltr.png";
 import thermalStop5gal from "@/assets/thermal-stop-5gal.png";
@@ -66,16 +65,11 @@ const ThermalStop = () => {
               </div>
             </div>
 
-            <div className="aspect-square bg-muted rounded-lg flex items-center justify-center gap-4 p-4">
+            <div className="aspect-square bg-muted rounded-lg flex items-center justify-center p-8">
               <img 
-                src={thermalStopProduct1} 
-                alt="Thermal Stop Fire Extinguisher" 
-                className="h-full object-contain flex-1"
-              />
-              <img 
-                src={thermalStopProduct2} 
-                alt="Thermal Stop Product Range" 
-                className="h-full object-contain flex-1"
+                src={extinguishersGroup} 
+                alt="Thermal Stop and Thermal Shield Extinguisher Range" 
+                className="w-full h-full object-contain"
               />
             </div>
           </div>

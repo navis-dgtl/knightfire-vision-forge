@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Shield, BadgeCheck, Download, ChevronRight } from "lucide-react";
-import thermalShieldProduct from "@/assets/thermal-shield-new.png";
+import thermalShieldProduct from "@/assets/thermal-shield-new.jpg";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Snowflake, Lock, Wind } from "lucide-react";

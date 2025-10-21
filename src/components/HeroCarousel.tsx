@@ -116,17 +116,17 @@ const HeroCarousel = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground p-2 rounded-full backdrop-blur-sm transition-colors"
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground p-1 md:p-1.5 rounded-full backdrop-blur-sm transition-colors"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="h-6 w-6" />
+        <ChevronLeft className="h-4 w-4 md:h-5 md:w-5" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground p-2 rounded-full backdrop-blur-sm transition-colors"
+        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground p-1 md:p-1.5 rounded-full backdrop-blur-sm transition-colors"
         aria-label="Next slide"
       >
-        <ChevronRight className="h-6 w-6" />
+        <ChevronRight className="h-4 w-4 md:h-5 md:w-5" />
       </button>
 
       {/* Dot Indicators */}

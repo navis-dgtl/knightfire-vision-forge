@@ -74,7 +74,7 @@ const About = () => {
                 <img 
                   src={mirandaKnight} 
                   alt="Miranda Knight" 
-                  className="w-32 h-32 rounded-full object-cover mx-auto mb-4"
+                  className="w-32 h-32 rounded-full object-cover object-top mx-auto mb-4"
                 />
                 <h3 className="text-xl font-heading font-bold mb-2 text-primary">Miranda Knight</h3>
                 <p className="text-sm text-muted-foreground mb-3">Client Engagement & Brand Development Director</p>

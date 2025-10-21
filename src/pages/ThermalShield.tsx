@@ -333,7 +333,7 @@ const ThermalShield = () => {
             </Button>
           </div>
           <p className="mt-6 text-primary-foreground/90">
-            Or call us at <a href="tel:1-833-466-5835" className="text-accent font-semibold hover:underline">1-833-466-5835</a>
+            Or call us at <a href="tel:1-833-466-5835" className="text-accent font-semibold hover:underline">1-833-ion-ktek</a>
           </p>
         </div>
       </section>

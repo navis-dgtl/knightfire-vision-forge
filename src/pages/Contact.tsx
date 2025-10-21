@@ -59,7 +59,7 @@ const Contact = () => {
               <CardContent className="p-6">
                 <Phone className="h-12 w-12 text-accent mx-auto mb-4" />
                 <h3 className="font-heading font-bold mb-2 text-primary">Call Us</h3>
-                <a href="tel:1-833-466-5835" className="text-lg text-primary hover:text-accent hover:underline">1-833-466-5835</a>
+                <a href="tel:1-833-466-5835" className="text-lg text-primary hover:text-accent hover:underline">1-833-ion-ktek</a>
               </CardContent>
             </Card>
 

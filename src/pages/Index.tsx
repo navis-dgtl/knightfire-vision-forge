@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Shield, Flame, Leaf, Gauge, Users, Award, BadgeCheck, Droplet, Zap } from "lucide-react";
 import extinguishersGroup from "@/assets/extinguishers-group.png";
-import thermalShieldProduct from "@/assets/thermal-shield-new.png";
+import thermalShieldProduct from "@/assets/thermal-shield-new.jpg";
 import evFireImg from "@/assets/ev-fire-demo.jpg";
 import publicSafetyImg from "@/assets/fire-department-team.jpg";
 import maritimeImg from "@/assets/maritime-port.jpg";

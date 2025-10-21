@@ -185,7 +185,7 @@ const Products = () => {
             </Button>
           </div>
           <p className="mt-6 text-primary-foreground/90">
-            Or call us at <a href="tel:405-568-2742" className="text-accent font-semibold hover:underline">405-568-2742</a>
+            Or call us at <a href="tel:1-833-466-5835" className="text-accent font-semibold hover:underline">1-833-466-5835</a>
           </p>
         </div>
       </section>

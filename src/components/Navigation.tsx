@@ -35,9 +35,9 @@ const Navigation = () => {
         <div className="border-b border-primary-foreground/20 py-2 hidden lg:block">
           <div className="flex justify-between items-center text-sm text-primary-foreground/90">
             <div className="flex gap-6">
-              <a href="tel:405-568-2742" className="flex items-center gap-2 hover:text-accent transition-colors">
+              <a href="tel:1-833-466-5835" className="flex items-center gap-2 hover:text-accent transition-colors">
                 <Phone className="h-4 w-4" />
-                405-568-2742
+                1-833-466-5835
               </a>
               <a href="mailto:info@ktekglobal.com" className="flex items-center gap-2 hover:text-accent transition-colors">
                 <Mail className="h-4 w-4" />

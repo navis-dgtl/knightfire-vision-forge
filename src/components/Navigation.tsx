@@ -23,7 +23,7 @@ const Navigation = () => {
       ]
     },
     { name: "Industries", path: "/industries" },
-    { name: "Publications", path: "/publications" },
+    { name: "Media", path: "/publications" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];

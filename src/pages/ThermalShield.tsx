@@ -234,6 +234,8 @@ const ThermalShield = () => {
                   <h3 className="text-xl font-heading font-bold mt-6 mb-4 text-primary">Storage & Handling</h3>
                   <ul className="space-y-2 text-foreground/80">
                     <li>• Extended shelf life with proper storage</li>
+                    <li>• Storage temperature: Minimum -40°F, Maximum 120°F</li>
+                    <li>• Freeze protected</li>
                     <li>• Store in cool, dry location</li>
                     <li>• No special handling requirements</li>
                     <li>• DOT Non-Hazardous classification</li>

@@ -252,10 +252,10 @@ const ThermalStop = () => {
                   <h3 className="text-xl font-heading font-bold mt-6 mb-4 text-primary">Specifications</h3>
                   <ul className="space-y-2 text-foreground/80">
                     <li>• Extended shelf life (5+ years) with proper storage</li>
-                    <li>• Multiple concentrate mixing ratios available (1:1, 3:1, 5:1)</li>
+                    <li>• 3% dilution ratio (3 parts foam / 97 parts water)</li>
                     <li>• Store in cool, dry location away from direct sunlight</li>
                     <li>• Compatible with standard firefighting equipment</li>
-                    <li>• Temperature range: 32°F to 120°F (0°C to 49°C)</li>
+                    <li>• Storage temperature: Minimum -40°F, Maximum 120°F</li>
                   </ul>
                 </CardContent>
               </Card>

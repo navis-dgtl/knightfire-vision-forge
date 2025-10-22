@@ -3,17 +3,17 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { 
-  Ship, 
-  ShieldAlert, 
-  Car, 
-  BatteryCharging, 
-  Plane, 
-  TrainFront, 
+import {
+  Ship,
+  ShieldAlert,
+  Car,
+  BatteryCharging,
+  Plane,
+  TrainFront,
   TruckIcon,
   Factory,
   BadgeCheck,
-  Home
+  Home,
 } from "lucide-react";
 import evFireImg from "@/assets/ev-fire-demo.jpg";
 import publicSafetyImg from "@/assets/fire-department-team.jpg";
@@ -22,7 +22,7 @@ import aviationImg from "@/assets/aviation-industry.jpg";
 import railImg from "@/assets/rail-industry.jpg";
 import towingImg from "@/assets/towing-industry.jpg";
 import industrialImg from "@/assets/industrial-commercial.jpg";
-import residentialImg from "@/assets/residential-home-new.jpg";
+import residentialImg from "@/assets/residential-home.jpg";
 
 const Industries = () => {
   const industries = [
@@ -31,154 +31,164 @@ const Industries = () => {
       rank: "#1",
       icon: Plane,
       title: "Aviation",
-      description: "Flight-safe fire suppression solutions for aircraft and airport operations. Meeting stringent aviation safety standards while protecting passengers, crew, and aircraft.",
+      description:
+        "Flight-safe fire suppression solutions for aircraft and airport operations. Meeting stringent aviation safety standards while protecting passengers, crew, and aircraft.",
       features: [
         "Aircraft battery fire protection",
         "Airport cargo facility safety",
         "Passenger device incident response",
-        "Aviation authority certified"
+        "Aviation authority certified",
       ],
-      image: aviationImg
+      image: aviationImg,
     },
     {
       id: 2,
       rank: "#2",
       icon: Car,
       title: "EV & Mobility",
-      description: "Advanced fire suppression for electric vehicles, e-bikes, and personal mobility devices. Proven effectiveness across all battery chemistries with minimal agent usage.",
+      description:
+        "Advanced fire suppression for electric vehicles, e-bikes, and personal mobility devices. Proven effectiveness across all battery chemistries with minimal agent usage.",
       features: [
         "Electric vehicle fire suppression",
         "E-bike and scooter protection",
         "Dealership and service center safety",
-        "Transportation and storage solutions"
+        "Transportation and storage solutions",
       ],
-      image: evFireImg
+      image: evFireImg,
     },
     {
       id: 3,
       rank: "#3",
       icon: Factory,
       title: "Industrial & Commercial",
-      description: "Broad-spectrum protection for manufacturing, warehousing, and commercial facilities including electronics manufacturing plants. Comprehensive solutions for any operation utilizing lithium-ion battery technology.",
+      description:
+        "Broad-spectrum protection for manufacturing, warehousing, and commercial facilities including electronics manufacturing plants. Comprehensive solutions for any operation utilizing lithium-ion battery technology.",
       features: [
         "Manufacturing facility protection",
         "Electronics manufacturing plants",
         "Warehouse and distribution safety",
         "Commercial building systems",
-        "Custom industrial solutions"
+        "Custom industrial solutions",
       ],
-      image: industrialImg
+      image: industrialImg,
     },
     {
       id: 4,
       rank: "#4",
       icon: Ship,
       title: "Maritime",
-      description: "Critical fire protection solutions for port operations, shipping containers, and cargo handling. Specialized systems designed for the unique challenges of maritime battery transport and storage on RORO (Roll on Roll off) and PCTC (Pure Car and Truck Carrier) vessels.",
+      description:
+        "Critical fire protection solutions for port operations, shipping containers, and cargo handling. Specialized systems designed for the unique challenges of maritime battery transport and storage on RORO (Roll on Roll off) and PCTC (Pure Car and Truck Carrier) vessels.",
       features: [
         "Port facility protection",
         "RORO & PCTC vessel safety",
         "Cargo container fire suppression",
         "Lithium battery shipment safety",
-        "Compliance with maritime regulations"
+        "Compliance with maritime regulations",
       ],
-      image: maritimeImg
+      image: maritimeImg,
     },
     {
       id: 5,
       rank: "#5",
       icon: BatteryCharging,
       title: "Power Storage",
-      description: "Advanced fire suppression and monitoring solutions for Battery Energy Storage Systems (BESS) and large-scale energy storage facilities. Purpose-built protection for grid-scale lithium-ion installations.",
+      description:
+        "Advanced fire suppression and monitoring solutions for Battery Energy Storage Systems (BESS) and large-scale energy storage facilities. Purpose-built protection for grid-scale lithium-ion installations.",
       features: [
         "BESS facility protection",
         "Grid-scale battery safety",
         "Energy storage system monitoring",
         "Utility-scale fire suppression",
-        "Emergency response planning"
+        "Emergency response planning",
       ],
-      image: industrialImg
+      image: industrialImg,
     },
     {
       id: 6,
       rank: "#6",
       icon: ShieldAlert,
       title: "Public Safety",
-      description: "Comprehensive solutions for fire departments and law enforcement agencies. Purpose-built equipment to protect first responders facing lithium-ion battery fire emergencies.",
+      description:
+        "Comprehensive solutions for fire departments and law enforcement agencies. Purpose-built equipment to protect first responders facing lithium-ion battery fire emergencies.",
       features: [
         "Fire department response equipment",
         "Law enforcement vehicle protection",
         "Training and support programs",
-        "Rapid deployment systems"
+        "Rapid deployment systems",
       ],
-      image: publicSafetyImg
+      image: publicSafetyImg,
     },
     {
       id: 7,
       rank: "#7",
       icon: TrainFront,
       title: "Rail",
-      description: "Comprehensive fire safety for rail transportation including passenger trains, freight operations, and maintenance facilities. Protection for the growing use of battery-powered rail systems.",
+      description:
+        "Comprehensive fire safety for rail transportation including passenger trains, freight operations, and maintenance facilities. Protection for the growing use of battery-powered rail systems.",
       features: [
         "Passenger train safety systems",
         "Freight cargo protection",
         "Rail yard and depot safety",
-        "Battery-electric locomotive protection"
+        "Battery-electric locomotive protection",
       ],
-      image: railImg
+      image: railImg,
     },
     {
       id: 8,
       rank: "#8",
       icon: Factory,
       title: "Recycling",
-      description: "Essential fire protection for battery recycling facilities and waste management operations. Specialized solutions for the unique hazards of lithium-ion battery processing and disposal.",
+      description:
+        "Essential fire protection for battery recycling facilities and waste management operations. Specialized solutions for the unique hazards of lithium-ion battery processing and disposal.",
       features: [
         "Recycling facility protection",
         "Battery sorting and processing safety",
         "Waste management facility systems",
         "Material recovery operations",
-        "Environmental compliance support"
+        "Environmental compliance support",
       ],
-      image: industrialImg
+      image: industrialImg,
     },
     {
       id: 9,
       rank: "#9",
       icon: TruckIcon,
       title: "Transport",
-      description: "Essential safety equipment for trucking, auto haulers, towing operators and recovery services handling disabled electric vehicles and lithium battery incidents. Comprehensive protection for the transport industry.",
+      description:
+        "Essential safety equipment for trucking, auto haulers, towing operators and recovery services handling disabled electric vehicles and lithium battery incidents. Comprehensive protection for the transport industry.",
       features: [
         "Auto hauler safety equipment",
         "EV towing safety equipment",
         "Recovery vehicle protection",
         "Trucking fleet protection",
         "Storage yard fire prevention",
-        "Operator training support"
+        "Operator training support",
       ],
-      image: towingImg
+      image: towingImg,
     },
     {
       id: 10,
       rank: "#10",
       icon: Home,
       title: "Residential Use",
-      description: "Protect your home and family with portable lithium-ion battery fire suppression solutions. Purpose-built protection for personal devices, power tools, e-bikes, and home energy storage systems.",
+      description:
+        "Protect your home and family with portable lithium-ion battery fire suppression solutions. Purpose-built protection for personal devices, power tools, e-bikes, and home energy storage systems.",
       features: [
         "Portable handheld extinguishers for home use",
         "Protection for personal electronics and devices",
         "E-bike and e-scooter fire safety",
         "Home battery backup system protection",
-        "Easy-to-use solutions for homeowners"
+        "Easy-to-use solutions for homeowners",
       ],
-      image: residentialImg
-    }
+      image: residentialImg,
+    },
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-primary to-primary/90">
         <div className="container mx-auto px-4">
@@ -190,7 +200,8 @@ const Industries = () => {
               Trusted by professionals across critical sectors worldwide
             </p>
             <p className="text-lg text-primary-foreground/80 max-w-3xl mx-auto">
-              From maritime operations to emergency services, our purpose-built lithium-ion battery fire suppression solutions protect lives and assets across diverse industries.
+              From maritime operations to emergency services, our purpose-built lithium-ion battery fire suppression
+              solutions protect lives and assets across diverse industries.
             </p>
           </div>
         </div>
@@ -203,14 +214,13 @@ const Industries = () => {
             {industries.map((industry) => {
               const IconComponent = industry.icon;
               return (
-                <Card key={industry.id} className="border-2 hover:border-accent hover:shadow-2xl transition-all duration-300">
+                <Card
+                  key={industry.id}
+                  className="border-2 hover:border-accent hover:shadow-2xl transition-all duration-300"
+                >
                   {industry.image && (
                     <div className="aspect-video relative overflow-hidden">
-                      <img 
-                        src={industry.image} 
-                        alt={industry.title}
-                        className="w-full h-full object-cover"
-                      />
+                      <img src={industry.image} alt={industry.title} className="w-full h-full object-cover" />
                       <div className="absolute top-4 left-4 bg-accent text-accent-foreground text-sm font-bold px-3 py-1 rounded">
                         {industry.rank}
                       </div>
@@ -222,15 +232,11 @@ const Industries = () => {
                         <IconComponent className="h-6 w-6 text-accent" />
                       </div>
                       <div>
-                        {!industry.image && (
-                          <div className="text-sm font-bold text-accent mb-1">{industry.rank}</div>
-                        )}
+                        {!industry.image && <div className="text-sm font-bold text-accent mb-1">{industry.rank}</div>}
                         <h3 className="text-2xl font-heading font-bold text-primary">{industry.title}</h3>
                       </div>
                     </div>
-                    <p className="text-foreground/80 mb-4">
-                      {industry.description}
-                    </p>
+                    <p className="text-foreground/80 mb-4">{industry.description}</p>
                     <div className="space-y-2">
                       {industry.features.map((feature, idx) => (
                         <div key={idx} className="flex items-start gap-2">
@@ -265,7 +271,10 @@ const Industries = () => {
             </Button>
           </div>
           <p className="mt-6 text-primary-foreground/90">
-            Or call us at <a href="tel:1-833-466-5835" className="text-accent font-semibold hover:underline">1-833-ion-ktek</a>
+            Or call us at{" "}
+            <a href="tel:1-833-466-5835" className="text-accent font-semibold hover:underline">
+              1-833-ion-ktek
+            </a>
           </p>
         </div>
       </section>

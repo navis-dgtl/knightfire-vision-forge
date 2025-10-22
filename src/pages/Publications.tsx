@@ -60,12 +60,31 @@ const Publications = () => {
                     <p className="text-foreground/70 mb-4">
                       Featured article: "Redline Fire Solutions rolls out dual agent system..." - Stephen Knight, CEO of KnightTek, discusses our partnership with Redline and the innovative dual-agent approach to lithium-ion battery fire safety.
                     </p>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Note: Please upload the Fire Magazine article PDF to enable viewing and download functionality.
-                    </p>
-                    <Button variant="outline" disabled>
-                      View Article (PDF Upload Required)
-                    </Button>
+                    <div className="flex gap-3">
+                      <Button 
+                        asChild 
+                        className="bg-accent text-accent-foreground hover:bg-accent/90"
+                      >
+                        <a 
+                          href="/publications/fire-magazine-september-2025.pdf" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          View Article
+                        </a>
+                      </Button>
+                      <Button 
+                        asChild 
+                        variant="outline"
+                      >
+                        <a 
+                          href="/publications/fire-magazine-september-2025.pdf" 
+                          download="Fire_Magazine_September_2025_KnightTek.pdf"
+                        >
+                          Download PDF
+                        </a>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </CardContent>

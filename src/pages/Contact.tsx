@@ -81,54 +81,16 @@ const Contact = () => {
           </div>
 
           <Card className="border-0 shadow-lg">
-            <CardContent className="p-8">
-              {isBrochureRequest ? (
-                <>
-                  <div className="flex items-center gap-3 mb-6">
-                    <Download className="h-8 w-8 text-accent" />
-                    <h2 className="text-2xl font-heading font-bold text-primary">Request Your Product Brochure</h2>
-                  </div>
-                  <p className="text-foreground/70 mb-6">
-                    Please provide your information below and we'll send you the Thermal Stop & Thermal Shield product brochure immediately.
-                  </p>
-                  <form onSubmit={handleBrochureSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <Input placeholder="First Name *" required />
-                      <Input placeholder="Last Name *" required />
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <Input type="email" placeholder="Email *" required />
-                      <Input type="tel" placeholder="Phone *" required />
-                    </div>
-                    <Input placeholder="Company Name *" required />
-                    <Input placeholder="Job Title" />
-                    <Textarea placeholder="How do you plan to use our products? (optional)" rows={4} />
-                    <Button type="submit" size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                      <Download className="h-5 w-5 mr-2" />
-                      Download Brochure
-                    </Button>
-                  </form>
-                </>
-              ) : (
-                <>
-                  <h2 className="text-2xl font-heading font-bold mb-6 text-primary">Send Us a Message</h2>
-                  <form onSubmit={handleContactSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <Input placeholder="First Name *" required />
-                      <Input placeholder="Last Name *" required />
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <Input type="email" placeholder="Email *" required />
-                      <Input type="tel" placeholder="Phone *" required />
-                    </div>
-                    <Input placeholder="Company Name" />
-                    <Textarea placeholder="Message *" rows={6} required />
-                    <Button type="submit" size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                      Send Message
-                    </Button>
-                  </form>
-                </>
-              )}
+            <CardContent className="p-4 md:p-8">
+              <h2 className="text-2xl font-heading font-bold mb-6 text-primary">Send Us a Message</h2>
+              <iframe 
+                src="https://nickprince.notion.site/ebd/2943a0ab35f78066b82ad1927998d608" 
+                width="100%" 
+                height="600" 
+                frameBorder="0"
+                className="w-full"
+                title="Contact Form"
+              />
             </CardContent>
           </Card>
         </div>

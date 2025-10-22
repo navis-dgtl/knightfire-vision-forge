@@ -12,7 +12,8 @@ import {
   TrainFront, 
   TruckIcon,
   Factory,
-  BadgeCheck
+  BadgeCheck,
+  Home
 } from "lucide-react";
 import evFireImg from "@/assets/ev-fire-demo.jpg";
 import publicSafetyImg from "@/assets/fire-department-team.jpg";
@@ -21,6 +22,7 @@ import aviationImg from "@/assets/aviation-industry.jpg";
 import railImg from "@/assets/rail-industry.jpg";
 import towingImg from "@/assets/towing-industry.jpg";
 import industrialImg from "@/assets/industrial-commercial.jpg";
+import residentialImg from "@/assets/residential-home.jpg";
 
 const Industries = () => {
   const industries = [
@@ -155,6 +157,21 @@ const Industries = () => {
         "Operator training support"
       ],
       image: towingImg
+    },
+    {
+      id: 10,
+      rank: "#10",
+      icon: Home,
+      title: "Residential Use",
+      description: "Protect your home and family with portable lithium-ion battery fire suppression solutions. Purpose-built protection for personal devices, power tools, e-bikes, and home energy storage systems.",
+      features: [
+        "Portable handheld extinguishers for home use",
+        "Protection for personal electronics and devices",
+        "E-bike and e-scooter fire safety",
+        "Home battery backup system protection",
+        "Easy-to-use solutions for homeowners"
+      ],
+      image: residentialImg
     }
   ];
 

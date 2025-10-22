@@ -4,7 +4,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Shield, Flame, Leaf, Gauge, Users, Award, BadgeCheck, Droplet, Zap } from "lucide-react";
+import { Shield, Flame, Leaf, Gauge, Users, Award, BadgeCheck, Droplet, Zap, Wrench } from "lucide-react";
 import extinguishersGroup from "@/assets/extinguishers-group.png";
 import thermalShieldProduct from "@/assets/thermal-shield-new.jpg";
 import evFireImg from "@/assets/ev-fire-demo.jpg";
@@ -76,7 +76,7 @@ const Index = () => {
             <p className="text-xl text-primary-foreground/90">Purpose-Built for Lithium-Ion Battery Fires</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {/* Thermal Stop Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
               <div className="aspect-square bg-muted flex items-center justify-center p-8">
@@ -150,6 +150,42 @@ const Index = () => {
                 </ul>
                 <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
                   <Link to="/products/thermal-shield">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Custom Engineered Solutions Card */}
+            <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
+              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+                <div className="flex items-center justify-center h-full">
+                  <Wrench className="h-32 w-32 text-accent opacity-20" />
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <Wrench className="h-6 w-6 text-accent" />
+                  <h3 className="text-2xl font-heading font-bold text-primary">Custom Engineered Solutions</h3>
+                </div>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Custom-engineered fire suppression apparatus</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Tailored delivery systems for exact specifications</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Full R&D for your specific project</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">On-site assessment and consultation</span>
+                  </li>
+                </ul>
+                <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                  <Link to="/contact">Contact Our Team</Link>
                 </Button>
               </CardContent>
             </Card>

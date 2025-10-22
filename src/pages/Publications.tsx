@@ -43,10 +43,12 @@ const Publications = () => {
           </div>
 
           {/* Featured Article */}
-          <div className="max-w-4xl mx-auto mt-12">
+          <div className="max-w-4xl mx-auto mt-12 space-y-6">
             <h3 className="text-2xl font-heading font-bold mb-6 text-primary text-center">
               Featured Publications
             </h3>
+            
+            {/* Fire Magazine Article */}
             <Card className="border-2 border-accent/20 hover:shadow-xl transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
@@ -82,6 +84,39 @@ const Publications = () => {
                           download="Fire_Magazine_September_2025_KnightTek.pdf"
                         >
                           Download PDF
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Auto Infos Article */}
+            <Card className="border-2 border-accent/20 hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-accent/10 rounded-lg flex-shrink-0">
+                    <FileText className="h-8 w-8 text-accent" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-heading font-bold mb-2 text-primary">
+                      Three Minutes to Extinguish a Tesla Fire: The Miracle Solution from Nevada
+                    </h4>
+                    <p className="text-foreground/70 mb-4">
+                      Auto Infos (France) covers Redline Fire Solutions' innovative plant-based fire suppression system that can extinguish electric vehicle fires in just three minutes, addressing the critical challenge of lithium-ion battery thermal runaway.
+                    </p>
+                    <div className="flex gap-3">
+                      <Button 
+                        asChild 
+                        className="bg-accent text-accent-foreground hover:bg-accent/90"
+                      >
+                        <a 
+                          href="https://www.auto-infos.fr/article/trois-minutes-pour-eteindre-une-tesla-en-feu-la-solution-miracle-viendrait-du-nevada.287299" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          View Article
                         </a>
                       </Button>
                     </div>

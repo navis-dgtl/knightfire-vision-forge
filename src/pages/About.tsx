@@ -48,8 +48,11 @@ const About = () => {
                 />
                 <h3 className="text-xl font-heading font-bold mb-2 text-primary">Stephen Knight</h3>
                 <p className="text-sm text-muted-foreground mb-3">Founder & CEO</p>
+                <p className="text-sm text-foreground/80 mb-3">
+                  Stephen Knight, Founder and CEO of KnightTek, LLC, brings over 30 years of experience in the oil and gas industry as a petroleum engineer. After witnessing a near-catastrophic fire on a frac location, Stephen recognized the urgent need for improved fire suppression solutions to better protect lives and assets. This pivotal event inspired him to establish a company dedicated to developing advanced technologies for fire safety and prevention.
+                </p>
                 <p className="text-sm text-foreground/80">
-                  Stephen is the founder and CEO of KnightTek, LLC - has over 30 years of experience in fire fighting within the oil and gas industry. As an engineer Stephen has designed and implemented many unique innovative solutions and holds many product patents of his designs.
+                  Throughout his career, Stephen has engineered numerous innovative products and holds multiple patents for his designs. He continues to collaborate closely with industry partners and global insurance leaders, including Lloyd's of London, to advance fire protection standards across high-risk sectors.
                 </p>
               </CardContent>
             </Card>
@@ -78,8 +81,14 @@ const About = () => {
                 />
                 <h3 className="text-xl font-heading font-bold mb-2 text-primary">Miranda Knight</h3>
                 <p className="text-sm text-muted-foreground mb-3">Client Engagement & Brand Development Director</p>
+                <p className="text-sm text-foreground/80 mb-3">
+                  With a diverse background spanning emergency response, healthcare, and business management, Miranda brings a unique blend of operational insight and strategic vision to the company.
+                </p>
+                <p className="text-sm text-foreground/80 mb-3">
+                  As KnightTEK's Client Engagement & Brand Development Director, she leads initiatives that connect industries, partners, and clients with innovative fire-suppression solutions that protect lives, property, and the environment.
+                </p>
                 <p className="text-sm text-foreground/80">
-                  With a background in emergency medical services and dentistry, Miranda brings hands-on safety experience and leadership to KnightTek. Holding a Bachelor's degree in Human Resource Management, she embodies KnightTek's commitment to Safety Through Innovative Solutions while leading customer service operations, ensuring every client experience reflects our top priority — our customers.
+                  Dynamic, results-driven, and deeply committed to safety through innovation, Miranda plays a key role in expanding KnightTEK's worldwide footprint and strengthening relationships with distributors, dealers, and global partners.
                 </p>
               </CardContent>
             </Card>

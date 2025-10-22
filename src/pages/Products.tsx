@@ -87,11 +87,10 @@ const Products = () => {
                 />
               </div>
               <CardContent className="p-6">
-                <div className="flex items-center gap-2 mb-2">
+                <div className="flex items-center gap-2 mb-4">
                   <Shield className="h-6 w-6 text-accent" />
                   <h3 className="text-2xl font-heading font-bold text-primary">Thermal Shield</h3>
                 </div>
-                <p className="text-sm text-muted-foreground mb-4 font-semibold">Containment & Prevention Solution</p>
                 <p className="text-foreground/80 mb-6">
                   High-performance gel barrier that locks down compromised batteries, preventing re-ignition and trapping toxic gases during transport or storage. The final containment solution.
                 </p>

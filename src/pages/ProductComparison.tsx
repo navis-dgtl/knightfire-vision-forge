@@ -51,10 +51,21 @@ const ProductComparison = () => {
             </table>
           </div>
 
-          <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-              <Link to="/contact">Need Help Choosing? Contact Us</Link>
-            </Button>
+          <div className="mt-12 bg-gradient-to-br from-accent/5 to-primary/5 border-2 border-accent/20 rounded-lg p-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4 text-primary">
+              Optimal Performance Together
+            </h2>
+            <p className="text-lg text-foreground/80 mb-6 max-w-3xl mx-auto">
+              Thermal Stop and Thermal Shield are designed to work as a complete dual-agent system. Use Thermal Stop for rapid fire suppression, then apply Thermal Shield for containment and safe transport. Together, they provide comprehensive protection against lithium-ion battery fires from initial incident through final disposal.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                <Link to="/products/comparison">Compare Products</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <Link to="/contact">Contact Us</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

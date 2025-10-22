@@ -29,8 +29,7 @@ const ThermalShield = () => {
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">Thermal Shield</h1>
-              <p className="text-xl mb-6 text-primary-foreground/90">The Premier Solution for Lithium-Ion Battery Fire Transport & Containment</p>
+              <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">Thermal Shield</h1>
               
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 bg-primary-foreground/10 px-4 py-2 rounded-full">

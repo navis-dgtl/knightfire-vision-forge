@@ -22,7 +22,7 @@ import aviationImg from "@/assets/aviation-industry.jpg";
 import railImg from "@/assets/rail-industry.jpg";
 import towingImg from "@/assets/towing-industry.jpg";
 import industrialImg from "@/assets/industrial-commercial.jpg";
-import residentialImg from "@/assets/residential-home.jpg";
+import residentialImg from "@/assets/residential-home-new.jpg";
 
 const Industries = () => {
   const industries = [

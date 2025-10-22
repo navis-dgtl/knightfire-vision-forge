@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { Shield, Flame, Leaf, Gauge, Users, Award, BadgeCheck, Droplet, Zap, Wrench } from "lucide-react";
 import extinguishersGroup from "@/assets/extinguishers-group.png";
 import thermalShieldProduct from "@/assets/thermal-shield-new.jpg";
+import customSolutionsImg from "@/assets/custom-solutions.jpg";
 import evFireImg from "@/assets/ev-fire-demo.jpg";
 import publicSafetyImg from "@/assets/fire-department-team.jpg";
 import maritimeImg from "@/assets/maritime-port.jpg";
@@ -157,9 +158,11 @@ const Index = () => {
             {/* Custom Engineered Solutions Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
               <div className="aspect-square bg-muted flex items-center justify-center p-8">
-                <div className="flex items-center justify-center h-full">
-                  <Wrench className="h-32 w-32 text-accent opacity-20" />
-                </div>
+                <img
+                  src={customSolutionsImg}
+                  alt="Custom Engineered Fire Suppression Solutions"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-4">

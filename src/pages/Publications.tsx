@@ -142,7 +142,7 @@ const Publications = () => {
             </div>
             
             <p className="text-lg text-foreground/80 text-center mb-8 max-w-3xl mx-auto">
-              Our burn demonstration videos from KnightTek showcasing thermal runaway containment in action. These videos demonstrate the real-world effectiveness of our dual-agent system.
+              Watch our burn demonstration videos from KnightTek showcasing thermal runaway containment in action. These videos demonstrate the real-world effectiveness of our dual-agent system.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8">

@@ -17,7 +17,7 @@ const Contact = () => {
   const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
 
   useEffect(() => {
-    if (searchParams.get('brochure') === 'true') {
+    if (searchParams.get("brochure") === "true") {
       setIsBrochureRequest(true);
     }
   }, [searchParams]);
@@ -29,28 +29,26 @@ const Contact = () => {
       description: "Your brochure download will begin shortly.",
     });
     // Download the brochure
-    window.open('/brochures/thermal-stop-thermal-shield-brochure.pdf', '_blank');
+    window.open("/brochures/thermal-stop-thermal-shield-brochure.pdf", "_blank");
   };
 
   const handleCheckboxChange = (product: string, checked: boolean) => {
-    setSelectedProducts(prev => 
-      checked 
-        ? [...prev, product] 
-        : prev.filter(p => p !== product)
-    );
+    setSelectedProducts((prev) => (checked ? [...prev, product] : prev.filter((p) => p !== product)));
   };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      
+
       <section className="pt-32 pb-16 bg-gradient-navy text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">
             {isBrochureRequest ? "Download Product Brochure" : "Contact KnightTek"}
           </h1>
           <p className="text-xl text-primary-foreground/90">
-            {isBrochureRequest ? "Fill out the form below to receive your brochure" : "We're here to help you protect lives"}
+            {isBrochureRequest
+              ? "Fill out the form below to receive your brochure"
+              : "We're here to help you protect lives"}
           </p>
         </div>
       </section>
@@ -62,7 +60,9 @@ const Contact = () => {
               <CardContent className="p-6">
                 <Phone className="h-12 w-12 text-accent mx-auto mb-4" />
                 <h3 className="font-heading font-bold mb-2 text-primary">Call Us</h3>
-                <a href="tel:1-833-466-5835" className="text-lg text-primary hover:text-accent hover:underline">1-833-ion-ktek</a>
+                <a href="tel:1-833-466-5835" className="text-lg text-primary hover:text-accent hover:underline">
+                  1-833-ion-ktek
+                </a>
               </CardContent>
             </Card>
 
@@ -70,7 +70,12 @@ const Contact = () => {
               <CardContent className="p-6">
                 <Mail className="h-12 w-12 text-accent mx-auto mb-4" />
                 <h3 className="font-heading font-bold mb-2 text-primary">Email Us</h3>
-                <a href="mailto:info@ktekglobal.com" className="text-lg text-primary hover:text-accent hover:underline break-all">info@ktekglobal.com</a>
+                <a
+                  href="mailto:info@ktekglobal.com"
+                  className="text-lg text-primary hover:text-accent hover:underline break-all"
+                >
+                  info@ktekglobal.com
+                </a>
               </CardContent>
             </Card>
 
@@ -92,7 +97,8 @@ const Contact = () => {
                     <h2 className="text-2xl font-heading font-bold text-primary">Request Your Product Brochure</h2>
                   </div>
                   <p className="text-foreground/70 mb-6">
-                    Please provide your information below and we'll send you the Thermal Stop & Thermal Shield product brochure immediately.
+                    Please provide your information below and we'll send you the Thermal Stop & Thermal Shield product
+                    brochure immediately.
                   </p>
                   <form onSubmit={handleBrochureSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
@@ -106,7 +112,11 @@ const Contact = () => {
                     <Input placeholder="Company Name *" required />
                     <Input placeholder="Job Title" />
                     <Textarea placeholder="How do you plan to use our products? (optional)" rows={4} />
-                    <Button type="submit" size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                    >
                       <Download className="h-5 w-5 mr-2" />
                       Download Brochure
                     </Button>
@@ -115,90 +125,47 @@ const Contact = () => {
               ) : (
                 <>
                   <h2 className="text-2xl font-heading font-bold mb-6 text-primary">Send Us a Message</h2>
-                  <form 
-                    action="https://formspree.io/f/xwprgeno" 
-                    method="POST" 
-                    className="space-y-6"
-                  >
+                  <form action="https://formspree.io/f/xwprgeno" method="POST" className="space-y-6">
                     {/* First & Last Name */}
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label
-                          className="block font-heading font-medium text-sm text-foreground"
-                          htmlFor="firstName"
-                        >
+                        <label className="block font-heading font-medium text-sm text-foreground" htmlFor="firstName">
                           First Name <span className="text-destructive">*</span>
                         </label>
-                        <Input 
-                          id="firstName"
-                          name="firstName"
-                          type="text"
-                          required 
-                        />
+                        <Input id="firstName" name="firstName" type="text" required />
                       </div>
 
                       <div className="space-y-2">
-                        <label
-                          className="block font-heading font-medium text-sm text-foreground"
-                          htmlFor="lastName"
-                        >
+                        <label className="block font-heading font-medium text-sm text-foreground" htmlFor="lastName">
                           Last Name <span className="text-destructive">*</span>
                         </label>
-                        <Input 
-                          id="lastName"
-                          name="lastName"
-                          type="text"
-                          required 
-                        />
+                        <Input id="lastName" name="lastName" type="text" required />
                       </div>
                     </div>
 
                     {/* Email and Phone */}
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label
-                          className="block font-heading font-medium text-sm text-foreground"
-                          htmlFor="email"
-                        >
+                        <label className="block font-heading font-medium text-sm text-foreground" htmlFor="email">
                           Email <span className="text-destructive">*</span>
                         </label>
-                        <Input 
-                          id="email"
-                          name="email"
-                          type="email"
-                          required 
-                        />
+                        <Input id="email" name="email" type="email" required />
                       </div>
 
                       <div className="space-y-2">
-                        <label
-                          className="block font-heading font-medium text-sm text-foreground"
-                          htmlFor="phone"
-                        >
+                        <label className="block font-heading font-medium text-sm text-foreground" htmlFor="phone">
                           Phone Number <span className="text-destructive">*</span>
                         </label>
-                        <Input 
-                          id="phone"
-                          name="phone"
-                          type="tel"
-                          required 
-                        />
+                        <Input id="phone" name="phone" type="tel" required />
                       </div>
                     </div>
 
                     {/* Company (Optional) */}
                     <div className="space-y-2">
-                      <label
-                        className="block font-heading font-medium text-sm text-foreground"
-                        htmlFor="company"
-                      >
+                      <label className="block font-heading font-medium text-sm text-foreground" htmlFor="company">
                         Company
                       </label>
-                      <Input 
-                        id="company"
-                        name="company"
-                        type="text"
-                      />
+                      <Input id="company" name="company" type="text" />
                     </div>
 
                     {/* Product Interest Checkboxes */}
@@ -242,13 +209,30 @@ const Contact = () => {
                             id="customSolution"
                             name="products[]"
                             value="Custom Engineered Solution"
-                            onCheckedChange={(checked) => handleCheckboxChange("Custom Engineered Solution", checked as boolean)}
+                            onCheckedChange={(checked) =>
+                              handleCheckboxChange("Custom Engineered Solution", checked as boolean)
+                            }
                           />
                           <label
                             htmlFor="customSolution"
                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
                           >
                             Custom Engineered Solution
+                          </label>
+                        </div>
+
+                        <div className="flex items-center space-x-3">
+                          <Checkbox
+                            id="other"
+                            name="products[]"
+                            value="Other"
+                            onCheckedChange={(checked) => handleCheckboxChange("Other", checked as boolean)}
+                          />
+                          <label
+                            htmlFor="other"
+                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+                          >
+                            Other
                           </label>
                         </div>
                       </div>
@@ -258,24 +242,16 @@ const Contact = () => {
 
                     {/* Additional Details */}
                     <div className="space-y-2">
-                      <label
-                        className="block font-heading font-medium text-sm text-foreground"
-                        htmlFor="details"
-                      >
+                      <label className="block font-heading font-medium text-sm text-foreground" htmlFor="details">
                         Any specific questions, details, or information you'd like to add for our team?
                       </label>
-                      <Textarea
-                        id="details"
-                        name="details"
-                        rows={5}
-                        className="resize-y"
-                      />
+                      <Textarea id="details" name="details" rows={5} className="resize-y" />
                     </div>
 
                     {/* Submit Button */}
-                    <Button 
-                      type="submit" 
-                      size="lg" 
+                    <Button
+                      type="submit"
+                      size="lg"
                       className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
                     >
                       Send Message

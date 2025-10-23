@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Phone, Mail, Download, Clock } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
@@ -13,6 +14,7 @@ const Contact = () => {
   const [searchParams] = useSearchParams();
   const { toast } = useToast();
   const [isBrochureRequest, setIsBrochureRequest] = useState(false);
+  const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
 
   useEffect(() => {
     if (searchParams.get('brochure') === 'true') {
@@ -30,13 +32,14 @@ const Contact = () => {
     window.open('/brochures/thermal-stop-thermal-shield-brochure.pdf', '_blank');
   };
 
-  const handleContactSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
+  const handleCheckboxChange = (product: string, checked: boolean) => {
+    setSelectedProducts(prev => 
+      checked 
+        ? [...prev, product] 
+        : prev.filter(p => p !== product)
+    );
   };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -82,15 +85,204 @@ const Contact = () => {
 
           <Card className="border-0 shadow-lg">
             <CardContent className="p-4 md:p-8">
-              <h2 className="text-2xl font-heading font-bold mb-6 text-primary">Send Us a Message</h2>
-              <iframe 
-                src="https://nickprince.notion.site/ebd/2943a0ab35f78066b82ad1927998d608" 
-                width="100%" 
-                height="600" 
-                frameBorder="0"
-                className="w-full"
-                title="Contact Form"
-              />
+              {isBrochureRequest ? (
+                <>
+                  <div className="flex items-center gap-3 mb-6">
+                    <Download className="h-8 w-8 text-accent" />
+                    <h2 className="text-2xl font-heading font-bold text-primary">Request Your Product Brochure</h2>
+                  </div>
+                  <p className="text-foreground/70 mb-6">
+                    Please provide your information below and we'll send you the Thermal Stop & Thermal Shield product brochure immediately.
+                  </p>
+                  <form onSubmit={handleBrochureSubmit} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <Input placeholder="First Name *" required />
+                      <Input placeholder="Last Name *" required />
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <Input type="email" placeholder="Email *" required />
+                      <Input type="tel" placeholder="Phone *" required />
+                    </div>
+                    <Input placeholder="Company Name *" required />
+                    <Input placeholder="Job Title" />
+                    <Textarea placeholder="How do you plan to use our products? (optional)" rows={4} />
+                    <Button type="submit" size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                      <Download className="h-5 w-5 mr-2" />
+                      Download Brochure
+                    </Button>
+                  </form>
+                </>
+              ) : (
+                <>
+                  <h2 className="text-2xl font-heading font-bold mb-6 text-primary">Send Us a Message</h2>
+                  <form 
+                    action="https://formspree.io/f/xwprgeno" 
+                    method="POST" 
+                    className="space-y-6"
+                  >
+                    {/* First & Last Name */}
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <label
+                          className="block font-heading font-medium text-sm text-foreground"
+                          htmlFor="firstName"
+                        >
+                          First Name <span className="text-destructive">*</span>
+                        </label>
+                        <Input 
+                          id="firstName"
+                          name="firstName"
+                          type="text"
+                          required 
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <label
+                          className="block font-heading font-medium text-sm text-foreground"
+                          htmlFor="lastName"
+                        >
+                          Last Name <span className="text-destructive">*</span>
+                        </label>
+                        <Input 
+                          id="lastName"
+                          name="lastName"
+                          type="text"
+                          required 
+                        />
+                      </div>
+                    </div>
+
+                    {/* Email and Phone */}
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <label
+                          className="block font-heading font-medium text-sm text-foreground"
+                          htmlFor="email"
+                        >
+                          Email <span className="text-destructive">*</span>
+                        </label>
+                        <Input 
+                          id="email"
+                          name="email"
+                          type="email"
+                          required 
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <label
+                          className="block font-heading font-medium text-sm text-foreground"
+                          htmlFor="phone"
+                        >
+                          Phone Number <span className="text-destructive">*</span>
+                        </label>
+                        <Input 
+                          id="phone"
+                          name="phone"
+                          type="tel"
+                          required 
+                        />
+                      </div>
+                    </div>
+
+                    {/* Company (Optional) */}
+                    <div className="space-y-2">
+                      <label
+                        className="block font-heading font-medium text-sm text-foreground"
+                        htmlFor="company"
+                      >
+                        Company
+                      </label>
+                      <Input 
+                        id="company"
+                        name="company"
+                        type="text"
+                      />
+                    </div>
+
+                    {/* Product Interest Checkboxes */}
+                    <div className="space-y-3">
+                      <label className="block font-heading font-medium text-sm text-foreground">
+                        What product(s) are you interested in? <span className="text-destructive">*</span>
+                      </label>
+                      <div className="space-y-3 pl-1">
+                        <div className="flex items-center space-x-3">
+                          <Checkbox
+                            id="thermalShield"
+                            name="products[]"
+                            value="Thermal Shield"
+                            onCheckedChange={(checked) => handleCheckboxChange("Thermal Shield", checked as boolean)}
+                          />
+                          <label
+                            htmlFor="thermalShield"
+                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+                          >
+                            Thermal Shield
+                          </label>
+                        </div>
+
+                        <div className="flex items-center space-x-3">
+                          <Checkbox
+                            id="thermalStop"
+                            name="products[]"
+                            value="Thermal Stop"
+                            onCheckedChange={(checked) => handleCheckboxChange("Thermal Stop", checked as boolean)}
+                          />
+                          <label
+                            htmlFor="thermalStop"
+                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+                          >
+                            Thermal Stop
+                          </label>
+                        </div>
+
+                        <div className="flex items-center space-x-3">
+                          <Checkbox
+                            id="customSolution"
+                            name="products[]"
+                            value="Custom Engineered Solution"
+                            onCheckedChange={(checked) => handleCheckboxChange("Custom Engineered Solution", checked as boolean)}
+                          />
+                          <label
+                            htmlFor="customSolution"
+                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+                          >
+                            Custom Engineered Solution
+                          </label>
+                        </div>
+                      </div>
+                      {/* Hidden input to submit selected products to Formspree */}
+                      <input type="hidden" name="products" value={selectedProducts.join(", ")} />
+                    </div>
+
+                    {/* Additional Details */}
+                    <div className="space-y-2">
+                      <label
+                        className="block font-heading font-medium text-sm text-foreground"
+                        htmlFor="details"
+                      >
+                        Any specific questions, details, or information you'd like to add for our team?
+                      </label>
+                      <Textarea
+                        id="details"
+                        name="details"
+                        rows={5}
+                        className="resize-y"
+                      />
+                    </div>
+
+                    {/* Submit Button */}
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                    >
+                      Send Message
+                    </Button>
+                  </form>
+                </>
+              )}
             </CardContent>
           </Card>
         </div>

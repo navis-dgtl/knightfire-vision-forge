@@ -104,7 +104,7 @@ const Publications = () => {
                       Three Minutes to Extinguish a Tesla Fire: The Miracle Solution from Nevada
                     </h4>
                     <p className="text-foreground/70 mb-4">
-                      Auto Infos (France) covers KnightTek' innovative plant-based fire suppression system that can extinguish electric vehicle fires in just three minutes, addressing the critical challenge of lithium-ion battery thermal runaway.
+                      Auto Infos (France) covers KnightTek's innovative plant-based fire suppression system that can extinguish electric vehicle fires in just three minutes, addressing the critical challenge of lithium-ion battery thermal runaway.
                     </p>
                     <div className="flex gap-3">
                       <Button 

@@ -141,6 +141,10 @@ const Publications = () => {
               </h2>
             </div>
             
+            <p className="text-lg text-foreground/80 text-center mb-8 max-w-3xl mx-auto">
+              Our burn demonstration videos from KnightTek showcasing thermal runaway containment in action. These videos demonstrate the real-world effectiveness of our dual-agent system.
+            </p>
+            
             <div className="grid md:grid-cols-2 gap-8">
               {/* Video 1 */}
               <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
@@ -221,38 +225,6 @@ const Publications = () => {
         </div>
       </section>
 
-      {/* Lithium-Ion Battery Fire Resources Section */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary">
-                Lithium-Ion Battery Fire Resources
-              </h2>
-              <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-                Watch our comprehensive demonstration and burn videos showcasing the effectiveness of our thermal management solutions in real-world scenarios.
-              </p>
-            </div>
-
-            <Card className="border-2 border-accent/20 bg-card">
-              <CardContent className="p-8 text-center">
-                <div className="inline-block p-4 bg-accent/10 rounded-full mb-4">
-                  <Video className="h-8 w-8 text-accent" />
-                </div>
-                <h3 className="text-xl font-heading font-bold mb-3 text-primary">
-                  Demonstration & Burn Videos
-                </h3>
-                <p className="text-foreground/70 mb-6 max-w-2xl mx-auto">
-                  Coming soon: Our burn demonstration videos from KnightTek showcasing thermal runaway containment in action. These videos will demonstrate the real-world effectiveness of our dual-agent system.
-                </p>
-                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                  <Link to="/contact">Request Demo Information</Link>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

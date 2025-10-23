@@ -60,7 +60,7 @@ const Publications = () => {
                       Fire Magazine - September 2025
                     </h4>
                     <p className="text-foreground/70 mb-4">
-                      Featured article: "Redline Fire Solutions rolls out dual agent system..." - Stephen Knight, CEO of KnightTek, discusses our partnership with Redline and the innovative dual-agent approach to lithium-ion battery fire safety.
+                      Featured article: "KnightTek rolls out dual agent system..." - Stephen Knight, CEO of KnightTek, discusses the innovative dual-agent approach to lithium-ion battery fire safety.
                     </p>
                     <div className="flex gap-3">
                       <Button 
@@ -104,7 +104,7 @@ const Publications = () => {
                       Three Minutes to Extinguish a Tesla Fire: The Miracle Solution from Nevada
                     </h4>
                     <p className="text-foreground/70 mb-4">
-                      Auto Infos (France) covers Redline Fire Solutions' innovative plant-based fire suppression system that can extinguish electric vehicle fires in just three minutes, addressing the critical challenge of lithium-ion battery thermal runaway.
+                      Auto Infos (France) covers KnightTek' innovative plant-based fire suppression system that can extinguish electric vehicle fires in just three minutes, addressing the critical challenge of lithium-ion battery thermal runaway.
                     </p>
                     <div className="flex gap-3">
                       <Button 
@@ -243,7 +243,7 @@ const Publications = () => {
                   Demonstration & Burn Videos
                 </h3>
                 <p className="text-foreground/70 mb-6 max-w-2xl mx-auto">
-                  Coming soon: Our burn demonstration videos from KnightTek, Redline, and Amipar showcasing thermal runaway containment in action. These fully-edited videos will demonstrate the real-world effectiveness of our dual-agent system.
+                  Coming soon: Our burn demonstration videos from KnightTek showcasing thermal runaway containment in action. These videos will demonstrate the real-world effectiveness of our dual-agent system.
                 </p>
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                   <Link to="/contact">Request Demo Information</Link>

@@ -65,7 +65,7 @@ const About = () => {
                   className="w-32 h-32 rounded-full object-cover mx-auto mb-4"
                 />
                 <h3 className="text-xl font-heading font-bold mb-2 text-primary">Matt Hill</h3>
-                <p className="text-sm text-muted-foreground mb-3">Vice President</p>
+                <p className="text-sm text-muted-foreground mb-3">VP of Business Development</p>
                 <p className="text-sm text-foreground/80">
                   Matt serves as Vice President with over 20 years of experience in the Oil and Gas industry. As a Safety Leader and board member of AADE, SPE, IADC, Oilfield Christian Fellowship, and API, he is an entrepreneur, podcast host, and speaker specializing in business development, automation, research, and energy advocacy.
                 </p>

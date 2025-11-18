@@ -4,7 +4,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Shield, Flame, Leaf, Gauge, Users, Award, BadgeCheck, Droplet, Zap, Wrench } from "lucide-react";
+import { Shield, Flame, Leaf, Gauge, Users, Award, BadgeCheck, Droplet, Zap, Wrench, Settings } from "lucide-react";
 import extinguishersGroup from "@/assets/extinguishers-group.png";
 import thermalShieldProduct from "@/assets/thermal-shield-new.jpg";
 import customSolutionsImg from "@/assets/custom-solutions.jpg";
@@ -158,11 +158,7 @@ const Index = () => {
             {/* Custom Engineered Solutions Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
               <div className="aspect-square bg-muted flex items-center justify-center p-8">
-                <img
-                  src={customSolutionsImg}
-                  alt="Custom Engineered Fire Suppression Solutions"
-                  className="w-full h-full object-contain"
-                />
+                <Settings className="w-32 h-32 text-accent" strokeWidth={1.5} />
               </div>
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-4">

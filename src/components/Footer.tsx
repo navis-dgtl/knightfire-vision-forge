@@ -18,7 +18,7 @@ const Footer = () => {
               </h3>
             </div>
             <p className="text-sm text-primary-foreground/80 mb-4">
-              Exclusive global distributor of Thermal Stop and Thermal Shield - revolutionary lithium-ion battery fire suppression solutions.
+              Exclusive global distributor of Thermal Stop™ and Thermal Shield™ - revolutionary lithium-ion battery fire suppression solutions.
             </p>
             <div className="flex gap-4">
               <a href="https://www.facebook.com/share/1c5Tfhwg5v/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
@@ -42,12 +42,12 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/products/thermal-stop" className="hover:text-accent transition-colors">
-                  Thermal Stop
+                  Thermal Stop™
                 </Link>
               </li>
               <li>
                 <Link to="/products/thermal-shield" className="hover:text-accent transition-colors">
-                  Thermal Shield
+                  Thermal Shield™
                 </Link>
               </li>
               <li>

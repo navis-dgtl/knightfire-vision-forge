@@ -26,14 +26,14 @@ const ThermalStop = () => {
             <ChevronRight className="h-4 w-4 mx-2" />
             <Link to="/products/thermal-stop" className="hover:text-accent">Products</Link>
             <ChevronRight className="h-4 w-4 mx-2" />
-            <span>Thermal Stop</span>
+            <span>Thermal Stop™</span>
           </div>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 mb-4">
                 <Shield className="h-8 w-8 text-accent" />
-                <h1 className="text-4xl md:text-5xl font-heading font-bold">Thermal Stop</h1>
+                <h1 className="text-4xl md:text-5xl font-heading font-bold">Thermal Stop™</h1>
               </div>
               <p className="text-xl mb-6 text-primary-foreground/90">Lithium-Ion Battery Fire Extinguishing Agent</p>
               
@@ -68,7 +68,7 @@ const ThermalStop = () => {
             <div className="aspect-square bg-muted rounded-lg flex items-center justify-center p-8">
               <img 
                 src={extinguishersGroup} 
-                alt="Thermal Stop and Thermal Shield Extinguisher Range" 
+                alt="Thermal Stop™ and Thermal Shield™ Extinguisher Range" 
                 className="w-full h-full object-contain"
               />
             </div>
@@ -81,16 +81,16 @@ const ThermalStop = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-heading font-bold mb-6 text-primary">What is Thermal Stop?</h2>
+              <h2 className="text-3xl font-heading font-bold mb-6 text-primary">What is Thermal Stop™?</h2>
               <div className="space-y-4 text-foreground/80">
                 <p>
-                  Thermal Stop is your go-to solution for extinguishing lithium-ion battery fires caused by thermal runaway. As the only suppressant on the market specifically designed to eliminate thermal runaway, Thermal Stop sets a new standard in fire safety.
+                  Thermal Stop™ is your go-to solution for extinguishing lithium-ion battery fires caused by thermal runaway. As the only suppressant on the market specifically designed to eliminate thermal runaway, Thermal Stop™ sets a new standard in fire safety.
                 </p>
                 <p>
-                  This all-natural, non-hazardous solution operates in three powerful ways: its superior endothermic properties provide super-fast cooling, effectively halting thermal runaway within just 30 seconds. By interrupting the chemical reactions within the battery, Thermal Stop blocks dangerous off-gassing and encapsulates harmful PFAS chemicals found in some lithium-ion batteries.
+                  This all-natural, non-hazardous solution operates in three powerful ways: its superior endothermic properties provide super-fast cooling, effectively halting thermal runaway within just 30 seconds. By interrupting the chemical reactions within the battery, Thermal Stop™ blocks dangerous off-gassing and encapsulates harmful PFAS chemicals found in some lithium-ion batteries.
                 </p>
                 <p>
-                  Designed for efficiency, Thermal Stop requires only a small amount to tackle large fires, making cleanup a breeze. With its patent-pending formulation, you can trust Thermal Stop to deliver exceptional performance when it matters most.
+                  Designed for efficiency, Thermal Stop™ requires only a small amount to tackle large fires, making cleanup a breeze. With its patent-pending formulation, you can trust Thermal Stop™ to deliver exceptional performance when it matters most.
                 </p>
               </div>
             </div>
@@ -131,7 +131,7 @@ const ThermalStop = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary">How Thermal Stop Works</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary">How Thermal Stop™ Works</h2>
             <p className="text-xl text-foreground/70">Three-Part Suppression System</p>
           </div>
 
@@ -199,7 +199,7 @@ const ThermalStop = () => {
                       </AccordionTrigger>
                       <AccordionContent>
                         <div className="flex justify-center py-4">
-                          <img src={thermalStop2ltr} alt="Thermal Stop 2 Liter" className="h-64 w-auto object-contain" />
+                          <img src={thermalStop2ltr} alt="Thermal Stop™ 2 Liter" className="h-64 w-auto object-contain" />
                         </div>
                       </AccordionContent>
                     </AccordionItem>
@@ -210,7 +210,7 @@ const ThermalStop = () => {
                       </AccordionTrigger>
                       <AccordionContent>
                         <div className="flex justify-center py-4">
-                          <img src={thermalStop6ltr} alt="Thermal Stop 6 Liter" className="h-64 w-auto object-contain" />
+                          <img src={thermalStop6ltr} alt="Thermal Stop™ 6 Liter" className="h-64 w-auto object-contain" />
                         </div>
                       </AccordionContent>
                     </AccordionItem>
@@ -221,7 +221,7 @@ const ThermalStop = () => {
                       </AccordionTrigger>
                       <AccordionContent>
                         <div className="flex justify-center py-4">
-                          <img src={thermalStop9ltr} alt="Thermal Stop 9 Liter" className="h-64 w-auto object-contain" />
+                          <img src={thermalStop9ltr} alt="Thermal Stop™ 9 Liter" className="h-64 w-auto object-contain" />
                         </div>
                       </AccordionContent>
                     </AccordionItem>
@@ -232,7 +232,7 @@ const ThermalStop = () => {
                       </AccordionTrigger>
                       <AccordionContent>
                         <div className="flex justify-center py-4">
-                          <img src={thermalStop5gal} alt="Thermal Stop 5 Gallon" className="h-64 w-auto object-contain" />
+                          <img src={thermalStop5gal} alt="Thermal Stop™ 5 Gallon" className="h-64 w-auto object-contain" />
                         </div>
                       </AccordionContent>
                     </AccordionItem>
@@ -243,7 +243,7 @@ const ThermalStop = () => {
                       </AccordionTrigger>
                       <AccordionContent>
                         <div className="flex justify-center py-4">
-                          <img src={thermalStop55gal} alt="Thermal Stop 55 Gallon" className="h-64 w-auto object-contain" />
+                          <img src={thermalStop55gal} alt="Thermal Stop™ 55 Gallon" className="h-64 w-auto object-contain" />
                         </div>
                       </AccordionContent>
                     </AccordionItem>
@@ -315,10 +315,10 @@ const ThermalStop = () => {
             <Card className="border-2">
               <CardContent className="p-6">
                 <h3 className="text-xl font-heading font-bold mb-3 text-primary">
-                  Q: How do you get Thermal Stop into the batteries?
+                  Q: How do you get Thermal Stop™ into the batteries?
                 </h3>
                 <p className="text-foreground/80">
-                  Responding fire departments typically arrive on scene within 5-8 minutes. By that time, the battery has often burned through the floorboard. Handle the situation as a normal vehicle fire—suppress the flames, and once knocked down, inject Thermal Stop's patented plant-based solution into the burned area. Less than 5 gallons of Thermal Stop has been proven to stop EV thermal runaway.
+                  Responding fire departments typically arrive on scene within 5-8 minutes. By that time, the battery has often burned through the floorboard. Handle the situation as a normal vehicle fire—suppress the flames, and once knocked down, inject Thermal Stop™'s patented plant-based solution into the burned area. Less than 5 gallons of Thermal Stop™ has been proven to stop EV thermal runaway.
                 </p>
               </CardContent>
             </Card>
@@ -329,7 +329,7 @@ const ThermalStop = () => {
                   Q: How can we handle runoff after contact with hazardous materials?
                 </h3>
                 <p className="text-foreground/80">
-                  Thermal Stop's efficiency means that typically 5 gallons or less is needed to handle EV thermal runaway events. Standard absorbents carried on fire apparatus will be more than enough for cleanup.
+                  Thermal Stop™'s efficiency means that typically 5 gallons or less is needed to handle EV thermal runaway events. Standard absorbents carried on fire apparatus will be more than enough for cleanup.
                 </p>
               </CardContent>
             </Card>
@@ -337,10 +337,10 @@ const ThermalStop = () => {
             <Card className="border-2">
               <CardContent className="p-6">
                 <h3 className="text-xl font-heading font-bold mb-3 text-primary">
-                  Q: Can Thermal Stop be used in engine AB tanks?
+                  Q: Can Thermal Stop™ be used in engine AB tanks?
                 </h3>
                 <p className="text-foreground/80">
-                  Absolutely. As EVs become more common and regulations phase out internal combustion vehicles, fire departments may want to designate or add a "C" tank for Thermal Stop. It can also be used in your existing A or B tanks as EV demographics shift across the U.S.
+                  Absolutely. As EVs become more common and regulations phase out internal combustion vehicles, fire departments may want to designate or add a "C" tank for Thermal Stop™. It can also be used in your existing A or B tanks as EV demographics shift across the U.S.
                 </p>
               </CardContent>
             </Card>
@@ -358,12 +358,12 @@ const ThermalStop = () => {
               <div className="flex items-center gap-4">
                 <Shield className="h-12 w-12 text-accent flex-shrink-0" />
                 <div className="flex-1">
-                  <h3 className="text-2xl font-heading font-bold mb-2 text-primary">Thermal Shield</h3>
+                  <h3 className="text-2xl font-heading font-bold mb-2 text-primary">Thermal Shield™</h3>
                   <p className="text-foreground/70 mb-4">
                     Revolutionary gel solution for battery fire containment and transport. Provides thermal shielding for storage and safe handling of damaged batteries.
                   </p>
                   <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-                    <Link to="/products/thermal-shield">Learn More About Thermal Shield</Link>
+                    <Link to="/products/thermal-shield">Learn More About Thermal Shield™</Link>
                   </Button>
                 </div>
               </div>
@@ -375,7 +375,7 @@ const ThermalStop = () => {
       {/* Bottom CTA */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Ready to Order Thermal Stop?</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Ready to Order Thermal Stop™?</h2>
           <p className="text-xl mb-8 text-primary-foreground/90">
             Contact us today to request a quote or schedule a product demonstration
           </p>

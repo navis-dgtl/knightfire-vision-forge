@@ -24,12 +24,12 @@ const ThermalShield = () => {
           <div className="flex items-center text-sm mb-6 text-primary-foreground/80">
             <Link to="/" className="hover:text-accent">Home</Link>
             <ChevronRight className="h-4 w-4 mx-2" />
-            <span>Thermal Shield</span>
+            <span>Thermal Shield™</span>
           </div>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">Thermal Shield</h1>
+              <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">Thermal Shield™</h1>
               
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 bg-primary-foreground/10 px-4 py-2 rounded-full">
@@ -56,7 +56,7 @@ const ThermalShield = () => {
             </div>
 
             <div className="bg-background rounded-lg p-8">
-              <img src={thermalShieldProduct} alt="Thermal Shield" className="w-full h-auto" />
+              <img src={thermalShieldProduct} alt="Thermal Shield™" className="w-full h-auto" />
             </div>
           </div>
         </div>
@@ -67,16 +67,16 @@ const ThermalShield = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-heading font-bold mb-6 text-primary">What is Thermal Shield?</h2>
+              <h2 className="text-3xl font-heading font-bold mb-6 text-primary">What is Thermal Shield™?</h2>
               <div className="space-y-4 text-foreground/80">
                 <p>
-                  Extinguishing the flames doesn't mean the danger is gone. Thermal Shield is the only gel suppressant proven to prevent reignition during the high-risk transport and storage phases.
+                  Extinguishing the flames doesn't mean the danger is gone. Thermal Shield™ is the only gel suppressant proven to prevent reignition during the high-risk transport and storage phases.
                 </p>
                 <p>
                   Applied directly to damaged battery packs, it delivers instant surface cooling, seals breaches to stop chemical activity, and traps hazardous PFAS vapors before they can escape.
                 </p>
                 <p>
-                  This all-natural, non-hazardous gel is certified to NFPA 18 standards and goes on easily, requiring only a small amount for full containment. Quick to clean up and engineered for safety, Thermal Shield's patent-pending formulation keeps compromised batteries stable, secure, and under control until they can be safely disposed of or repaired.
+                  This all-natural, non-hazardous gel is certified to NFPA 18 standards and goes on easily, requiring only a small amount for full containment. Quick to clean up and engineered for safety, Thermal Shield™'s patent-pending formulation keeps compromised batteries stable, secure, and under control until they can be safely disposed of or repaired.
                 </p>
               </div>
             </div>
@@ -114,7 +114,7 @@ const ThermalShield = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary">How Thermal Shield Works</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary">How Thermal Shield™ Works</h2>
             <p className="text-xl text-foreground/70">Three-Part Containment System</p>
           </div>
 
@@ -182,7 +182,7 @@ const ThermalShield = () => {
                       </AccordionTrigger>
                       <AccordionContent>
                         <div className="flex justify-center py-4">
-                          <img src={thermalStop2ltr} alt="Thermal Shield 2 Liter" className="h-64 w-auto object-contain" />
+                          <img src={thermalStop2ltr} alt="Thermal Shield™ 2 Liter" className="h-64 w-auto object-contain" />
                         </div>
                       </AccordionContent>
                     </AccordionItem>
@@ -193,7 +193,7 @@ const ThermalShield = () => {
                       </AccordionTrigger>
                       <AccordionContent>
                         <div className="flex justify-center py-4">
-                          <img src={thermalStop6ltr} alt="Thermal Shield 6 Liter" className="h-64 w-auto object-contain" />
+                          <img src={thermalStop6ltr} alt="Thermal Shield™ 6 Liter" className="h-64 w-auto object-contain" />
                         </div>
                       </AccordionContent>
                     </AccordionItem>
@@ -204,7 +204,7 @@ const ThermalShield = () => {
                       </AccordionTrigger>
                       <AccordionContent>
                         <div className="flex justify-center py-4">
-                          <img src={thermalStop9ltr} alt="Thermal Shield 9 Liter" className="h-64 w-auto object-contain" />
+                          <img src={thermalStop9ltr} alt="Thermal Shield™ 9 Liter" className="h-64 w-auto object-contain" />
                         </div>
                       </AccordionContent>
                     </AccordionItem>
@@ -215,7 +215,7 @@ const ThermalShield = () => {
                       </AccordionTrigger>
                       <AccordionContent>
                         <div className="flex justify-center py-4">
-                          <img src={thermalStop5gal} alt="Thermal Shield 5 Gallon" className="h-64 w-auto object-contain" />
+                          <img src={thermalStop5gal} alt="Thermal Shield™ 5 Gallon" className="h-64 w-auto object-contain" />
                         </div>
                       </AccordionContent>
                     </AccordionItem>
@@ -226,7 +226,7 @@ const ThermalShield = () => {
                       </AccordionTrigger>
                       <AccordionContent>
                         <div className="flex justify-center py-4">
-                          <img src={thermalStop55gal} alt="Thermal Shield 55 Gallon" className="h-64 w-auto object-contain" />
+                          <img src={thermalStop55gal} alt="Thermal Shield™ 55 Gallon" className="h-64 w-auto object-contain" />
                         </div>
                       </AccordionContent>
                     </AccordionItem>
@@ -295,7 +295,7 @@ const ThermalShield = () => {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-heading font-bold mb-4 text-primary">The Complete Dual-Agent System</h2>
             <p className="text-xl text-foreground/70">
-              Thermal Stop + Thermal Shield work together to provide comprehensive lithium-ion battery fire protection
+              Thermal Stop™ + Thermal Shield™ work together to provide comprehensive lithium-ion battery fire protection
             </p>
           </div>
           
@@ -304,12 +304,12 @@ const ThermalShield = () => {
               <div className="flex items-center gap-4">
                 <Shield className="h-12 w-12 text-accent flex-shrink-0" />
                 <div className="flex-1">
-                  <h3 className="text-2xl font-heading font-bold mb-2 text-primary">Thermal Stop</h3>
+                  <h3 className="text-2xl font-heading font-bold mb-2 text-primary">Thermal Stop™</h3>
                   <p className="text-foreground/70 mb-4">
                     Rapid-response liquid agent that penetrates battery cells to halt thermal runaway in under 30 seconds. Your first line of defense against lithium-ion battery fires.
                   </p>
                   <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-                    <Link to="/products/thermal-stop">Learn More About Thermal Stop</Link>
+                    <Link to="/products/thermal-stop">Learn More About Thermal Stop™</Link>
                   </Button>
                 </div>
               </div>
@@ -321,7 +321,7 @@ const ThermalShield = () => {
       {/* Bottom CTA */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Ready to Order Thermal Shield?</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Ready to Order Thermal Shield™?</h2>
           <p className="text-xl mb-8 text-primary-foreground/90">
             Contact us today to request a quote or learn more about our dual-agent fire suppression system
           </p>

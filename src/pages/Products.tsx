@@ -38,14 +38,14 @@ const Products = () => {
               <div className="aspect-square bg-muted flex items-center justify-center p-8">
                 <img 
                   src={extinguishersGroup} 
-                  alt="Thermal Stop and Thermal Shield Extinguisher Range" 
+                  alt="Thermal Stop™ and Thermal Shield™ Extinguisher Range" 
                   className="w-full h-full object-contain"
                 />
               </div>
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-2">
                   <Flame className="h-6 w-6 text-accent" />
-                  <h3 className="text-2xl font-heading font-bold text-primary">Thermal Stop</h3>
+                  <h3 className="text-2xl font-heading font-bold text-primary">Thermal Stop™</h3>
                 </div>
                 <p className="text-sm text-muted-foreground mb-4 font-semibold">Extinguishing Agent</p>
                 <p className="text-foreground/80 mb-6">
@@ -82,14 +82,14 @@ const Products = () => {
               <div className="aspect-square bg-muted flex items-center justify-center p-8">
                 <img 
                   src={thermalShieldProduct} 
-                  alt="Thermal Shield Containment Solution" 
+                  alt="Thermal Shield™ Containment Solution" 
                   className="w-full h-full object-contain"
                 />
               </div>
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <Shield className="h-6 w-6 text-accent" />
-                  <h3 className="text-2xl font-heading font-bold text-primary">Thermal Shield</h3>
+                  <h3 className="text-2xl font-heading font-bold text-primary">Thermal Shield™</h3>
                 </div>
                 <p className="text-foreground/80 mb-6">
                   High-performance gel barrier that locks down compromised batteries, preventing re-ignition and trapping toxic gases during transport or storage. The final containment solution.

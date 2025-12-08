@@ -11,7 +11,7 @@ const ProductComparison = () => {
       
       <section className="pt-32 pb-16 bg-gradient-navy text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">Thermal Stop vs. Thermal Shield</h1>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">Thermal Stop™ vs. Thermal Shield™</h1>
           <p className="text-xl text-primary-foreground/90">Choose the Right Solution for Your Needs</p>
         </div>
       </section>
@@ -23,8 +23,8 @@ const ProductComparison = () => {
               <thead>
                 <tr className="bg-primary text-primary-foreground">
                   <th className="p-4 text-left font-heading">Feature</th>
-                  <th className="p-4 text-center font-heading">Thermal Stop</th>
-                  <th className="p-4 text-center font-heading">Thermal Shield</th>
+                  <th className="p-4 text-center font-heading">Thermal Stop™</th>
+                  <th className="p-4 text-center font-heading">Thermal Shield™</th>
                 </tr>
               </thead>
               <tbody>
@@ -56,7 +56,7 @@ const ProductComparison = () => {
               Optimal Performance Together
             </h2>
             <p className="text-lg text-foreground/80 mb-6 max-w-3xl mx-auto">
-              Thermal Stop and Thermal Shield are designed to work as a complete dual-agent system. Use Thermal Stop for rapid fire suppression, then apply Thermal Shield for containment and safe transport. Together, they provide comprehensive protection against lithium-ion battery fires from initial incident through final disposal.
+              Thermal Stop™ and Thermal Shield™ are designed to work as a complete dual-agent system. Use Thermal Stop™ for rapid fire suppression, then apply Thermal Shield™ for containment and safe transport. Together, they provide comprehensive protection against lithium-ion battery fires from initial incident through final disposal.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">

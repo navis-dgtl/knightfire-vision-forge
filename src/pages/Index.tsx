@@ -31,7 +31,7 @@ const Index = () => {
                 Protecting Lives with Advanced Fire Suppression Technology
               </h2>
               <p className="text-lg mb-4 text-foreground/80">
-                KnightTek is the exclusive global distributor of Thermal Stop and Thermal Shield, revolutionary
+                KnightTek is the exclusive global distributor of Thermal Stop™ and Thermal Shield™, revolutionary
                 lithium-ion battery fire suppression solutions developed through 7+ years of dedicated research and
                 development.
               </p>
@@ -83,14 +83,14 @@ const Index = () => {
               <div className="aspect-square bg-muted flex items-center justify-center p-8">
                 <img
                   src={extinguishersGroup}
-                  alt="Thermal Stop and Thermal Shield Extinguisher Range"
+                  alt="Thermal Stop™ and Thermal Shield™ Extinguisher Range"
                   className="w-full h-full object-contain"
                 />
               </div>
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-2">
                   <Flame className="h-6 w-6 text-accent" />
-                  <h3 className="text-2xl font-heading font-bold text-primary">Thermal Stop</h3>
+                  <h3 className="text-2xl font-heading font-bold text-primary">Thermal Stop™</h3>
                 </div>
                 <p className="text-sm text-muted-foreground mb-4 font-semibold">Extinguishing Agent</p>
                 <ul className="space-y-2 mb-6">
@@ -122,14 +122,14 @@ const Index = () => {
               <div className="aspect-square bg-muted flex items-center justify-center p-8">
                 <img
                   src={thermalShieldProduct}
-                  alt="Thermal Shield Containment Solution"
+                  alt="Thermal Shield™ Containment Solution"
                   className="w-full h-full object-contain"
                 />
               </div>
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <Shield className="h-6 w-6 text-accent" />
-                  <h3 className="text-2xl font-heading font-bold text-primary">Thermal Shield</h3>
+                  <h3 className="text-2xl font-heading font-bold text-primary">Thermal Shield™</h3>
                 </div>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start gap-2">

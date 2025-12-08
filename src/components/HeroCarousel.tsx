@@ -26,16 +26,16 @@ const slides: Slide[] = [
   },
   {
     id: 2,
-    title: "Thermal Stop: Extinguish Lithium-Ion Battery Fires",
+    title: "Thermal Stop™: Extinguish Lithium-Ion Battery Fires",
     subtitle: "The only suppressant specifically designed to eliminate thermal runaway",
-    cta: "Learn More About Thermal Stop",
+    cta: "Learn More About Thermal Stop™",
     ctaLink: "/products/thermal-stop",
   },
   {
     id: 3,
-    title: "Thermal Shield: Prevent & Contain Battery Fires",
+    title: "Thermal Shield™: Prevent & Contain Battery Fires",
     subtitle: "Revolutionary solution for lithium-ion battery fire transport and containment",
-    cta: "Learn More About Thermal Shield",
+    cta: "Learn More About Thermal Shield™",
     ctaLink: "/products/thermal-shield",
   },
   {

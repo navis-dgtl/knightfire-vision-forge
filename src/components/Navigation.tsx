@@ -17,8 +17,8 @@ const Navigation = () => {
       path: "/products",
       submenu: [
         { name: "All Products", path: "/products" },
-        { name: "Thermal Stop", path: "/products/thermal-stop" },
-        { name: "Thermal Shield", path: "/products/thermal-shield" },
+        { name: "Thermal Stop™", path: "/products/thermal-stop" },
+        { name: "Thermal Shield™", path: "/products/thermal-shield" },
         { name: "Product Comparison", path: "/products/comparison" },
       ]
     },

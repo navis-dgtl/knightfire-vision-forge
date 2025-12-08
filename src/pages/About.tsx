@@ -24,7 +24,7 @@ const About = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-heading font-bold mb-6 text-primary">Our Mission</h2>
           <p className="text-lg text-foreground/80 mb-4">
-            KnightTek, LLC is the exclusive global distributor for Thermal Stop and Thermal Shield. We are dedicated to providing the most advanced lithium-ion battery fire suppression solutions to first responders and industry professionals worldwide.
+            KnightTek, LLC is the exclusive global distributor for Thermal Stop™ and Thermal Shield™. We are dedicated to providing the most advanced lithium-ion battery fire suppression solutions to first responders and industry professionals worldwide.
           </p>
           <p className="text-lg text-foreground/80 mb-8">
             With 7+ years of R&D, our products represent purpose-built technology specifically engineered for lithium-ion battery fires—achieving a 100% success rate across all battery chemistries.

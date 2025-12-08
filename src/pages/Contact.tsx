@@ -97,7 +97,7 @@ const Contact = () => {
                     <h2 className="text-2xl font-heading font-bold text-primary">Request Your Product Brochure</h2>
                   </div>
                   <p className="text-foreground/70 mb-6">
-                    Please provide your information below and we'll send you the Thermal Stop & Thermal Shield product
+                    Please provide your information below and we'll send you the Thermal Stop™ & Thermal Shield™ product
                     brochure immediately.
                   </p>
                   <form onSubmit={handleBrochureSubmit} className="space-y-6">
@@ -178,14 +178,14 @@ const Contact = () => {
                           <Checkbox
                             id="thermalShield"
                             name="products[]"
-                            value="Thermal Shield"
-                            onCheckedChange={(checked) => handleCheckboxChange("Thermal Shield", checked as boolean)}
+                            value="Thermal Shield™"
+                            onCheckedChange={(checked) => handleCheckboxChange("Thermal Shield™", checked as boolean)}
                           />
                           <label
                             htmlFor="thermalShield"
                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
                           >
-                            Thermal Shield
+                            Thermal Shield™
                           </label>
                         </div>
 
@@ -193,14 +193,14 @@ const Contact = () => {
                           <Checkbox
                             id="thermalStop"
                             name="products[]"
-                            value="Thermal Stop"
-                            onCheckedChange={(checked) => handleCheckboxChange("Thermal Stop", checked as boolean)}
+                            value="Thermal Stop™"
+                            onCheckedChange={(checked) => handleCheckboxChange("Thermal Stop™", checked as boolean)}
                           />
                           <label
                             htmlFor="thermalStop"
                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
                           >
-                            Thermal Stop
+                            Thermal Stop™
                           </label>
                         </div>
 

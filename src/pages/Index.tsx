@@ -37,7 +37,7 @@ const Index = () => {
               </p>
               <p className="text-lg mb-4 text-foreground/80">
                 Our products are specifically designed—not repurposed—to combat lithium-ion battery thermal runaway
-                fires with a 100% success rate across all battery chemistries.
+                fires across all battery chemistries.
               </p>
               <p className="text-lg mb-6 text-foreground/80">
                 With NFPA 18 certification and EPA Safer Choice listing, we provide the most advanced, environmentally
@@ -226,7 +226,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-heading font-bold mb-3 text-primary">Proven Performance</h3>
                 <p className="text-foreground/80">
-                  100% success rate across hundreds of tests with all battery chemistries. NFPA 18 certified.
+                  Proven effective across hundreds of tests with all battery chemistries. NFPA 18 certified.
                 </p>
               </CardContent>
             </Card>

@@ -18,7 +18,7 @@ const slides: Slide[] = [
   {
     id: 1,
     title: "Advanced Lithium-Ion Battery Fire Solutions",
-    subtitle: "NFPA 18 Certified. EPA Safer Choice Listed. 100% Success Rate.",
+    subtitle: "NFPA 18 Certified. EPA Safer Choice Listed.",
     cta: "Explore Products",
     ctaLink: "/products/thermal-stop",
     secondaryCta: "Request Consultation",

@@ -23,7 +23,7 @@ const Products = () => {
               Purpose-Built Lithium-Ion Battery Fire Solutions
             </p>
             <p className="text-lg text-primary-foreground/80 max-w-3xl mx-auto">
-              7+ years of dedicated research and development creating solutions specifically designed for lithium-ion battery thermal runaway fires. NFPA 18 certified. EPA Safer Choice listed. 100% success rate.
+              7+ years of dedicated research and development creating solutions specifically designed for lithium-ion battery thermal runaway fires. NFPA 18 certified. EPA Safer Choice listed.
             </p>
           </div>
         </div>

@@ -16,6 +16,15 @@ interface Slide {
 
 const slides: Slide[] = [
   {
+    id: 0,
+    title: "Become a KnightTek™ Distributor",
+    subtitle: "We're expanding our U.S. distribution network. Partner with us to bring advanced lithium-ion fire suppression solutions to your region.",
+    cta: "Apply Now",
+    ctaLink: "/distributors",
+    secondaryCta: "Learn More",
+    secondaryCtaLink: "/distributors",
+  },
+  {
     id: 1,
     title: "Advanced Lithium-Ion Battery Fire Solutions",
     subtitle: "NFPA 18 Certified. EPA Safer Choice Listed.",

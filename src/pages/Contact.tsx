@@ -125,7 +125,7 @@ const Contact = () => {
               ) : (
                 <>
                   <h2 className="text-2xl font-heading font-bold mb-6 text-primary">Send Us a Message</h2>
-                  <form action="https://formspree.io/f/xwprgeno" method="POST" className="space-y-6">
+                  <form action="https://formspree.io/f/mzdagajq" method="POST" className="space-y-6">
                     {/* First & Last Name */}
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">

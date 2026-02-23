@@ -315,7 +315,7 @@ const Products = () => {
                     Coming Soon
                   </span>
                 </div>
-                <div className="aspect-video bg-muted/50 flex items-center justify-center p-4">
+                <div className="aspect-square bg-muted/50 flex items-center justify-center p-4">
                   <img src={personalTravelPack} alt="Thermal Stop™ Personal Travel Pack" className="w-full h-full object-contain" />
                 </div>
                 <CardContent className="p-6">

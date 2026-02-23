@@ -190,9 +190,12 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 flex flex-wrap gap-4 justify-center">
             <Button asChild size="lg" variant="outline-light">
-              <Link to="/products/comparison">Compare All Products</Link>
+              <Link to="/products">View All Products</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline-light">
+              <Link to="/products/comparison">Compare Products</Link>
             </Button>
           </div>
         </div>

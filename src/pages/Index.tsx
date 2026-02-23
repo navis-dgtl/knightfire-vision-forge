@@ -36,7 +36,7 @@ const Index = () => {
                 development.
               </p>
               <p className="text-lg mb-4 text-foreground/80">
-                Our products are specifically designed—not repurposed—to combat lithium-ion battery thermal runaway
+                The products are specifically designed—not repurposed—to combat lithium-ion battery thermal runaway
                 fires across all battery chemistries.
               </p>
               <p className="text-lg mb-6 text-foreground/80">
@@ -45,7 +45,7 @@ const Index = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                  <Link to="/products/thermal-stop">Explore Our Products</Link>
+                  <Link to="/products/thermal-stop">Explore Products</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline">
                   <Link to="/about">Learn About Us</Link>
@@ -192,7 +192,7 @@ const Index = () => {
 
           <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline-light">
-              <Link to="/products/comparison">Compare Our Products</Link>
+              <Link to="/products/comparison">Compare All Products</Link>
             </Button>
           </div>
         </div>

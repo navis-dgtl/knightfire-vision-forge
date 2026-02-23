@@ -3,7 +3,9 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Shield, Flame, BadgeCheck, ArrowRight, Droplets, Zap, Box, SprayCan } from "lucide-react";
+import { Shield, Flame, BadgeCheck, ArrowRight, Droplets, Zap, Box, SprayCan, X } from "lucide-react";
+import { useState } from "react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import extinguishersGroup from "@/assets/extinguishers-group.png";
 import thermalShieldProduct from "@/assets/thermal-shield-new.jpg";
 import suppressitImg from "@/assets/suppressit.jpg";
@@ -15,6 +17,8 @@ import thermalBoxBack from "@/assets/thermal-box-back.png";
 import thermalBoxLid from "@/assets/thermal-box-lid.png";
 
 const Products = () => {
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -283,12 +287,12 @@ const Products = () => {
                   </span>
                 </div>
                 <div className="p-4 bg-white">
-                  <img src={thermalBoxMain} alt="KnightTek™ Lithium-Ion Thermal Runaway Box" className="w-full h-auto object-contain max-h-64 mx-auto" />
+                  <img src={thermalBoxMain} alt="KnightTek™ Lithium-Ion Thermal Runaway Box" className="w-full h-auto object-contain max-h-64 mx-auto cursor-pointer hover:opacity-90 transition-opacity" onClick={() => setLightboxImage(thermalBoxMain)} />
                 </div>
                 <div className="grid grid-cols-3 gap-1 px-4 pb-4 bg-white">
-                  <img src={thermalBoxOpen} alt="Thermal Runaway Box open view" className="w-full h-20 object-contain bg-muted/20 rounded" />
-                  <img src={thermalBoxBack} alt="Thermal Runaway Box back view" className="w-full h-20 object-contain bg-muted/20 rounded" />
-                  <img src={thermalBoxLid} alt="Thermal Runaway Box lid detail" className="w-full h-20 object-contain bg-muted/20 rounded" />
+                  <img src={thermalBoxOpen} alt="Thermal Runaway Box open view" className="w-full h-20 object-contain bg-muted/20 rounded cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setLightboxImage(thermalBoxOpen)} />
+                  <img src={thermalBoxBack} alt="Thermal Runaway Box back view" className="w-full h-20 object-contain bg-muted/20 rounded cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setLightboxImage(thermalBoxBack)} />
+                  <img src={thermalBoxLid} alt="Thermal Runaway Box lid detail" className="w-full h-20 object-contain bg-muted/20 rounded cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setLightboxImage(thermalBoxLid)} />
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-heading font-bold text-primary mb-1">KnightTek™ Lithium-Ion Thermal Runaway Box</h3>
@@ -379,6 +383,14 @@ const Products = () => {
       </section>
 
       <Footer />
+      {/* Image Lightbox */}
+      <Dialog open={!!lightboxImage} onOpenChange={() => setLightboxImage(null)}>
+        <DialogContent className="max-w-3xl p-2 bg-white">
+          {lightboxImage && (
+            <img src={lightboxImage} alt="Enlarged product view" className="w-full h-auto object-contain max-h-[80vh]" />
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

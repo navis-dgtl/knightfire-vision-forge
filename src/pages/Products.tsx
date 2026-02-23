@@ -12,6 +12,7 @@ import suppressitImg from "@/assets/suppressit.jpg";
 import firequitImg from "@/assets/firequit.png";
 import elixir5Img from "@/assets/elixir5.png";
 import thermalBoxMain from "@/assets/thermal-box-main.png";
+import personalTravelPack from "@/assets/personal-travel-pack.png";
 import thermalBoxOpen from "@/assets/thermal-box-open.png";
 import thermalBoxBack from "@/assets/thermal-box-back.png";
 import thermalBoxLid from "@/assets/thermal-box-lid.png";
@@ -314,18 +315,15 @@ const Products = () => {
                     Coming Soon
                   </span>
                 </div>
-                <div className="aspect-video bg-muted/50 flex items-center justify-center">
-                  <div className="text-center text-muted-foreground">
-                    <SprayCan className="h-16 w-16 mx-auto mb-2 opacity-50" />
-                    <p className="text-sm">Product Image Coming Soon</p>
-                  </div>
+                <div className="aspect-video bg-muted/50 flex items-center justify-center p-4">
+                  <img src={personalTravelPack} alt="Thermal Stop™ Personal Travel Pack" className="w-full h-full object-contain" />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-heading font-bold text-primary mb-1">Thermal Stop™ Personal Canister</h3>
+                  <h3 className="text-xl font-heading font-bold text-primary mb-1">Thermal Stop™ Personal Travel Pack</h3>
                   <p className="text-sm text-accent font-semibold mb-2">Patent Pending</p>
                   <p className="text-sm text-foreground/70 italic mb-3">Protection in the Palm of Your Hand.</p>
                   <p className="text-foreground/80 mb-4 text-sm">
-                    A compact, portable fire suppression canister designed for personal use while traveling. Purpose-built for addressing lithium-ion thermal runaway events from small devices on aircraft and in transit. Carry-on friendly.
+                    A compact, portable fire suppression travel pack designed for personal use while traveling. Purpose-built for addressing lithium-ion thermal runaway events from small devices on aircraft and in transit. Carry-on friendly.
                   </p>
                   <p className="text-sm font-semibold text-primary">Available to order soon.</p>
                 </CardContent>

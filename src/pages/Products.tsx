@@ -3,9 +3,12 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Shield, Flame, BadgeCheck, ArrowRight } from "lucide-react";
+import { Shield, Flame, BadgeCheck, ArrowRight, Droplets, Zap, Box, SprayCan } from "lucide-react";
 import extinguishersGroup from "@/assets/extinguishers-group.png";
 import thermalShieldProduct from "@/assets/thermal-shield-new.jpg";
+import suppressitImg from "@/assets/suppressit.jpg";
+import firequitImg from "@/assets/firequit.png";
+import elixir5Img from "@/assets/elixir5.png";
 
 const Products = () => {
   return (
@@ -23,7 +26,7 @@ const Products = () => {
               Purpose-Built Lithium-Ion Battery Fire Solutions
             </p>
             <p className="text-lg text-primary-foreground/80 max-w-3xl mx-auto">
-              7+ years of dedicated research and development creating solutions specifically designed for lithium-ion battery thermal runaway fires. NFPA 18 certified. EPA Safer Choice listed.
+              7+ years of development by Redline Fire Solutions, specifically designed for lithium-ion battery thermal runaway fire solutions. NFPA 18 certified. EPA Safer Choice listed. Additional certifications and testing are ongoing globally.
             </p>
           </div>
         </div>
@@ -32,7 +35,7 @@ const Products = () => {
       {/* Products Grid */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-8">
             {/* Thermal Stop Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow group">
               <div className="aspect-square bg-muted flex items-center justify-center p-8">
@@ -87,10 +90,11 @@ const Products = () => {
                 />
               </div>
               <CardContent className="p-6">
-                <div className="flex items-center gap-2 mb-4">
+                <div className="flex items-center gap-2 mb-2">
                   <Shield className="h-6 w-6 text-accent" />
                   <h3 className="text-2xl font-heading font-bold text-primary">Thermal Shield™</h3>
                 </div>
+                <p className="text-sm text-muted-foreground mb-4 font-semibold">Containment Gel</p>
                 <p className="text-foreground/80 mb-6">
                   High-performance gel barrier that locks down compromised batteries, preventing re-ignition and trapping toxic gases during transport or storage. The final containment solution.
                 </p>
@@ -119,19 +123,204 @@ const Products = () => {
                 </Button>
               </CardContent>
             </Card>
+
+            {/* Suppressit Card */}
+            <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow group">
+              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+                <img 
+                  src={suppressitImg} 
+                  alt="Suppressit™ Non-Fluorinated Foam" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <Droplets className="h-6 w-6 text-accent" />
+                  <h3 className="text-2xl font-heading font-bold text-primary">Suppressit™</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4 font-semibold">Non-Fluorinated Foam</p>
+                <p className="text-foreground/80 mb-6">
+                  Expertly designed to replace AFFF, providing a low-viscosity, high-performance solution that seamlessly integrates into existing systems without changing proportioning plates. First-in-class self-healing ability ensures high safety standards during suppression and rescue operations.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Direct AFFF replacement</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">NFPA 11 certified, meets UL 162 standards</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Third-party PFAS-free tested</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Works with existing proportioning systems</span>
+                  </li>
+                </ul>
+                <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90 group-hover:shadow-lg transition-all">
+                  <Link to="/products/suppressit" className="flex items-center justify-center gap-2">
+                    Learn More <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Fire Quit Card */}
+            <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow group">
+              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+                <img 
+                  src={firequitImg} 
+                  alt="Fire Quit™ Wetting Agent" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <Flame className="h-6 w-6 text-accent" />
+                  <h3 className="text-2xl font-heading font-bold text-primary">Fire Quit™</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4 font-semibold">Wetting Agent</p>
+                <p className="text-foreground/80 mb-6">
+                  A cutting-edge wetting agent designed to tackle Class A, B, D, and K fires. Reduces water's surface tension to spread and penetrate deeply into wood, vegetation, and other combustible surfaces. Stands alone without requiring combination with other chemicals.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Class A, B, D, and K fires</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">NFPA 18 third-party certified</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Third-party PFAS-free tested</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">No additional chemicals required</span>
+                  </li>
+                </ul>
+                <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90 group-hover:shadow-lg transition-all">
+                  <Link to="/products/fire-quit" className="flex items-center justify-center gap-2">
+                    Learn More <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Elixir 5 Card */}
+            <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow group">
+              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+                <img 
+                  src={elixir5Img} 
+                  alt="Elixir 5™ Extinguisher Solution" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <Zap className="h-6 w-6 text-accent" />
+                  <h3 className="text-2xl font-heading font-bold text-primary">Elixir 5™</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4 font-semibold">All-Class Wetting Agent — Extinguisher Refill Solution</p>
+                <p className="text-foreground/80 mb-6">
+                  An advanced wetting agent formulated for all fire classes including Class C electrical fires. Non-conductive for safety around electrical hazards. Pre-measured, ready-to-use extinguisher refill solution.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">All fire classes: A, B, C, D, and K</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">NFPA 18 third-party certified</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Third-party PFAS-free tested</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Non-conductive, extinguisher ready</span>
+                  </li>
+                </ul>
+                <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90 group-hover:shadow-lg transition-all">
+                  <Link to="/products/elixir-5" className="flex items-center justify-center gap-2">
+                    Learn More <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
           </div>
+
+          {/* Redline attribution */}
+          <p className="text-sm text-muted-foreground text-center max-w-7xl mx-auto mb-16 italic">
+            Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Exclusive Global Distributor.
+          </p>
 
           {/* Coming Soon Products */}
           <div className="max-w-6xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8 text-center text-primary">
-              New Products Coming Soon
-            </h2>
-            <Card className="border-2 border-accent/20 bg-gradient-to-br from-accent/5 to-primary/5">
-              <CardContent className="p-12 text-center">
-                <p className="text-xl text-foreground/70 mb-4">Expanding Our Fire Safety Solutions</p>
-                <p className="text-foreground/60">Stay tuned for exciting new additions to our product lineup</p>
-              </CardContent>
-            </Card>
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">
+                Coming Soon
+              </h2>
+              <p className="text-lg text-foreground/70 mt-2">Our R&D Team Has Been Hard at Work</p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Thermal Runaway Containment Box */}
+              <Card className="border-2 border-dashed border-accent/30 bg-gradient-to-br from-accent/5 to-primary/5 relative overflow-hidden">
+                <div className="absolute top-4 right-4 z-10">
+                  <span className="bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-full">
+                    Coming Soon
+                  </span>
+                </div>
+                <div className="aspect-video bg-muted/50 flex items-center justify-center">
+                  <div className="text-center text-muted-foreground">
+                    <Box className="h-16 w-16 mx-auto mb-2 opacity-50" />
+                    <p className="text-sm">Product Image Coming Soon</p>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-heading font-bold text-primary mb-1">KnightTek™ Lithium-Ion Thermal Runaway Box</h3>
+                  <p className="text-sm text-accent font-semibold mb-2">Patent Pending</p>
+                  <p className="text-sm text-foreground/70 italic mb-3">Rapid Containment. Immediate Suppression. Proactive Protection.</p>
+                  <p className="text-foreground/80 mb-4 text-sm">
+                    A portable, fire-rated containment unit designed for small lithium-ion batteries. Works in two modes: pre-runaway intervention and post-ignition suppression. Ships with an integrated Thermal Stop™ suppression pouch, fire-rated containment box, fire-protective gloves, a 2-liter extinguisher, and clear instructional labeling. No special training required.
+                  </p>
+                  <p className="text-xs text-muted-foreground mb-2">Dimensions: 18" × 10" × 15"</p>
+                  <p className="text-xs text-muted-foreground mb-4">Target: Hospitals, schools, offices, hotels, and commercial facilities.</p>
+                  <p className="text-sm font-semibold text-primary">Available to order soon.</p>
+                </CardContent>
+              </Card>
+
+              {/* Personal Handheld Canister */}
+              <Card className="border-2 border-dashed border-accent/30 bg-gradient-to-br from-accent/5 to-primary/5 relative overflow-hidden">
+                <div className="absolute top-4 right-4 z-10">
+                  <span className="bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-full">
+                    Coming Soon
+                  </span>
+                </div>
+                <div className="aspect-video bg-muted/50 flex items-center justify-center">
+                  <div className="text-center text-muted-foreground">
+                    <SprayCan className="h-16 w-16 mx-auto mb-2 opacity-50" />
+                    <p className="text-sm">Product Image Coming Soon</p>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-heading font-bold text-primary mb-1">Thermal Stop™ Personal Canister</h3>
+                  <p className="text-sm text-accent font-semibold mb-2">Patent Pending</p>
+                  <p className="text-sm text-foreground/70 italic mb-3">Protection in the Palm of Your Hand.</p>
+                  <p className="text-foreground/80 mb-4 text-sm">
+                    A compact, portable fire suppression canister designed for personal use while traveling. Purpose-built for addressing lithium-ion thermal runaway events from small devices on aircraft and in transit. Carry-on friendly.
+                  </p>
+                  <p className="text-sm font-semibold text-primary">Available to order soon.</p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
           {/* Comparison CTA */}

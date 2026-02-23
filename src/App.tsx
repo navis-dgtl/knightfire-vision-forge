@@ -14,6 +14,9 @@ import Industries from "./pages/Industries";
 import About from "./pages/About";
 import Distributors from "./pages/Distributors";
 import Contact from "./pages/Contact";
+import Suppressit from "./pages/Suppressit";
+import FireQuit from "./pages/FireQuit";
+import Elixir5 from "./pages/Elixir5";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +33,9 @@ const App = () => (
           <Route path="/products" element={<Products />} />
           <Route path="/products/thermal-stop" element={<ThermalStop />} />
           <Route path="/products/thermal-shield" element={<ThermalShield />} />
+          <Route path="/products/suppressit" element={<Suppressit />} />
+          <Route path="/products/fire-quit" element={<FireQuit />} />
+          <Route path="/products/elixir-5" element={<Elixir5 />} />
           <Route path="/products/comparison" element={<ProductComparison />} />
           <Route path="/publications" element={<Publications />} />
           <Route path="/industries" element={<Industries />} />

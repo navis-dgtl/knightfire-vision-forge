@@ -323,7 +323,7 @@ const Products = () => {
                   <p className="text-sm text-accent font-semibold mb-2">Patent Pending</p>
                   <p className="text-sm text-foreground/70 italic mb-3">Protection in the Palm of Your Hand.</p>
                   <p className="text-foreground/80 mb-4 text-sm">
-                    A compact, portable fire suppression travel pack designed for personal use while traveling. Purpose-built for addressing lithium-ion thermal runaway events from small devices on aircraft and in transit. Carry-on friendly.
+                    A compact, portable fire suppression travel pack designed for personal use while traveling. Purpose-built for addressing lithium-ion thermal runaway events from small devices on aircraft and in transit. Ideal for laptops, cell phones, ear buds, and other small battery-powered devices. Carry-on friendly.
                   </p>
                   <p className="text-sm font-semibold text-primary">Available to order soon.</p>
                 </CardContent>

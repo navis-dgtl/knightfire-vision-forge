@@ -9,6 +9,10 @@ import thermalShieldProduct from "@/assets/thermal-shield-new.jpg";
 import suppressitImg from "@/assets/suppressit.jpg";
 import firequitImg from "@/assets/firequit.png";
 import elixir5Img from "@/assets/elixir5.png";
+import thermalBoxMain from "@/assets/thermal-box-main.png";
+import thermalBoxOpen from "@/assets/thermal-box-open.png";
+import thermalBoxBack from "@/assets/thermal-box-back.png";
+import thermalBoxLid from "@/assets/thermal-box-lid.png";
 
 const Products = () => {
   return (
@@ -278,11 +282,13 @@ const Products = () => {
                     Coming Soon
                   </span>
                 </div>
-                <div className="aspect-video bg-muted/50 flex items-center justify-center">
-                  <div className="text-center text-muted-foreground">
-                    <Box className="h-16 w-16 mx-auto mb-2 opacity-50" />
-                    <p className="text-sm">Product Image Coming Soon</p>
-                  </div>
+                <div className="p-4 bg-white">
+                  <img src={thermalBoxMain} alt="KnightTek™ Lithium-Ion Thermal Runaway Box" className="w-full h-auto object-contain max-h-64 mx-auto" />
+                </div>
+                <div className="grid grid-cols-3 gap-1 px-4 pb-4 bg-white">
+                  <img src={thermalBoxOpen} alt="Thermal Runaway Box open view" className="w-full h-20 object-contain bg-muted/20 rounded" />
+                  <img src={thermalBoxBack} alt="Thermal Runaway Box back view" className="w-full h-20 object-contain bg-muted/20 rounded" />
+                  <img src={thermalBoxLid} alt="Thermal Runaway Box lid detail" className="w-full h-20 object-contain bg-muted/20 rounded" />
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-heading font-bold text-primary mb-1">KnightTek™ Lithium-Ion Thermal Runaway Box</h3>

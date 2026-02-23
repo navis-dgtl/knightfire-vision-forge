@@ -206,6 +206,51 @@ const Contact = () => {
 
                         <div className="flex items-center space-x-3">
                           <Checkbox
+                            id="suppressit"
+                            name="products[]"
+                            value="Suppressit™"
+                            onCheckedChange={(checked) => handleCheckboxChange("Suppressit™", checked as boolean)}
+                          />
+                          <label
+                            htmlFor="suppressit"
+                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+                          >
+                            Suppressit™
+                          </label>
+                        </div>
+
+                        <div className="flex items-center space-x-3">
+                          <Checkbox
+                            id="fireQuit"
+                            name="products[]"
+                            value="Fire Quit™"
+                            onCheckedChange={(checked) => handleCheckboxChange("Fire Quit™", checked as boolean)}
+                          />
+                          <label
+                            htmlFor="fireQuit"
+                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+                          >
+                            Fire Quit™
+                          </label>
+                        </div>
+
+                        <div className="flex items-center space-x-3">
+                          <Checkbox
+                            id="elixir5"
+                            name="products[]"
+                            value="Elixir 5™"
+                            onCheckedChange={(checked) => handleCheckboxChange("Elixir 5™", checked as boolean)}
+                          />
+                          <label
+                            htmlFor="elixir5"
+                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+                          >
+                            Elixir 5™
+                          </label>
+                        </div>
+
+                        <div className="flex items-center space-x-3">
+                          <Checkbox
                             id="customSolution"
                             name="products[]"
                             value="Custom Engineered Solution"

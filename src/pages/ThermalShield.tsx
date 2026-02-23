@@ -76,7 +76,7 @@ const ThermalShield = () => {
                   Applied directly to damaged battery packs, it delivers instant surface cooling, seals breaches to stop chemical activity, and traps hazardous PFAS vapors before they can escape.
                 </p>
                 <p>
-                  This all-natural, non-hazardous gel is certified to NFPA 18 standards and goes on easily, requiring only a small amount for full containment. Quick to clean up and engineered for safety, Thermal Shield™'s patent-pending formulation keeps compromised batteries stable, secure, and under control until they can be safely disposed of or repaired.
+                  This all-natural, non-hazardous gel is certified to NFPA 18 standards and goes on easily, requiring only a small amount for full containment. Quick to clean up and engineered for safety, Thermal Shield™ features a patented formulation that keeps compromised batteries stable, secure, and under control until they are safely disposed of or repaired.
                 </p>
               </div>
             </div>
@@ -91,7 +91,7 @@ const ThermalShield = () => {
                   "Traps hazardous PFAS vapors",
                   "All-natural, non-hazardous gel formula",
                   "NFPA 18 certified",
-                  "Patent-pending formulation",
+                  "Patented formulation by Redline Fire Solutions",
                   "Easy application with minimal product needed",
                   "Quick and simple cleanup",
                   "Non-toxic and biodegradable",
@@ -257,8 +257,8 @@ const ThermalShield = () => {
                       <p>Recognized by the EPA for environmental safety and effectiveness.</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2">Patent-Pending Technology</h4>
-                      <p>Proprietary gel formulation designed specifically for lithium-ion battery containment.</p>
+                      <h4 className="font-semibold mb-2">Patented Technology</h4>
+                      <p>Patented gel formulation designed specifically for lithium-ion battery containment.</p>
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">Safety Data Sheet (SDS)</h4>

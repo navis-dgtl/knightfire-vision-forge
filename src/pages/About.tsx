@@ -16,7 +16,7 @@ const About = () => {
       <section className="pt-32 pb-16 bg-gradient-navy text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">About KnightTek</h1>
-          <p className="text-xl text-primary-foreground/90">Exclusive Global Distributor of Revolutionary Fire Suppression Technology</p>
+          <p className="text-xl text-primary-foreground/90">Exclusive Global Distributor of Thermal Stop™, Thermal Shield™, Suppressit™, Fire Quit™, and Elixir 5™ Fire Suppression Products</p>
         </div>
       </section>
 
@@ -24,10 +24,10 @@ const About = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-heading font-bold mb-6 text-primary">Our Mission</h2>
           <p className="text-lg text-foreground/80 mb-4">
-            KnightTek, LLC is the exclusive global distributor for Thermal Stop™ and Thermal Shield™. We are dedicated to providing the most advanced lithium-ion battery fire suppression solutions to first responders and industry professionals worldwide.
+            KnightTek, LLC is the Exclusive Global Distributor of Redline Fire Solutions™ lithium-ion battery fire suppression products. We are dedicated to providing the most advanced fire suppression solutions to first responders and industry professionals worldwide.
           </p>
           <p className="text-lg text-foreground/80 mb-8">
-            With 7+ years of R&D, our products represent purpose-built technology specifically engineered for lithium-ion battery fires—proven effective across all battery chemistries.
+            Backed by 7+ years of R&D by Redline Fire Solutions, these products represent purpose-built technology specifically engineered for lithium-ion battery fires, proven effective across all battery chemistries.
           </p>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
             <Link to="/contact">Partner With Us</Link>

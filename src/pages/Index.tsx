@@ -31,12 +31,12 @@ const Index = () => {
                 Protecting Lives with Advanced Fire Suppression Technology
               </h2>
               <p className="text-lg mb-4 text-foreground/80">
-                KnightTek is the exclusive global distributor of Thermal Stop™ and Thermal Shield™, revolutionary
-                lithium-ion battery fire suppression solutions developed through 7+ years of dedicated research and
+                KnightTek is the Exclusive Global Distributor of Thermal Stop™ and Thermal Shield™, advanced
+                lithium-ion battery fire suppression solutions developed by Redline Fire Solutions through 7+ years of dedicated research and
                 development.
               </p>
               <p className="text-lg mb-4 text-foreground/80">
-                Our products are specifically designed—not repurposed—to combat lithium-ion battery thermal runaway
+                These products are purpose-built to combat lithium-ion battery thermal runaway
                 fires across all battery chemistries.
               </p>
               <p className="text-lg mb-6 text-foreground/80">
@@ -214,7 +214,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-heading font-bold mb-3 text-primary">Purpose-Built Technology</h3>
                 <p className="text-foreground/80">
-                  7+ years of R&D creating solutions specifically for lithium-ion battery fires—not repurposed products.
+                  Backed by 7+ years of R&D by Redline Fire Solutions, creating suppression solutions specifically for lithium-ion battery fires.
                 </p>
               </CardContent>
             </Card>

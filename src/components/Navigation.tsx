@@ -19,6 +19,9 @@ const Navigation = () => {
         { name: "All Products", path: "/products" },
         { name: "Thermal Stop™", path: "/products/thermal-stop" },
         { name: "Thermal Shield™", path: "/products/thermal-shield" },
+        { name: "Suppressit™", path: "/products/suppressit" },
+        { name: "Fire Quit™", path: "/products/fire-quit" },
+        { name: "Elixir 5™", path: "/products/elixir-5" },
         { name: "Product Comparison", path: "/products/comparison" },
       ]
     },

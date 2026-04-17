@@ -7,6 +7,7 @@ import stephenKnight from "@/assets/stephen-knight.jpg";
 import mattHill from "@/assets/matt-hill.avif";
 import mirandaKnight from "@/assets/miranda-knight.png";
 import brandonAlvarez from "@/assets/brandon-alvarez.jpg";
+import ludovicAudoin from "@/assets/ludovic-audoin.png";
 
 const About = () => {
   return (
@@ -53,6 +54,27 @@ const About = () => {
                 </p>
                 <p className="text-sm text-foreground/80">
                   Throughout his career, Stephen has engineered numerous innovative products and holds multiple patents for his designs. He continues to collaborate closely with industry partners and global insurance leaders, including Lloyd's of London, to advance fire protection standards across high-risk sectors.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardContent className="pt-6">
+                <img 
+                  src={ludovicAudoin} 
+                  alt="Ludovic Audoin" 
+                  className="w-32 h-32 rounded-full object-cover object-top mx-auto mb-4"
+                />
+                <h3 className="text-xl font-heading font-bold mb-2 text-primary">Ludovic Audoin</h3>
+                <p className="text-sm text-muted-foreground mb-3">President, European Operations</p>
+                <p className="text-sm text-foreground/80 mb-3">
+                  Ludovic Audoin brings over 25 years of international operational and executive experience in the oil and gas industry. He serves as President of KnightTEK's European operations, leading strategic growth and regional development.
+                </p>
+                <p className="text-sm text-foreground/80 mb-3">
+                  Ludovic is also the co-founder of SIS Risk Management, a UK-based company that supports the energy insurance sector by assessing and rating oil, gas, and renewable energy assets to enhance risk differentiation and improve overall risk profiles.
+                </p>
+                <p className="text-sm text-foreground/80">
+                  He holds a degree in Mechanical and Industrial Engineering from Arts et Métiers ParisTech, and a Master's degree in Petroleum Engineering from the Institut Français du Pétrole (IFP).
                 </p>
               </CardContent>
             </Card>

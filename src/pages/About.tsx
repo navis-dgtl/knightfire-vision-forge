@@ -7,6 +7,7 @@ import stephenKnight from "@/assets/stephen-knight.jpg";
 import mattHill from "@/assets/matt-hill.avif";
 import mirandaKnight from "@/assets/miranda-knight.png";
 import brandonAlvarez from "@/assets/brandon-alvarez.jpg";
+import ludovicAudoin from "@/assets/ludovic-audoin.png";
 
 const About = () => {
   return (

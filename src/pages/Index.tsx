@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Shield, Flame, Leaf, Gauge, Users, Award, BadgeCheck, Droplet, Zap, Wrench, Settings } from "lucide-react";
 import extinguishersGroup from "@/assets/extinguishers-group.png";
+import fdicQrCode from "@/assets/fdic-qr-code.png";
 import thermalShieldProduct from "@/assets/thermal-shield-new.jpg";
 import customSolutionsImg from "@/assets/custom-solutions.jpg";
 import evFireImg from "@/assets/ev-fire-demo.jpg";
@@ -19,19 +20,20 @@ const Index = () => {
 
       {/* FDIC Conference Banner */}
       <section className="pt-20 lg:pt-28 bg-accent">
-        <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
-          <p className="text-accent-foreground font-semibold text-base md:text-lg">
-            Visiting us at FDIC? Enter our booth game for a chance to win!
-          </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
-          >
-            <a href="https://docs.google.com/forms/d/e/1faipqlsdwo3ez782uerqlpdyxxa0dbpbpcc9hmh6w7wuwnsalaswxvq/viewform?usp=header&pli=1&authuser=0" target="_blank" rel="noopener noreferrer">
-              Enter Here for FDIC
-            </a>
-          </Button>
+        <div className="container mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-center gap-6 text-center sm:text-left">
+          <img
+            src={fdicQrCode}
+            alt="Scan QR code to enter FDIC booth game"
+            className="w-32 h-32 md:w-40 md:h-40 bg-white p-2 rounded-md shadow-md flex-shrink-0"
+          />
+          <div className="flex flex-col items-center sm:items-start gap-2">
+            <p className="text-accent-foreground font-semibold text-base md:text-lg">
+              Visiting us at FDIC? Scan the QR code to enter our booth game for a chance to win!
+            </p>
+            <p className="text-accent-foreground/80 text-sm">
+              Scan with your phone camera to register.
+            </p>
+          </div>
         </div>
       </section>
 

@@ -28,7 +28,7 @@ const Index = () => {
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
           >
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://docs.google.com/forms/d/e/1faipqlsdwo3ez782uerqlpdyxxa0dbpbpcc9hmh6w7wuwnsalaswxvq/viewform?usp=header&pli=1&authuser=0" target="_blank" rel="noopener noreferrer">
               Enter Here for FDIC
             </a>
           </Button>

@@ -17,8 +17,26 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
+      {/* FDIC Conference Banner */}
+      <section className="pt-20 lg:pt-28 bg-accent">
+        <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
+          <p className="text-accent-foreground font-semibold text-base md:text-lg">
+            Visiting us at FDIC? Enter our booth game for a chance to win!
+          </p>
+          <Button
+            asChild
+            size="lg"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
+          >
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              Enter Here for FDIC
+            </a>
+          </Button>
+        </div>
+      </section>
+
       {/* Hero Carousel */}
-      <section className="pt-20 lg:pt-28">
+      <section>
         <HeroCarousel />
       </section>
 

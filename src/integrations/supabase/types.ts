@@ -14,6 +14,21 @@ export type Database = {
   }
   public: {
     Tables: {
+      admin_email_allowlist: {
+        Row: {
+          created_at: string
+          email: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+        }
+        Relationships: []
+      }
       brochure_requests: {
         Row: {
           company: string

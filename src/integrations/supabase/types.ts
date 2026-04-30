@@ -94,55 +94,67 @@ export type Database = {
       }
       distributor_applications: {
         Row: {
-          additional_info: string | null
-          company: string
-          country: string | null
+          business_address: string
+          business_name: string
+          business_phone: string
+          company_profile: string
+          contact_email: string
+          contact_name: string
+          contact_phone: string
+          contact_title: string
           created_at: string
-          email: string
-          experience: string | null
-          first_name: string
+          employees: string
           id: string
-          job_title: string | null
-          last_name: string
+          linkedin: string | null
           markets: string[]
-          phone: string
           status: string
+          territory: string
           updated_at: string
           us_confirmed: boolean
+          website: string | null
+          year_established: string
         }
         Insert: {
-          additional_info?: string | null
-          company: string
-          country?: string | null
+          business_address: string
+          business_name: string
+          business_phone: string
+          company_profile: string
+          contact_email: string
+          contact_name: string
+          contact_phone: string
+          contact_title: string
           created_at?: string
-          email: string
-          experience?: string | null
-          first_name: string
+          employees: string
           id?: string
-          job_title?: string | null
-          last_name: string
+          linkedin?: string | null
           markets?: string[]
-          phone: string
           status?: string
+          territory: string
           updated_at?: string
           us_confirmed?: boolean
+          website?: string | null
+          year_established: string
         }
         Update: {
-          additional_info?: string | null
-          company?: string
-          country?: string | null
+          business_address?: string
+          business_name?: string
+          business_phone?: string
+          company_profile?: string
+          contact_email?: string
+          contact_name?: string
+          contact_phone?: string
+          contact_title?: string
           created_at?: string
-          email?: string
-          experience?: string | null
-          first_name?: string
+          employees?: string
           id?: string
-          job_title?: string | null
-          last_name?: string
+          linkedin?: string | null
           markets?: string[]
-          phone?: string
           status?: string
+          territory?: string
           updated_at?: string
           us_confirmed?: boolean
+          website?: string | null
+          year_established?: string
         }
         Relationships: []
       }

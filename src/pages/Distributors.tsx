@@ -110,19 +110,79 @@ const Distributors = () => {
     );
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     if (!usConfirmed) {
-      e.preventDefault();
       setUsError(true);
       return;
     }
     setUsError(false);
-    // Formspree handles submission natively; show toast after redirect
+
+    const fd = new FormData(e.currentTarget);
+    const raw = {
+      businessName: String(fd.get("businessName") || ""),
+      businessAddress: String(fd.get("businessAddress") || ""),
+      website: String(fd.get("website") || ""),
+      businessPhone: String(fd.get("businessPhone") || ""),
+      contactName: String(fd.get("contactName") || ""),
+      contactTitle: String(fd.get("contactTitle") || ""),
+      contactPhone: String(fd.get("contactPhone") || ""),
+      contactEmail: String(fd.get("contactEmail") || ""),
+      linkedin: String(fd.get("linkedin") || ""),
+      yearEstablished: String(fd.get("yearEstablished") || ""),
+      employees: String(fd.get("employees") || ""),
+      territory: String(fd.get("territory") || ""),
+      companyProfile: String(fd.get("companyProfile") || ""),
+    };
+
+    const parsed = distributorSchema.safeParse(raw);
+    if (!parsed.success) {
+      toast({
+        title: "Please check the form",
+        description: parsed.error.issues[0].message,
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setSubmitting(true);
+    const { error } = await supabase.from("distributor_applications").insert({
+      business_name: parsed.data.businessName,
+      business_address: parsed.data.businessAddress,
+      website: parsed.data.website || null,
+      business_phone: parsed.data.businessPhone,
+      contact_name: parsed.data.contactName,
+      contact_title: parsed.data.contactTitle,
+      contact_phone: parsed.data.contactPhone,
+      contact_email: parsed.data.contactEmail,
+      linkedin: parsed.data.linkedin || null,
+      year_established: parsed.data.yearEstablished,
+      employees: parsed.data.employees,
+      territory: parsed.data.territory,
+      markets: selectedMarkets,
+      company_profile: parsed.data.companyProfile,
+      us_confirmed: true,
+    });
+    setSubmitting(false);
+
+    if (error) {
+      toast({
+        title: "Submission failed",
+        description: "Please try again or call us at 1-833-ion-ktek.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     toast({
       title: "Thank you for your application!",
-      description:
-        "Our team will review your submission and contact you soon.",
+      description: "Our team will review your submission and contact you soon.",
     });
+    formRef.current?.reset();
+    setSelectedMarkets([]);
+    setUsConfirmed(false);
   };
 
   const scrollToForm = () => {

@@ -586,8 +586,9 @@ const Distributors = () => {
                   type="submit"
                   size="lg"
                   className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                  disabled={submitting}
                 >
-                  Submit Application
+                  {submitting ? "Submitting…" : "Submit Application"}
                 </Button>
               </form>
             </CardContent>

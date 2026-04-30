@@ -305,21 +305,9 @@ const Distributors = () => {
             <CardContent className="p-4 md:p-8">
               <form
                 ref={formRef}
-                action="https://formspree.io/f/xzdagako"
-                method="POST"
                 onSubmit={handleSubmit}
                 className="space-y-6"
               >
-                <input
-                  type="hidden"
-                  name="_subject"
-                  value="New U.S. Distributor Application"
-                />
-                <input
-                  type="hidden"
-                  name="markets"
-                  value={selectedMarkets.join(", ")}
-                />
 
                 {/* US Confirmation Checkbox */}
                 <div className="space-y-1">

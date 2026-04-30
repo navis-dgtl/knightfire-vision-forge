@@ -106,7 +106,7 @@ const Auth = () => {
                   {submitting ? "Signing in…" : "Sign In"}
                 </Button>
                 <p className="text-xs text-muted-foreground text-center">
-                  Need an admin account? Contact your KnightTek site administrator.
+                  Restricted access. Accounts are provisioned by KnightTek administrators only — public sign-ups are disabled.
                 </p>
                 <p className="text-xs text-center">
                   <Link to="/" className="text-primary hover:underline">

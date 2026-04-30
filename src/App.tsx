@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "@/hooks/useAuth";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import ThermalStop from "./pages/ThermalStop";
@@ -17,6 +18,8 @@ import Contact from "./pages/Contact";
 import Suppressit from "./pages/Suppressit";
 import FireQuit from "./pages/FireQuit";
 import Elixir5 from "./pages/Elixir5";
+import Auth from "./pages/Auth";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,23 +30,27 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/products/thermal-stop" element={<ThermalStop />} />
-          <Route path="/products/thermal-shield" element={<ThermalShield />} />
-          <Route path="/products/suppressit" element={<Suppressit />} />
-          <Route path="/products/fire-quit" element={<FireQuit />} />
-          <Route path="/products/elixir-5" element={<Elixir5 />} />
-          <Route path="/products/comparison" element={<ProductComparison />} />
-          <Route path="/publications" element={<Publications />} />
-          <Route path="/industries" element={<Industries />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/distributors" element={<Distributors />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <AuthProvider>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/thermal-stop" element={<ThermalStop />} />
+            <Route path="/products/thermal-shield" element={<ThermalShield />} />
+            <Route path="/products/suppressit" element={<Suppressit />} />
+            <Route path="/products/fire-quit" element={<FireQuit />} />
+            <Route path="/products/elixir-5" element={<Elixir5 />} />
+            <Route path="/products/comparison" element={<ProductComparison />} />
+            <Route path="/publications" element={<Publications />} />
+            <Route path="/industries" element={<Industries />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/distributors" element={<Distributors />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

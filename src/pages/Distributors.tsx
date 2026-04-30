@@ -8,6 +8,24 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { useState, useRef } from "react";
+import { z } from "zod";
+import { supabase } from "@/integrations/supabase/client";
+
+const distributorSchema = z.object({
+  businessName: z.string().trim().min(1, "Legal Business Name is required").max(200),
+  businessAddress: z.string().trim().min(1, "Business Address is required").max(500),
+  website: z.string().trim().max(500).optional().or(z.literal("")),
+  businessPhone: z.string().trim().min(1, "Main Business Phone is required").max(50),
+  contactName: z.string().trim().min(1, "Primary Contact Name is required").max(150),
+  contactTitle: z.string().trim().min(1, "Title is required").max(150),
+  contactPhone: z.string().trim().min(1, "Phone is required").max(50),
+  contactEmail: z.string().trim().email("Please enter a valid email").max(255),
+  linkedin: z.string().trim().max(500).optional().or(z.literal("")),
+  yearEstablished: z.string().trim().min(1, "Year Established is required").max(20),
+  employees: z.string().trim().min(1, "Number of Employees is required").max(50),
+  territory: z.string().trim().min(1, "Territory is required").max(500),
+  companyProfile: z.string().trim().min(1, "Company Profile is required").max(5000),
+});
 import {
   Ship,
   Plane,

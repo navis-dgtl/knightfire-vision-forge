@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { notifyFormspree } from "@/lib/formspree";
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -107,6 +108,18 @@ const Contact = () => {
       title: "Message received",
       description: "Thanks for reaching out! Our team will be in touch soon.",
     });
+    void notifyFormspree({
+      _subject: `New contact request — ${parsed.data.firstName} ${parsed.data.lastName} (${parsed.data.company || "no company"})`,
+      _replyto: parsed.data.email,
+      formType: "Contact Request",
+      firstName: parsed.data.firstName,
+      lastName: parsed.data.lastName,
+      email: parsed.data.email,
+      phone: parsed.data.phone,
+      company: parsed.data.company || "",
+      products: parsed.data.products.join(", "),
+      details: parsed.data.details || "",
+    });
     setContactForm(initialContact);
     setSelectedProducts([]);
   };
@@ -144,6 +157,18 @@ const Contact = () => {
     toast({
       title: "Thank you!",
       description: "Your brochure download will begin shortly.",
+    });
+    void notifyFormspree({
+      _subject: `Brochure request — ${parsed.data.company}`,
+      _replyto: parsed.data.email,
+      formType: "Brochure Request",
+      firstName: parsed.data.firstName,
+      lastName: parsed.data.lastName,
+      email: parsed.data.email,
+      phone: parsed.data.phone,
+      company: parsed.data.company,
+      jobTitle: parsed.data.jobTitle || "",
+      intendedUse: parsed.data.intendedUse || "",
     });
     setBrochureForm(initialBrochure);
     window.open("/brochures/thermal-stop-thermal-shield-brochure.pdf", "_blank");

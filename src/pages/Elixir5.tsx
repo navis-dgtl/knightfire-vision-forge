@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -10,8 +11,24 @@ import elixir5Img from "@/assets/elixir5.png";
 const Elixir5 = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Elixir 5™ | All-Class Wetting Agent (A, B, C, D, K)"
+        description="Elixir 5™ is an all-class wetting agent — safe and effective for Class A, B, C, D, and K fires."
+        canonical="/products/elixir-5"
+        type="product"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Elixir 5™",
+          description:
+            "All-class wetting agent for Class A, B, C, D, and K fires. Safe and effective for every challenge.",
+          brand: { "@type": "Brand", name: "Redline Fire Solutions" },
+          category: "Fire Suppression Equipment",
+          url: "https://ktekglobal.com/products/elixir-5",
+        }}
+      />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-navy text-primary-foreground">
         <div className="container mx-auto px-4">

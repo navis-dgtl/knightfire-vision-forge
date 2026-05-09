@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -16,8 +17,25 @@ import thermalStop55gal from "@/assets/thermal-stop-55gal.png";
 const ThermalStop = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Thermal Stop™ | NFPA 18 Lithium-Ion Battery Fire Extinguisher"
+        description="Thermal Stop™ extinguishes lithium-ion battery thermal runaway in seconds. NFPA 18 certified, EPA Safer Choice listed, PFAS-free. Available in 2L–55gal sizes."
+        canonical="/products/thermal-stop"
+        type="product"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Thermal Stop™",
+          description:
+            "NFPA 18 certified lithium-ion battery fire extinguishing agent. Stops thermal runaway in seconds across all battery chemistries. EPA Safer Choice listed, PFAS-free.",
+          brand: { "@type": "Brand", name: "Redline Fire Solutions" },
+          manufacturer: { "@type": "Organization", name: "Redline Fire Solutions" },
+          category: "Fire Suppression Equipment",
+          url: "https://ktekglobal.com/products/thermal-stop",
+        }}
+      />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-navy text-primary-foreground">
         <div className="container mx-auto px-4">

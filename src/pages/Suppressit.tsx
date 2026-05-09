@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -10,8 +11,24 @@ import suppressitImg from "@/assets/suppressit.jpg";
 const Suppressit = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Suppressit™ | Non-Fluorinated Foam — AFFF Replacement"
+        description="Suppressit™ is a non-fluorinated, PFAS-free firefighting foam — a direct AFFF replacement that attacks fire smarter, anywhere, anytime."
+        canonical="/products/suppressit"
+        type="product"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Suppressit™",
+          description:
+            "Non-fluorinated, PFAS-free firefighting foam designed as a direct AFFF replacement.",
+          brand: { "@type": "Brand", name: "Redline Fire Solutions" },
+          category: "Fire Suppression Equipment",
+          url: "https://ktekglobal.com/products/suppressit",
+        }}
+      />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-navy text-primary-foreground">
         <div className="container mx-auto px-4">

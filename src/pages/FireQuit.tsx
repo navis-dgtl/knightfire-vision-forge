@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -10,8 +11,24 @@ import firequitImg from "@/assets/firequit.png";
 const FireQuit = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Fire Quit™ | Advanced Wetting Agent for Class A, B, D & K Fires"
+        description="Fire Quit™ is an advanced wetting agent for efficient, effective firefighting across Class A, B, D, and K fires."
+        canonical="/products/fire-quit"
+        type="product"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Fire Quit™",
+          description:
+            "Advanced wetting agent for efficient firefighting across Class A, B, D, and K fires.",
+          brand: { "@type": "Brand", name: "Redline Fire Solutions" },
+          category: "Fire Suppression Equipment",
+          url: "https://ktekglobal.com/products/fire-quit",
+        }}
+      />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-navy text-primary-foreground">
         <div className="container mx-auto px-4">

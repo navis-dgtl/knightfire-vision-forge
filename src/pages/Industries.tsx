@@ -16,14 +16,14 @@ import {
   BadgeCheck,
   Home,
 } from "lucide-react";
-import evFireImg from "@/assets/ev-fire-demo.jpg";
-import publicSafetyImg from "@/assets/fire-department-team.jpg";
-import maritimeImg from "@/assets/maritime-port.jpg";
-import aviationImg from "@/assets/aviation-industry.jpg";
-import railImg from "@/assets/rail-industry.jpg";
-import towingImg from "@/assets/towing-industry.jpg";
-import industrialImg from "@/assets/industrial-commercial.jpg";
-import residentialImg from "@/assets/residential-home.jpg";
+import evFireImg from "@/assets/ev-fire-demo.webp";
+import publicSafetyImg from "@/assets/fire-department-team.webp";
+import maritimeImg from "@/assets/maritime-port.webp";
+import aviationImg from "@/assets/aviation-industry.webp";
+import railImg from "@/assets/rail-industry.webp";
+import towingImg from "@/assets/towing-industry.webp";
+import industrialImg from "@/assets/industrial-commercial.webp";
+import residentialImg from "@/assets/residential-home.webp";
 
 const Industries = () => {
   const industries = [

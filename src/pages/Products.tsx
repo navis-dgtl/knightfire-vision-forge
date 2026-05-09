@@ -7,16 +7,16 @@ import { Link } from "react-router-dom";
 import { Shield, Flame, BadgeCheck, ArrowRight, Droplets, Zap, Box, SprayCan, X } from "lucide-react";
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import extinguishersGroup from "@/assets/extinguishers-group.png";
-import thermalShieldProduct from "@/assets/thermal-shield-new.jpg";
-import suppressitImg from "@/assets/suppressit.jpg";
-import firequitImg from "@/assets/firequit.png";
-import elixir5Img from "@/assets/elixir5.png";
-import thermalBoxMain from "@/assets/thermal-box-main.png";
-import personalTravelPack from "@/assets/personal-travel-pack.png";
-import thermalBoxOpen from "@/assets/thermal-box-open.png";
-import thermalBoxBack from "@/assets/thermal-box-back.png";
-import thermalBoxLid from "@/assets/thermal-box-lid.png";
+import extinguishersGroup from "@/assets/extinguishers-group.webp";
+import thermalShieldProduct from "@/assets/thermal-shield-new.webp";
+import suppressitImg from "@/assets/suppressit.webp";
+import firequitImg from "@/assets/firequit.webp";
+import elixir5Img from "@/assets/elixir5.webp";
+import thermalBoxMain from "@/assets/thermal-box-main.webp";
+import personalTravelPack from "@/assets/personal-travel-pack.webp";
+import thermalBoxOpen from "@/assets/thermal-box-open.webp";
+import thermalBoxBack from "@/assets/thermal-box-back.webp";
+import thermalBoxLid from "@/assets/thermal-box-lid.webp";
 
 const Products = () => {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);

@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { BadgeCheck, Zap, ChevronRight } from "lucide-react";
-import elixir5Img from "@/assets/elixir5.png";
+import elixir5Img from "@/assets/elixir5.webp";
 
 const Elixir5 = () => {
   return (

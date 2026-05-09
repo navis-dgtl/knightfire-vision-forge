@@ -4,11 +4,11 @@ import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import stephenKnight from "@/assets/stephen-knight.jpg";
+import stephenKnight from "@/assets/stephen-knight.webp";
 import mattHill from "@/assets/matt-hill.avif";
-import mirandaKnight from "@/assets/miranda-knight.png";
-import brandonAlvarez from "@/assets/brandon-alvarez.jpg";
-import ludovicAudoin from "@/assets/ludovic-audoin.png";
+import mirandaKnight from "@/assets/miranda-knight.webp";
+import brandonAlvarez from "@/assets/brandon-alvarez.webp";
+import ludovicAudoin from "@/assets/ludovic-audoin.webp";
 
 const About = () => {
   return (

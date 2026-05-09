@@ -6,12 +6,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Shield, Flame, Leaf, Gauge, Users, Award, BadgeCheck, Droplet, Zap, Wrench, Settings } from "lucide-react";
-import extinguishersGroup from "@/assets/extinguishers-group.png";
-import thermalShieldProduct from "@/assets/thermal-shield-new.jpg";
-import customSolutionsImg from "@/assets/custom-solutions.jpg";
-import evFireImg from "@/assets/ev-fire-demo.jpg";
-import publicSafetyImg from "@/assets/fire-department-team.jpg";
-import maritimeImg from "@/assets/maritime-port.jpg";
+import extinguishersGroup from "@/assets/extinguishers-group.webp";
+import thermalShieldProduct from "@/assets/thermal-shield-new.webp";
+import customSolutionsImg from "@/assets/custom-solutions.webp";
+import evFireImg from "@/assets/ev-fire-demo.webp";
+import publicSafetyImg from "@/assets/fire-department-team.webp";
+import maritimeImg from "@/assets/maritime-port.webp";
 
 const Index = () => {
   return (

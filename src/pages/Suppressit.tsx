@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { BadgeCheck, Shield, ChevronRight, Droplets } from "lucide-react";
-import suppressitImg from "@/assets/suppressit.jpg";
+import suppressitImg from "@/assets/suppressit.webp";
 
 const Suppressit = () => {
   return (

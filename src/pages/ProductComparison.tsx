@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
@@ -7,8 +8,13 @@ import { Check } from "lucide-react";
 const ProductComparison = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Product Comparison | KnightTek Fire Suppression Solutions"
+        description="Compare Thermal Stop™, Thermal Shield™, Suppressit™, Fire Quit™, and Elixir 5™ side-by-side to choose the right fire suppression solution."
+        canonical="/products/comparison"
+      />
       <Navigation />
-      
+
       <section className="pt-32 pb-16 bg-gradient-navy text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">Product Comparison</h1>

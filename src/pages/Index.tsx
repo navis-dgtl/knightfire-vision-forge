@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -15,6 +16,11 @@ import maritimeImg from "@/assets/maritime-port.jpg";
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="KnightTek | Lithium-Ion Battery Thermal Runaway Solutions"
+        description="NFPA 18 Certified lithium-ion battery fire suppression solutions. Thermal Stop™ extinguishes fires, Thermal Shield™ provides containment."
+        canonical="/"
+      />
       <Navigation />
 
       {/* Hero Carousel */}
@@ -56,9 +62,10 @@ const Index = () => {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/i3XAMJBUqKA?si=swdRcBNajNN8Iqgv"
+                src="https://www.youtube-nocookie.com/embed/i3XAMJBUqKA?si=swdRcBNajNN8Iqgv"
                 title="KnightTek Product Demo Video"
                 frameBorder="0"
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen

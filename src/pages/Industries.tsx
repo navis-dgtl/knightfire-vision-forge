@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -187,6 +188,11 @@ const Industries = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Industries We Serve | KnightTek Lithium-Ion Fire Solutions"
+        description="KnightTek serves maritime, public safety, EV & mobility, aviation, rail, trucking, towing, residential, and industrial sectors with lithium-ion fire solutions."
+        canonical="/industries"
+      />
       <Navigation />
 
       {/* Hero Section */}

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -213,6 +214,11 @@ const Distributors = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Become a KnightTek™ U.S. Distributor | Partnership Opportunities"
+        description="Partner with KnightTek to bring NFPA 18 certified lithium-ion battery fire suppression technology to your region. Apply to join our U.S. distribution network."
+        canonical="/distributors"
+      />
       <Navigation />
 
       {/* SECTION 1: Hero Banner */}

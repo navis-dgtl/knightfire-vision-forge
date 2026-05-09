@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -176,6 +177,30 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Contact KnightTek | Request a Consultation or Brochure"
+        description="Contact KnightTek for lithium-ion battery fire suppression consultations, product brochures, and partnership inquiries. Call 1-833-466-5835."
+        canonical="/contact"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Contact KnightTek",
+          url: "https://ktekglobal.com/contact",
+          mainEntity: {
+            "@type": "Organization",
+            name: "KnightTek",
+            telephone: "+1-833-466-5835",
+            url: "https://ktekglobal.com/",
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+1-833-466-5835",
+              contactType: "sales",
+              areaServed: "Worldwide",
+              availableLanguage: "English",
+            },
+          },
+        }}
+      />
       <Navigation />
 
       <section className="pt-32 pb-16 bg-gradient-navy text-primary-foreground">

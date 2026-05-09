@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -22,8 +23,13 @@ const Products = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Products | KnightTek Lithium-Ion Battery Fire Suppression"
+        description="Explore KnightTek's full product line: Thermal Stop™, Thermal Shield™, Suppressit™, Fire Quit™, and Elixir 5™. NFPA 18 certified, EPA Safer Choice listed."
+        canonical="/products"
+      />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-primary to-primary/90">
         <div className="container mx-auto px-4">

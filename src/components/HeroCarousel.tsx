@@ -87,6 +87,11 @@ const HeroCarousel = () => {
 
   return (
     <div className="relative h-[600px] md:h-[700px] overflow-hidden bg-primary">
+      {/* Single SEO H1 — visually hidden, anchors the page on the primary keyword */}
+      <h1 className="sr-only">
+        Lithium-Ion Battery Fire Suppression Solutions — Thermal Stop™ &amp; Thermal Shield™
+      </h1>
+
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -94,6 +99,7 @@ const HeroCarousel = () => {
           className={`absolute inset-0 transition-opacity duration-1000 ${
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
+          aria-hidden={index !== currentSlide}
         >
           {/* Background Image */}
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroBackground})` }} />
@@ -103,9 +109,9 @@ const HeroCarousel = () => {
           {/* Content */}
           <div className="container mx-auto px-4 h-full flex items-center relative z-10">
             <div className="max-w-3xl text-primary-foreground">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
                 {slide.title}
-              </h1>
+              </h2>
               <p className="text-lg md:text-xl mb-8 text-primary-foreground/90">{slide.subtitle}</p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">

@@ -54,7 +54,6 @@ export default defineConfig(({ mode }) => ({
             /<script (?:type="module" )?(?:crossorigin )?src="\/?@vite\/client"><\/script>/g,
             "",
           );
-          return rendered;
         },
       }),
   ].filter(Boolean),

@@ -6,6 +6,7 @@
       "name": "vite_react_shadcn_ts",
       "dependencies": {
         "@hookform/resolvers": "^3.10.0",
+        "@plausible-analytics/tracker": "^0.4.5",
         "@radix-ui/react-accordion": "^1.2.11",
         "@radix-ui/react-alert-dialog": "^1.1.14",
         "@radix-ui/react-aspect-ratio": "^1.1.7",
@@ -200,6 +201,8 @@
     "@nodelib/fs.walk": ["@nodelib/fs.walk@1.2.8", "", { "dependencies": { "@nodelib/fs.scandir": "2.1.5", "fastq": "^1.6.0" } }, "sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg=="],
 
     "@pkgjs/parseargs": ["@pkgjs/parseargs@0.11.0", "", {}, "sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg=="],
+
+    "@plausible-analytics/tracker": ["@plausible-analytics/tracker@0.4.5", "https://europe-west1-npm.pkg.dev/lovable-core-prod/sandbox-npm-cache/@plausible-analytics/tracker/-/tracker-0.4.5.tgz", {}, "sha512-6BfAGejXY+YA3Cw6LYT2Zpn4hTxDtPQAawFsYUsQCOg78wIS5C4deAGXTfJffa5VleMWITv5lpJ/EYuQBl1tPA=="],
 
     "@prerenderer/prerenderer": ["@prerenderer/prerenderer@1.2.5", "https://europe-west1-npm.pkg.dev/lovable-core-prod/sandbox-npm-cache/@prerenderer/prerenderer/-/prerenderer-1.2.5.tgz", { "dependencies": { "express": "^4.18.2", "portfinder": "^1.0.32", "schema-utils": "4.0.0", "stoppable": "^1.1.0", "ts-deepmerge": "^6.2.0" }, "optionalDependencies": { "http-proxy-middleware": "^2.0.6" } }, "sha512-rPNbSgupfZhtwxdhdlOxDRevEcxvRmKrPQfCrwQH+bMDeRvjPtTYZHt8ZUob7o67UmC9wjZrFGvzji9QOOe9rA=="],
 

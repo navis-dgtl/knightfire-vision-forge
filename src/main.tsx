@@ -1,6 +1,14 @@
 import { createRoot } from "react-dom/client";
+import { init as initPlausible } from "@plausible-analytics/tracker";
 import App from "./App.tsx";
 import "./index.css";
+
+initPlausible({
+  domain: "ktekglobal.com",
+  outboundLinks: true,
+  fileDownloads: true,
+  formSubmissions: true,
+});
 
 const container = document.getElementById("root")!;
 

@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -47,8 +48,14 @@ const Publications = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Publications & Resources | KnightTek Fire Safety Articles"
+        description="Browse KnightTek's library of fire safety articles, videos, and industry publications covering lithium-ion battery fire suppression."
+        canonical="/publications"
+      />
       <Navigation />
 
+      {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-primary to-primary/90">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

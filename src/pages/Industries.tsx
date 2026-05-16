@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -15,14 +16,14 @@ import {
   BadgeCheck,
   Home,
 } from "lucide-react";
-import evFireImg from "@/assets/ev-fire-demo.jpg";
-import publicSafetyImg from "@/assets/fire-department-team.jpg";
-import maritimeImg from "@/assets/maritime-port.jpg";
-import aviationImg from "@/assets/aviation-industry.jpg";
-import railImg from "@/assets/rail-industry.jpg";
-import towingImg from "@/assets/towing-industry.jpg";
-import industrialImg from "@/assets/industrial-commercial.jpg";
-import residentialImg from "@/assets/residential-home.jpg";
+import evFireImg from "@/assets/ev-fire-demo.webp";
+import publicSafetyImg from "@/assets/fire-department-team.webp";
+import maritimeImg from "@/assets/maritime-port.webp";
+import aviationImg from "@/assets/aviation-industry.webp";
+import railImg from "@/assets/rail-industry.webp";
+import towingImg from "@/assets/towing-industry.webp";
+import industrialImg from "@/assets/industrial-commercial.webp";
+import residentialImg from "@/assets/residential-home.webp";
 
 const Industries = () => {
   const industries = [
@@ -187,6 +188,11 @@ const Industries = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Industries We Serve | KnightTek Lithium-Ion Fire Solutions"
+        description="KnightTek serves maritime, public safety, EV & mobility, aviation, rail, trucking, towing, residential, and industrial sectors with lithium-ion fire solutions."
+        canonical="/industries"
+      />
       <Navigation />
 
       {/* Hero Section */}

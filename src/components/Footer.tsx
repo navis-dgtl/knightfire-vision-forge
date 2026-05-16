@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Linkedin, Youtube, Instagram } from "lucide-react";
-import knightTekIcon from "@/assets/knight-tek-icon.png";
+import knightTekIcon from "@/assets/knight-tek-icon.webp";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

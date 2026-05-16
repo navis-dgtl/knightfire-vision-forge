@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,25 +7,26 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/hooks/useAuth";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
-import ThermalStop from "./pages/ThermalStop";
-import ThermalShield from "./pages/ThermalShield";
-import ProductComparison from "./pages/ProductComparison";
-import Products from "./pages/Products";
-import Publications from "./pages/Publications";
-import Industries from "./pages/Industries";
-import About from "./pages/About";
-import Distributors from "./pages/Distributors";
-import Contact from "./pages/Contact";
-import Suppressit from "./pages/Suppressit";
-import FireQuit from "./pages/FireQuit";
-import Elixir5 from "./pages/Elixir5";
-import Auth from "./pages/Auth";
-import Admin from "./pages/Admin";
-import PostDetail from "./pages/PostDetail";
-import PostsList from "./pages/admin/PostsList";
-import PostEditor from "./pages/admin/PostEditor";
 import { RequireAdmin } from "@/components/RequireAdmin";
-import NotFound from "./pages/NotFound";
+
+const ThermalStop = lazy(() => import("./pages/ThermalStop"));
+const ThermalShield = lazy(() => import("./pages/ThermalShield"));
+const ProductComparison = lazy(() => import("./pages/ProductComparison"));
+const Products = lazy(() => import("./pages/Products"));
+const Publications = lazy(() => import("./pages/Publications"));
+const Industries = lazy(() => import("./pages/Industries"));
+const About = lazy(() => import("./pages/About"));
+const Distributors = lazy(() => import("./pages/Distributors"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Suppressit = lazy(() => import("./pages/Suppressit"));
+const FireQuit = lazy(() => import("./pages/FireQuit"));
+const Elixir5 = lazy(() => import("./pages/Elixir5"));
+const Auth = lazy(() => import("./pages/Auth"));
+const Admin = lazy(() => import("./pages/Admin"));
+const PostDetail = lazy(() => import("./pages/PostDetail"));
+const PostsList = lazy(() => import("./pages/admin/PostsList"));
+const PostEditor = lazy(() => import("./pages/admin/PostEditor"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
@@ -36,49 +38,51 @@ const App = () => (
       <BrowserRouter>
         <AuthProvider>
           <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/products/thermal-stop" element={<ThermalStop />} />
-            <Route path="/products/thermal-shield" element={<ThermalShield />} />
-            <Route path="/products/suppressit" element={<Suppressit />} />
-            <Route path="/products/fire-quit" element={<FireQuit />} />
-            <Route path="/products/elixir-5" element={<Elixir5 />} />
-            <Route path="/products/comparison" element={<ProductComparison />} />
-            <Route path="/publications" element={<Publications />} />
-            <Route path="/publications/:slug" element={<PostDetail />} />
-            <Route path="/industries" element={<Industries />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/distributors" element={<Distributors />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/auth" element={<Auth />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route
-              path="/admin/posts"
-              element={
-                <RequireAdmin>
-                  <PostsList />
-                </RequireAdmin>
-              }
-            />
-            <Route
-              path="/admin/posts/new"
-              element={
-                <RequireAdmin>
-                  <PostEditor />
-                </RequireAdmin>
-              }
-            />
-            <Route
-              path="/admin/posts/:id"
-              element={
-                <RequireAdmin>
-                  <PostEditor />
-                </RequireAdmin>
-              }
-            />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Suspense fallback={null}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/products/thermal-stop" element={<ThermalStop />} />
+              <Route path="/products/thermal-shield" element={<ThermalShield />} />
+              <Route path="/products/suppressit" element={<Suppressit />} />
+              <Route path="/products/fire-quit" element={<FireQuit />} />
+              <Route path="/products/elixir-5" element={<Elixir5 />} />
+              <Route path="/products/comparison" element={<ProductComparison />} />
+              <Route path="/publications" element={<Publications />} />
+              <Route path="/publications/:slug" element={<PostDetail />} />
+              <Route path="/industries" element={<Industries />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/distributors" element={<Distributors />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/auth" element={<Auth />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route
+                path="/admin/posts"
+                element={
+                  <RequireAdmin>
+                    <PostsList />
+                  </RequireAdmin>
+                }
+              />
+              <Route
+                path="/admin/posts/new"
+                element={
+                  <RequireAdmin>
+                    <PostEditor />
+                  </RequireAdmin>
+                }
+              />
+              <Route
+                path="/admin/posts/:id"
+                element={
+                  <RequireAdmin>
+                    <PostEditor />
+                  </RequireAdmin>
+                }
+              />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>

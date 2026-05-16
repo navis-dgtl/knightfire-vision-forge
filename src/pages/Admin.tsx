@@ -16,6 +16,7 @@ import {
 import { LogOut, Mail, Phone, Building, Calendar, Eye, FileText } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 
 interface ContactRow {
   id: string;
@@ -143,6 +144,12 @@ const Admin = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Admin | KnightTek"
+        description="KnightTek admin dashboard."
+        canonical="/admin"
+        noindex
+      />
       <Navigation />
       <section className="pt-32 pb-8 bg-gradient-navy text-primary-foreground">
         <div className="container mx-auto px-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -10,6 +11,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useState, useRef } from "react";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
+import { notifyFormspree } from "@/lib/formspree";
 
 const distributorSchema = z.object({
   businessName: z.string().trim().min(1, "Legal Business Name is required").max(200),
@@ -180,6 +182,25 @@ const Distributors = () => {
       title: "Thank you for your application!",
       description: "Our team will review your submission and contact you soon.",
     });
+    void notifyFormspree({
+      _subject: `Distributor application — ${parsed.data.businessName}`,
+      _replyto: parsed.data.contactEmail,
+      formType: "Distributor Application",
+      businessName: parsed.data.businessName,
+      businessAddress: parsed.data.businessAddress,
+      website: parsed.data.website || "",
+      businessPhone: parsed.data.businessPhone,
+      contactName: parsed.data.contactName,
+      contactTitle: parsed.data.contactTitle,
+      contactPhone: parsed.data.contactPhone,
+      contactEmail: parsed.data.contactEmail,
+      linkedin: parsed.data.linkedin || "",
+      yearEstablished: parsed.data.yearEstablished,
+      employees: parsed.data.employees,
+      territory: parsed.data.territory,
+      markets: selectedMarkets.join(", "),
+      companyProfile: parsed.data.companyProfile,
+    });
     formRef.current?.reset();
     setSelectedMarkets([]);
     setUsConfirmed(false);
@@ -193,6 +214,11 @@ const Distributors = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Become a KnightTek™ U.S. Distributor | Partnership Opportunities"
+        description="Partner with KnightTek to bring NFPA 18 certified lithium-ion battery fire suppression technology to your region. Apply to join our U.S. distribution network."
+        canonical="/distributors"
+      />
       <Navigation />
 
       {/* SECTION 1: Hero Banner */}

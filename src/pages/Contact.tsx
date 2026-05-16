@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -10,6 +11,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { notifyFormspree } from "@/lib/formspree";
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -107,6 +109,18 @@ const Contact = () => {
       title: "Message received",
       description: "Thanks for reaching out! Our team will be in touch soon.",
     });
+    void notifyFormspree({
+      _subject: `New contact request — ${parsed.data.firstName} ${parsed.data.lastName} (${parsed.data.company || "no company"})`,
+      _replyto: parsed.data.email,
+      formType: "Contact Request",
+      firstName: parsed.data.firstName,
+      lastName: parsed.data.lastName,
+      email: parsed.data.email,
+      phone: parsed.data.phone,
+      company: parsed.data.company || "",
+      products: parsed.data.products.join(", "),
+      details: parsed.data.details || "",
+    });
     setContactForm(initialContact);
     setSelectedProducts([]);
   };
@@ -145,12 +159,48 @@ const Contact = () => {
       title: "Thank you!",
       description: "Your brochure download will begin shortly.",
     });
+    void notifyFormspree({
+      _subject: `Brochure request — ${parsed.data.company}`,
+      _replyto: parsed.data.email,
+      formType: "Brochure Request",
+      firstName: parsed.data.firstName,
+      lastName: parsed.data.lastName,
+      email: parsed.data.email,
+      phone: parsed.data.phone,
+      company: parsed.data.company,
+      jobTitle: parsed.data.jobTitle || "",
+      intendedUse: parsed.data.intendedUse || "",
+    });
     setBrochureForm(initialBrochure);
     window.open("/brochures/thermal-stop-thermal-shield-brochure.pdf", "_blank");
   };
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Contact KnightTek | Request a Consultation or Brochure"
+        description="Contact KnightTek for lithium-ion battery fire suppression consultations, product brochures, and partnership inquiries. Call 1-833-466-5835."
+        canonical="/contact"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Contact KnightTek",
+          url: "https://ktekglobal.com/contact",
+          mainEntity: {
+            "@type": "Organization",
+            name: "KnightTek",
+            telephone: "+1-833-466-5835",
+            url: "https://ktekglobal.com/",
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+1-833-466-5835",
+              contactType: "sales",
+              areaServed: "Worldwide",
+              availableLanguage: "English",
+            },
+          },
+        }}
+      />
       <Navigation />
 
       <section className="pt-32 pb-16 bg-gradient-navy text-primary-foreground">

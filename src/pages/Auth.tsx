@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 
 const schema = z.object({
   email: z.string().trim().email({ message: "Please enter a valid email" }).max(255),
@@ -57,6 +58,12 @@ const Auth = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Admin Sign In | KnightTek"
+        description="KnightTek team access."
+        canonical="/auth"
+        noindex
+      />
       <Navigation />
       <section className="pt-32 pb-16 bg-gradient-navy text-primary-foreground">
         <div className="container mx-auto px-4 text-center">

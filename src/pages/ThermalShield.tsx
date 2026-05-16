@@ -1,9 +1,10 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Shield, BadgeCheck, Download, ChevronRight } from "lucide-react";
-import thermalShieldProduct from "@/assets/thermal-shield-new.jpg";
+import thermalShieldProduct from "@/assets/thermal-shield-new.webp";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Snowflake, Lock, Wind } from "lucide-react";
@@ -17,8 +18,25 @@ import thermalStop55gal from "@/assets/thermal-stop-55gal.png";
 const ThermalShield = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="Thermal Shield™ | Lithium-Ion Battery Containment & Transport"
+        description="Thermal Shield™ prevents lithium-ion battery thermal runaway propagation. NFPA 18 certified. Safe for battery storage and transport across all chemistries."
+        canonical="/products/thermal-shield"
+        type="product"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Thermal Shield™",
+          description:
+            "NFPA 18 certified containment and thermal shielding solution. Prevents thermal runaway propagation. Safe for lithium-ion battery storage and transport.",
+          brand: { "@type": "Brand", name: "Redline Fire Solutions" },
+          manufacturer: { "@type": "Organization", name: "Redline Fire Solutions" },
+          category: "Fire Suppression Equipment",
+          url: "https://ktekglobal.com/products/thermal-shield",
+        }}
+      />
       <Navigation />
-      
+
       <section className="pt-32 pb-16 bg-gradient-navy text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="flex items-center text-sm mb-6 text-primary-foreground/80">

@@ -1,19 +1,40 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import stephenKnight from "@/assets/stephen-knight.jpg";
+import stephenKnight from "@/assets/stephen-knight.webp";
 import mattHill from "@/assets/matt-hill.avif";
-import mirandaKnight from "@/assets/miranda-knight.png";
-import brandonAlvarez from "@/assets/brandon-alvarez.jpg";
-import ludovicAudoin from "@/assets/ludovic-audoin.png";
+import mirandaKnight from "@/assets/miranda-knight.webp";
+import brandonAlvarez from "@/assets/brandon-alvarez.webp";
+import ludovicAudoin from "@/assets/ludovic-audoin.webp";
 
 const About = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <Seo
+        title="About KnightTek | Lithium-Ion Battery Fire Suppression Experts"
+        description="KnightTek, LLC is the exclusive global distributor of Redline Fire Solutions™ NFPA 18 certified lithium-ion battery fire suppression products. Meet our team."
+        canonical="/about"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "About KnightTek",
+          url: "https://ktekglobal.com/about",
+          mainEntity: {
+            "@type": "Organization",
+            name: "KnightTek",
+            legalName: "KnightTek, LLC",
+            url: "https://ktekglobal.com/",
+            telephone: "+1-833-466-5835",
+            description:
+              "Exclusive global distributor of Redline Fire Solutions™ lithium-ion battery fire suppression products.",
+          },
+        }}
+      />
       <Navigation />
-      
+
       <section className="pt-32 pb-16 bg-gradient-navy text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">About KnightTek</h1>

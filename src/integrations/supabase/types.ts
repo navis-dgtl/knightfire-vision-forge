@@ -173,60 +173,6 @@ export type Database = {
         }
         Relationships: []
       }
-      posts: {
-        Row: {
-          author_id: string | null
-          body: string | null
-          created_at: string
-          excerpt: string | null
-          external_url: string | null
-          featured_image_url: string | null
-          id: string
-          pdf_url: string | null
-          published_at: string | null
-          slug: string
-          status: Database["public"]["Enums"]["post_status"]
-          title: string
-          type: Database["public"]["Enums"]["post_type"]
-          updated_at: string
-          video_url: string | null
-        }
-        Insert: {
-          author_id?: string | null
-          body?: string | null
-          created_at?: string
-          excerpt?: string | null
-          external_url?: string | null
-          featured_image_url?: string | null
-          id?: string
-          pdf_url?: string | null
-          published_at?: string | null
-          slug: string
-          status?: Database["public"]["Enums"]["post_status"]
-          title: string
-          type: Database["public"]["Enums"]["post_type"]
-          updated_at?: string
-          video_url?: string | null
-        }
-        Update: {
-          author_id?: string | null
-          body?: string | null
-          created_at?: string
-          excerpt?: string | null
-          external_url?: string | null
-          featured_image_url?: string | null
-          id?: string
-          pdf_url?: string | null
-          published_at?: string | null
-          slug?: string
-          status?: Database["public"]["Enums"]["post_status"]
-          title?: string
-          type?: Database["public"]["Enums"]["post_type"]
-          updated_at?: string
-          video_url?: string | null
-        }
-        Relationships: []
-      }
       user_roles: {
         Row: {
           created_at: string
@@ -263,8 +209,6 @@ export type Database = {
     }
     Enums: {
       app_role: "admin" | "user"
-      post_status: "draft" | "published"
-      post_type: "article" | "news" | "video" | "publication"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -393,8 +337,6 @@ export const Constants = {
   public: {
     Enums: {
       app_role: ["admin", "user"],
-      post_status: ["draft", "published"],
-      post_type: ["article", "news", "video", "publication"],
     },
   },
 } as const

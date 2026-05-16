@@ -21,6 +21,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { RichTextEditor } from "@/components/editor/RichTextEditor";
+import { AiAssistPanel } from "@/components/editor/AiAssistPanel";
 import { SafeHtml } from "@/components/SafeHtml";
 import { useAuth } from "@/hooks/useAuth";
 import { uploadMedia } from "@/lib/storage";
@@ -49,6 +50,7 @@ interface FormState {
   pdf_url: string;
   external_url: string;
   status: PostStatus;
+  scheduled_at: string;
 }
 
 const EMPTY: FormState = {
@@ -62,7 +64,16 @@ const EMPTY: FormState = {
   pdf_url: "",
   external_url: "",
   status: "draft",
+  scheduled_at: "",
 };
+
+/** ISO timestamp -> value for an <input type="datetime-local"> (local time). */
+function toDateTimeLocal(iso: string): string {
+  const d = new Date(iso);
+  return new Date(d.getTime() - d.getTimezoneOffset() * 60000)
+    .toISOString()
+    .slice(0, 16);
+}
 
 const PostEditor = () => {
   const { id } = useParams();
@@ -79,6 +90,7 @@ const PostEditor = () => {
   const [uploadingImage, setUploadingImage] = useState(false);
   const [uploadingPdf, setUploadingPdf] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [aiUses, setAiUses] = useState(0);
   const populated = useRef(false);
   const imageInputRef = useRef<HTMLInputElement>(null);
   const pdfInputRef = useRef<HTMLInputElement>(null);
@@ -98,7 +110,11 @@ const PostEditor = () => {
         pdf_url: existing.pdf_url ?? "",
         external_url: existing.external_url ?? "",
         status: existing.status,
+        scheduled_at: existing.scheduled_at
+          ? toDateTimeLocal(existing.scheduled_at)
+          : "",
       });
+      setAiUses(existing.ai_uses ?? 0);
     }
   }, [existing]);
 
@@ -160,6 +176,17 @@ const PostEditor = () => {
       return;
     }
 
+    if (form.status === "scheduled") {
+      if (!form.scheduled_at) {
+        toast.error("Choose a date and time to publish.");
+        return;
+      }
+      if (new Date(form.scheduled_at).getTime() <= Date.now()) {
+        toast.error("The scheduled publish time must be in the future.");
+        return;
+      }
+    }
+
     setSaving(true);
     try {
       const slug = await uniqueSlug(form.slug || form.title, isNew ? undefined : id);
@@ -168,6 +195,10 @@ const PostEditor = () => {
         form.status === "published"
           ? existing?.published_at ?? new Date().toISOString()
           : existing?.published_at ?? null;
+      const scheduled_at =
+        form.status === "scheduled"
+          ? new Date(form.scheduled_at).toISOString()
+          : null;
 
       const values: TablesInsert<"posts"> = {
         type: form.type,
@@ -182,6 +213,7 @@ const PostEditor = () => {
           form.type === "publication" ? form.external_url.trim() || null : null,
         status: form.status,
         published_at,
+        scheduled_at,
         ...(isNew && user ? { author_id: user.id } : {}),
       };
 
@@ -302,6 +334,9 @@ const PostEditor = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="draft">Draft — only visible here</SelectItem>
+                  <SelectItem value="scheduled">
+                    Scheduled — publishes automatically
+                  </SelectItem>
                   <SelectItem value="published">
                     Published — live on the site
                   </SelectItem>
@@ -309,6 +344,25 @@ const PostEditor = () => {
               </Select>
             </div>
           </div>
+
+          {/* Scheduled publish time */}
+          {form.status === "scheduled" && (
+            <div className="space-y-2">
+              <Label htmlFor="scheduled_at">Publish date &amp; time</Label>
+              <Input
+                id="scheduled_at"
+                type="datetime-local"
+                value={form.scheduled_at}
+                min={toDateTimeLocal(new Date().toISOString())}
+                onChange={(e) => update({ scheduled_at: e.target.value })}
+                className="max-w-xs"
+              />
+              <p className="text-sm text-muted-foreground">
+                The post stays hidden until this time, then publishes
+                automatically. Times use your browser's timezone.
+              </p>
+            </div>
+          )}
 
           {/* Title */}
           <div className="space-y-2">
@@ -402,6 +456,15 @@ const PostEditor = () => {
               <RichTextEditor
                 value={form.body}
                 onChange={(html) => update({ body: html })}
+              />
+              <AiAssistPanel
+                postId={isNew ? null : id ?? null}
+                hasBody={form.body.replace(/<[^>]*>/g, "").trim().length > 0}
+                aiUses={aiUses}
+                onResult={(html, uses) => {
+                  update({ body: html });
+                  setAiUses(uses);
+                }}
               />
             </div>
           )}

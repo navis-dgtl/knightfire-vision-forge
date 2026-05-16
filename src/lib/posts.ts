@@ -15,6 +15,22 @@ export const POST_TYPE_LABELS: Record<PostType, string> = {
   publication: "Publication",
 };
 
+export const POST_STATUS_LABELS: Record<PostStatus, string> = {
+  draft: "Draft",
+  scheduled: "Scheduled",
+  published: "Published",
+};
+
+/**
+ * PostgREST filter matching posts the public may see: anything published, plus
+ * scheduled posts whose time has already passed (covers the brief window
+ * before the auto-publish cron job flips their status).
+ */
+function publicVisibleFilter(): string {
+  const now = new Date().toISOString();
+  return `status.eq.published,and(status.eq.scheduled,scheduled_at.lte.${now})`;
+}
+
 /** Turns a title into a URL-safe slug. */
 export function slugify(input: string): string {
   return input
@@ -58,7 +74,7 @@ export async function uniqueSlug(base: string, excludeId?: string): Promise<stri
   }
 }
 
-/** Published posts, newest first — for the public /publications page. */
+/** Live posts, newest first — for the public /publications page. */
 export function usePublishedPosts() {
   return useQuery({
     queryKey: ["posts", "published"],
@@ -66,15 +82,15 @@ export function usePublishedPosts() {
       const { data, error } = await supabase
         .from("posts")
         .select("*")
-        .eq("status", "published")
-        .order("published_at", { ascending: false });
+        .or(publicVisibleFilter())
+        .order("published_at", { ascending: false, nullsFirst: false });
       if (error) throw error;
       return data ?? [];
     },
   });
 }
 
-/** A single published post by slug — for the public /publications/:slug page. */
+/** A single live post by slug — for the public /publications/:slug page. */
 export function usePublishedPost(slug: string | undefined) {
   return useQuery({
     queryKey: ["posts", "slug", slug],
@@ -84,7 +100,7 @@ export function usePublishedPost(slug: string | undefined) {
         .from("posts")
         .select("*")
         .eq("slug", slug as string)
-        .eq("status", "published")
+        .or(publicVisibleFilter())
         .maybeSingle();
       if (error) throw error;
       return data;

@@ -41,6 +41,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { toast } from "sonner";
 import {
+  POST_STATUS_LABELS,
   POST_TYPE_LABELS,
   POST_TYPES,
   useAllPosts,
@@ -49,6 +50,15 @@ import {
   type PostStatus,
   type PostType,
 } from "@/lib/posts";
+
+const STATUS_BADGE_VARIANT: Record<
+  PostStatus,
+  "default" | "secondary" | "outline"
+> = {
+  published: "default",
+  scheduled: "outline",
+  draft: "secondary",
+};
 
 const TYPE_ICON: Record<PostType, typeof FileText> = {
   article: FileText,
@@ -158,6 +168,7 @@ const PostsList = () => {
               <SelectContent>
                 <SelectItem value="all">All statuses</SelectItem>
                 <SelectItem value="published">Published</SelectItem>
+                <SelectItem value="scheduled">Scheduled</SelectItem>
                 <SelectItem value="draft">Draft</SelectItem>
               </SelectContent>
             </Select>
@@ -189,7 +200,7 @@ const PostsList = () => {
                     <TableHead>Title</TableHead>
                     <TableHead className="w-36">Type</TableHead>
                     <TableHead className="w-28">Status</TableHead>
-                    <TableHead className="w-36">Published</TableHead>
+                    <TableHead className="w-44">Date</TableHead>
                     <TableHead className="w-28 text-right">Actions</TableHead>
                   </TableRow>
                 </TableHeader>
@@ -210,16 +221,14 @@ const PostsList = () => {
                           </span>
                         </TableCell>
                         <TableCell>
-                          <Badge
-                            variant={
-                              post.status === "published" ? "default" : "secondary"
-                            }
-                          >
-                            {post.status === "published" ? "Published" : "Draft"}
+                          <Badge variant={STATUS_BADGE_VARIANT[post.status]}>
+                            {POST_STATUS_LABELS[post.status]}
                           </Badge>
                         </TableCell>
                         <TableCell className="text-sm text-muted-foreground">
-                          {formatDate(post.published_at)}
+                          {post.status === "scheduled" && post.scheduled_at
+                            ? `Scheduled · ${formatDate(post.scheduled_at)}`
+                            : formatDate(post.published_at)}
                         </TableCell>
                         <TableCell
                           className="text-right"

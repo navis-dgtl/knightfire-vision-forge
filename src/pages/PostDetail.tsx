@@ -76,10 +76,10 @@ const PostDetail = () => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary-foreground mb-3">
               {post.title}
             </h1>
-            {post.published_at && (
+            {(post.published_at || post.scheduled_at) && (
               <p className="flex items-center gap-1.5 text-primary-foreground/80 text-sm">
                 <Calendar className="h-4 w-4" />
-                {formatDate(post.published_at)}
+                {formatDate(post.published_at ?? post.scheduled_at)}
               </p>
             )}
           </div>

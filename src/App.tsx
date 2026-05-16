@@ -20,6 +20,10 @@ import FireQuit from "./pages/FireQuit";
 import Elixir5 from "./pages/Elixir5";
 import Auth from "./pages/Auth";
 import Admin from "./pages/Admin";
+import PostDetail from "./pages/PostDetail";
+import PostsList from "./pages/admin/PostsList";
+import PostEditor from "./pages/admin/PostEditor";
+import { RequireAdmin } from "@/components/RequireAdmin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,12 +46,37 @@ const App = () => (
             <Route path="/products/elixir-5" element={<Elixir5 />} />
             <Route path="/products/comparison" element={<ProductComparison />} />
             <Route path="/publications" element={<Publications />} />
+            <Route path="/publications/:slug" element={<PostDetail />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/about" element={<About />} />
             <Route path="/distributors" element={<Distributors />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/admin" element={<Admin />} />
+            <Route
+              path="/admin/posts"
+              element={
+                <RequireAdmin>
+                  <PostsList />
+                </RequireAdmin>
+              }
+            />
+            <Route
+              path="/admin/posts/new"
+              element={
+                <RequireAdmin>
+                  <PostEditor />
+                </RequireAdmin>
+              }
+            />
+            <Route
+              path="/admin/posts/:id"
+              element={
+                <RequireAdmin>
+                  <PostEditor />
+                </RequireAdmin>
+              }
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>

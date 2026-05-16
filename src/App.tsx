@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/hooks/useAuth";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
+import { RequireAdmin } from "@/components/RequireAdmin";
 
 const ThermalStop = lazy(() => import("./pages/ThermalStop"));
 const ThermalShield = lazy(() => import("./pages/ThermalShield"));
@@ -22,6 +23,9 @@ const FireQuit = lazy(() => import("./pages/FireQuit"));
 const Elixir5 = lazy(() => import("./pages/Elixir5"));
 const Auth = lazy(() => import("./pages/Auth"));
 const Admin = lazy(() => import("./pages/Admin"));
+const PostDetail = lazy(() => import("./pages/PostDetail"));
+const PostsList = lazy(() => import("./pages/admin/PostsList"));
+const PostEditor = lazy(() => import("./pages/admin/PostEditor"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -45,12 +49,37 @@ const App = () => (
               <Route path="/products/elixir-5" element={<Elixir5 />} />
               <Route path="/products/comparison" element={<ProductComparison />} />
               <Route path="/publications" element={<Publications />} />
+              <Route path="/publications/:slug" element={<PostDetail />} />
               <Route path="/industries" element={<Industries />} />
               <Route path="/about" element={<About />} />
               <Route path="/distributors" element={<Distributors />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/admin" element={<Admin />} />
+              <Route
+                path="/admin/posts"
+                element={
+                  <RequireAdmin>
+                    <PostsList />
+                  </RequireAdmin>
+                }
+              />
+              <Route
+                path="/admin/posts/new"
+                element={
+                  <RequireAdmin>
+                    <PostEditor />
+                  </RequireAdmin>
+                }
+              />
+              <Route
+                path="/admin/posts/:id"
+                element={
+                  <RequireAdmin>
+                    <PostEditor />
+                  </RequireAdmin>
+                }
+              />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

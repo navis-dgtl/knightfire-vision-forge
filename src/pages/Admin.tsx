@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -13,7 +13,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { LogOut, Mail, Phone, Building, Calendar, Eye } from "lucide-react";
+import { LogOut, Mail, Phone, Building, Calendar, Eye, FileText } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Seo from "@/components/Seo";
@@ -161,10 +161,21 @@ const Admin = () => {
               All contact, distributor, and brochure form submissions.
             </p>
           </div>
-          <Button onClick={signOut} variant="outline" className="bg-transparent">
-            <LogOut className="h-4 w-4 mr-2" />
-            Sign out
-          </Button>
+          <div className="flex flex-wrap gap-2">
+            <Button
+              asChild
+              className="bg-accent text-accent-foreground hover:bg-accent/90"
+            >
+              <Link to="/admin/posts">
+                <FileText className="h-4 w-4 mr-2" />
+                Manage Publications
+              </Link>
+            </Button>
+            <Button onClick={signOut} variant="outline" className="bg-transparent">
+              <LogOut className="h-4 w-4 mr-2" />
+              Sign out
+            </Button>
+          </div>
         </div>
       </section>
       <section className="py-10 bg-background flex-1">

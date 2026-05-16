@@ -175,6 +175,7 @@ export type Database = {
       }
       posts: {
         Row: {
+          ai_uses: number
           author_id: string | null
           body: string | null
           created_at: string
@@ -184,6 +185,7 @@ export type Database = {
           id: string
           pdf_url: string | null
           published_at: string | null
+          scheduled_at: string | null
           slug: string
           status: Database["public"]["Enums"]["post_status"]
           title: string
@@ -192,6 +194,7 @@ export type Database = {
           video_url: string | null
         }
         Insert: {
+          ai_uses?: number
           author_id?: string | null
           body?: string | null
           created_at?: string
@@ -201,6 +204,7 @@ export type Database = {
           id?: string
           pdf_url?: string | null
           published_at?: string | null
+          scheduled_at?: string | null
           slug: string
           status?: Database["public"]["Enums"]["post_status"]
           title: string
@@ -209,6 +213,7 @@ export type Database = {
           video_url?: string | null
         }
         Update: {
+          ai_uses?: number
           author_id?: string | null
           body?: string | null
           created_at?: string
@@ -218,6 +223,7 @@ export type Database = {
           id?: string
           pdf_url?: string | null
           published_at?: string | null
+          scheduled_at?: string | null
           slug?: string
           status?: Database["public"]["Enums"]["post_status"]
           title?: string
@@ -253,6 +259,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      consume_ai_use: {
+        Args: { p_limit?: number; p_post_id: string }
+        Returns: number
+      }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
@@ -260,10 +270,11 @@ export type Database = {
         }
         Returns: boolean
       }
+      publish_due_posts: { Args: never; Returns: undefined }
     }
     Enums: {
       app_role: "admin" | "user"
-      post_status: "draft" | "published"
+      post_status: "draft" | "published" | "scheduled"
       post_type: "article" | "news" | "video" | "publication"
     }
     CompositeTypes: {
@@ -393,7 +404,7 @@ export const Constants = {
   public: {
     Enums: {
       app_role: ["admin", "user"],
-      post_status: ["draft", "published"],
+      post_status: ["draft", "published", "scheduled"],
       post_type: ["article", "news", "video", "publication"],
     },
   },

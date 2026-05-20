@@ -26,6 +26,7 @@ const Admin = lazy(() => import("./pages/Admin"));
 const PostDetail = lazy(() => import("./pages/PostDetail"));
 const PostsList = lazy(() => import("./pages/admin/PostsList"));
 const PostEditor = lazy(() => import("./pages/admin/PostEditor"));
+const RsvpMesquite = lazy(() => import("./pages/RsvpMesquite"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -54,6 +55,7 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/distributors" element={<Distributors />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/rsvp-mesquite" element={<RsvpMesquite />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/admin" element={<Admin />} />
               <Route

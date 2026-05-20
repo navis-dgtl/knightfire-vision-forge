@@ -2,11 +2,13 @@ User-agent: Googlebot
 Allow: /
 Disallow: /admin
 Disallow: /auth
+Disallow: /signup
 
 User-agent: Bingbot
 Allow: /
 Disallow: /admin
 Disallow: /auth
+Disallow: /signup
 
 User-agent: Twitterbot
 Allow: /
@@ -18,20 +20,24 @@ User-agent: GPTBot
 Allow: /
 Disallow: /admin
 Disallow: /auth
+Disallow: /signup
 
 User-agent: ClaudeBot
 Allow: /
 Disallow: /admin
 Disallow: /auth
+Disallow: /signup
 
 User-agent: PerplexityBot
 Allow: /
 Disallow: /admin
 Disallow: /auth
+Disallow: /signup
 
 User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /auth
+Disallow: /signup
 
 Sitemap: https://ktekglobal.com/sitemap.xml

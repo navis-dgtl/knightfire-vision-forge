@@ -58,6 +58,7 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/rsvp-mesquite" element={<RsvpMesquite />} />
               <Route path="/auth" element={<Auth />} />
+              <Route path="/signup" element={<SignUp />} />
               <Route path="/admin" element={<Admin />} />
               <Route
                 path="/admin/posts"

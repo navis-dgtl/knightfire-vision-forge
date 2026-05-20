@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
-  ArrowLeft,
   Plus,
   Pencil,
   Trash2,
@@ -10,8 +9,6 @@ import {
   Video,
   BookOpen,
 } from "lucide-react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -108,40 +105,24 @@ const PostsList = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
-
-      <section className="pt-32 pb-8 bg-gradient-navy text-primary-foreground">
-        <div className="container mx-auto px-4">
-          <Link
-            to="/admin"
-            className="inline-flex items-center gap-1.5 text-sm text-primary-foreground/80 hover:text-primary-foreground mb-3"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to submission inbox
-          </Link>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <h1 className="text-3xl md:text-4xl font-heading font-bold">
-                Publications
-              </h1>
-              <p className="text-primary-foreground/80 mt-1">
-                Write and publish articles, news, videos, and publications.
-              </p>
-            </div>
-            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-              <Link to="/admin/posts/new">
-                <Plus className="h-4 w-4 mr-2" />
-                New post
-              </Link>
-            </Button>
-          </div>
+    <div className="space-y-4">
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <h2 className="text-2xl font-heading font-bold">Publications</h2>
+          <p className="text-muted-foreground text-sm mt-1">
+            Write and publish articles, news, videos, and publications.
+          </p>
         </div>
-      </section>
+        <Button asChild>
+          <Link to="/admin/posts/new">
+            <Plus className="h-4 w-4 mr-2" />
+            New post
+          </Link>
+        </Button>
+      </div>
 
-      <section className="py-10 bg-background flex-1">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap gap-3 mb-6">
+      <div>
+        <div className="flex flex-wrap gap-3 mb-4">
             <Select
               value={typeFilter}
               onValueChange={(v) => setTypeFilter(v as "all" | PostType)}
@@ -260,10 +241,7 @@ const PostsList = () => {
               </Table>
             </div>
           )}
-        </div>
-      </section>
-
-      <Footer />
+      </div>
 
       <AlertDialog
         open={!!pendingDelete}

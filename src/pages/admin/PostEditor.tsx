@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Eye, ExternalLink, Loader2, Save, Upload, X } from "lucide-react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -241,17 +239,11 @@ const PostEditor = () => {
 
   if (!isNew && !isLoading && !existing) {
     return (
-      <div className="min-h-screen flex flex-col">
-        <Navigation />
-        <section className="pt-32 pb-16 flex-1 bg-background text-center">
-          <div className="container mx-auto px-4 max-w-md">
-            <h1 className="text-2xl font-heading font-bold mb-3">Post not found</h1>
-            <Button asChild variant="outline">
-              <Link to="/admin/posts">Back to publications</Link>
-            </Button>
-          </div>
-        </section>
-        <Footer />
+      <div className="text-center py-16">
+        <h2 className="text-2xl font-heading font-bold mb-3">Post not found</h2>
+        <Button asChild variant="outline">
+          <Link to="/admin/posts">Back to publications</Link>
+        </Button>
       </div>
     );
   }
@@ -259,50 +251,36 @@ const PostEditor = () => {
   const isArticleLike = form.type === "article" || form.type === "news";
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
+    <div className="space-y-4">
+      <Link
+        to="/admin/posts"
+        className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground"
+      >
+        <ArrowLeft className="h-4 w-4" />
+        Back to publications
+      </Link>
 
-      <section className="pt-32 pb-8 bg-gradient-navy text-primary-foreground">
-        <div className="container mx-auto px-4">
-          <Link
-            to="/admin/posts"
-            className="inline-flex items-center gap-1.5 text-sm text-primary-foreground/80 hover:text-primary-foreground mb-3"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to publications
-          </Link>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <h1 className="text-3xl md:text-4xl font-heading font-bold">
-              {isNew ? "New post" : "Edit post"}
-            </h1>
-            <div className="flex flex-wrap gap-2">
-              <Button
-                variant="outline"
-                className="bg-transparent"
-                onClick={() => setPreviewOpen(true)}
-              >
-                <Eye className="h-4 w-4 mr-2" />
-                Preview
-              </Button>
-              <Button
-                className="bg-accent text-accent-foreground hover:bg-accent/90"
-                onClick={handleSave}
-                disabled={saving}
-              >
-                {saving ? (
-                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                ) : (
-                  <Save className="h-4 w-4 mr-2" />
-                )}
-                Save
-              </Button>
-            </div>
-          </div>
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <h2 className="text-2xl font-heading font-bold">
+          {isNew ? "New post" : "Edit post"}
+        </h2>
+        <div className="flex flex-wrap gap-2">
+          <Button variant="outline" onClick={() => setPreviewOpen(true)}>
+            <Eye className="h-4 w-4 mr-2" />
+            Preview
+          </Button>
+          <Button onClick={handleSave} disabled={saving}>
+            {saving ? (
+              <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+            ) : (
+              <Save className="h-4 w-4 mr-2" />
+            )}
+            Save
+          </Button>
         </div>
-      </section>
+      </div>
 
-      <section className="py-10 bg-background flex-1">
-        <div className="container mx-auto px-4 max-w-3xl space-y-6">
+      <div className="max-w-3xl space-y-6">
           {/* Type + status */}
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="space-y-2">
@@ -555,10 +533,7 @@ const PostEditor = () => {
               View live page
             </a>
           )}
-        </div>
-      </section>
-
-      <Footer />
+      </div>
 
       <Dialog open={previewOpen} onOpenChange={setPreviewOpen}>
         <DialogContent className="max-w-3xl max-h-[85vh] overflow-y-auto">

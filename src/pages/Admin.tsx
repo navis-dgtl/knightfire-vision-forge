@@ -13,7 +13,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { LogOut, Mail, Phone, Building, Calendar, Eye, FileText } from "lucide-react";
+import { LogOut, Mail, Phone, Building, Calendar, Eye, FileText, ShieldCheck } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Seo from "@/components/Seo";
@@ -169,6 +169,12 @@ const Admin = () => {
               <Link to="/admin/posts">
                 <FileText className="h-4 w-4 mr-2" />
                 Manage Publications
+              </Link>
+            </Button>
+            <Button asChild variant="outline" className="bg-transparent">
+              <Link to="/admin/allowlist">
+                <ShieldCheck className="h-4 w-4 mr-2" />
+                Allowlist
               </Link>
             </Button>
             <Button onClick={signOut} variant="outline" className="bg-transparent">

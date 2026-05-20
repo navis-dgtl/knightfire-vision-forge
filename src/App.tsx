@@ -27,6 +27,7 @@ const Admin = lazy(() => import("./pages/Admin"));
 const PostDetail = lazy(() => import("./pages/PostDetail"));
 const PostsList = lazy(() => import("./pages/admin/PostsList"));
 const PostEditor = lazy(() => import("./pages/admin/PostEditor"));
+const Allowlist = lazy(() => import("./pages/admin/Allowlist"));
 const RsvpMesquite = lazy(() => import("./pages/RsvpMesquite"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -81,6 +82,14 @@ const App = () => (
                 element={
                   <RequireAdmin>
                     <PostEditor />
+                  </RequireAdmin>
+                }
+              />
+              <Route
+                path="/admin/allowlist"
+                element={
+                  <RequireAdmin>
+                    <Allowlist />
                   </RequireAdmin>
                 }
               />

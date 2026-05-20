@@ -1,5 +1,5 @@
 import { ReactNode, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { LogOut } from "lucide-react";
@@ -9,8 +9,12 @@ import Footer from "@/components/Footer";
 /**
  * Gates a route to signed-in admins. Sends anonymous visitors to /auth and
  * shows an access-denied notice to signed-in users without the admin role.
+ *
+ * Used two ways:
+ *   <RequireAdmin><MyPage/></RequireAdmin>     (wrap a single page)
+ *   <Route element={<RequireAdmin/>}><Route .../></Route>   (gate a subtree via Outlet)
  */
-export function RequireAdmin({ children }: { children: ReactNode }) {
+export function RequireAdmin({ children }: { children?: ReactNode }) {
   const { user, isAdmin, loading, signOut } = useAuth();
   const navigate = useNavigate();
 
@@ -50,5 +54,5 @@ export function RequireAdmin({ children }: { children: ReactNode }) {
     );
   }
 
-  return <>{children}</>;
+  return <>{children ?? <Outlet />}</>;
 }

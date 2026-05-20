@@ -1,39 +1,139 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import knightTekIcon from "@/assets/knight-tek-icon.webp";
+import AnnouncementBanner from "@/components/AnnouncementBanner";
+import { usePublicNav, type NavNode } from "@/lib/navigation";
+import { useAllPages, type Page } from "@/lib/pages";
+
+interface RenderedLink {
+  key: string;
+  name: string;
+  path: string;
+  external: boolean;
+  newTab: boolean;
+  submenu?: RenderedLink[];
+}
+
+const FALLBACK_LINKS: RenderedLink[] = [
+  { key: "f-home", name: "Home", path: "/", external: false, newTab: false },
+  {
+    key: "f-products",
+    name: "Products",
+    path: "/products",
+    external: false,
+    newTab: false,
+    submenu: [
+      { key: "f-p-all", name: "All Products", path: "/products", external: false, newTab: false },
+      { key: "f-p-1", name: "Thermal Stop™", path: "/products/thermal-stop", external: false, newTab: false },
+      { key: "f-p-2", name: "Thermal Shield™", path: "/products/thermal-shield", external: false, newTab: false },
+      { key: "f-p-3", name: "Suppressit™", path: "/products/suppressit", external: false, newTab: false },
+      { key: "f-p-4", name: "Fire Quit™", path: "/products/fire-quit", external: false, newTab: false },
+      { key: "f-p-5", name: "Elixir 5™", path: "/products/elixir-5", external: false, newTab: false },
+      { key: "f-p-6", name: "Product Comparison", path: "/products/comparison", external: false, newTab: false },
+    ],
+  },
+  { key: "f-industries", name: "Industries", path: "/industries", external: false, newTab: false },
+  { key: "f-distributors", name: "Distributors", path: "/distributors", external: false, newTab: false },
+  { key: "f-media", name: "Media", path: "/publications", external: false, newTab: false },
+  { key: "f-about", name: "About", path: "/about", external: false, newTab: false },
+  { key: "f-contact", name: "Contact", path: "/contact", external: false, newTab: false },
+];
+
+const isExternal = (url: string) => /^https?:\/\//i.test(url);
+
+const resolvePath = (
+  node: NavNode,
+  pagesById: Map<string, Pick<Page, "slug" | "status">>,
+): string | null => {
+  if (node.page_id) {
+    const page = pagesById.get(node.page_id);
+    if (!page || page.status !== "published") return null;
+    return `/${page.slug}`;
+  }
+  return node.url || null;
+};
+
+const toRendered = (
+  node: NavNode,
+  pagesById: Map<string, Pick<Page, "slug" | "status">>,
+): RenderedLink | null => {
+  const path = resolvePath(node, pagesById);
+  if (!path) return null;
+  const submenu = node.children
+    .map((child) => toRendered(child, pagesById))
+    .filter((c): c is RenderedLink => !!c);
+  return {
+    key: node.id,
+    name: node.label,
+    path,
+    external: isExternal(path),
+    newTab: node.opens_new_tab,
+    submenu: submenu.length > 0 ? submenu : undefined,
+  };
+};
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { data: dbTree } = usePublicNav("header");
+  const { data: pages = [] } = useAllPages();
+
+  const navLinks: RenderedLink[] = useMemo(() => {
+    if (!dbTree || dbTree.length === 0) return FALLBACK_LINKS;
+    const pagesById = new Map<string, Pick<Page, "slug" | "status">>(
+      pages.map((p) => [p.id, { slug: p.slug, status: p.status }]),
+    );
+    const rendered = dbTree
+      .map((node) => toRendered(node, pagesById))
+      .filter((n): n is RenderedLink => !!n);
+    return rendered.length > 0 ? rendered : FALLBACK_LINKS;
+  }, [dbTree, pages]);
 
   const isActive = (path: string) => location.pathname === path;
 
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { 
-      name: "Products", 
-      path: "/products",
-      submenu: [
-        { name: "All Products", path: "/products" },
-        { name: "Thermal Stop™", path: "/products/thermal-stop" },
-        { name: "Thermal Shield™", path: "/products/thermal-shield" },
-        { name: "Suppressit™", path: "/products/suppressit" },
-        { name: "Fire Quit™", path: "/products/fire-quit" },
-        { name: "Elixir 5™", path: "/products/elixir-5" },
-        { name: "Product Comparison", path: "/products/comparison" },
-      ]
-    },
-    { name: "Industries", path: "/industries" },
-    { name: "Distributors", path: "/distributors" },
-    { name: "Media", path: "/publications" },
-    { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
-  ];
+  // Single component for an in-content link that knows internal vs. external.
+  const NavAnchor = ({
+    link,
+    className,
+    onClick,
+    children,
+  }: {
+    link: RenderedLink;
+    className?: string;
+    onClick?: () => void;
+    children: React.ReactNode;
+  }) => {
+    if (link.external) {
+      return (
+        <a
+          href={link.path}
+          className={className}
+          onClick={onClick}
+          target={link.newTab ? "_blank" : undefined}
+          rel={link.newTab ? "noopener noreferrer" : undefined}
+        >
+          {children}
+        </a>
+      );
+    }
+    return (
+      <Link
+        to={link.path}
+        className={className}
+        onClick={onClick}
+        target={link.newTab ? "_blank" : undefined}
+        rel={link.newTab ? "noopener noreferrer" : undefined}
+      >
+        {children}
+      </Link>
+    );
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary shadow-lg">
+      <AnnouncementBanner />
       <div className="container mx-auto px-4">
         {/* Top bar with contact info */}
         <div className="border-b border-primary-foreground/20 py-2 hidden lg:block">
@@ -48,9 +148,7 @@ const Navigation = () => {
                 info@ktekglobal.com
               </a>
             </div>
-            <div className="text-xs">
-              Lithium-Ion Battery Thermal Runaway Solutions
-            </div>
+            <div className="text-xs">Lithium-Ion Battery Thermal Runaway Solutions</div>
           </div>
         </div>
 
@@ -71,26 +169,26 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <div key={link.path} className="relative group">
-                <Link
-                  to={link.path}
+              <div key={link.key} className="relative group">
+                <NavAnchor
+                  link={link}
                   className={`font-medium transition-colors hover:text-accent ${
                     isActive(link.path) ? "text-accent" : "text-primary-foreground"
                   }`}
                 >
                   {link.name}
-                </Link>
+                </NavAnchor>
                 {link.submenu && (
                   <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     <div className="bg-card shadow-xl rounded-lg border border-border py-2 min-w-[220px]">
                       {link.submenu.map((sublink) => (
-                        <Link
-                          key={sublink.path}
-                          to={sublink.path}
+                        <NavAnchor
+                          key={sublink.key}
+                          link={sublink}
                           className="block px-4 py-2 hover:bg-muted transition-colors text-foreground"
                         >
                           {sublink.name}
-                        </Link>
+                        </NavAnchor>
                       ))}
                     </div>
                   </div>
@@ -116,27 +214,27 @@ const Navigation = () => {
           <div className="lg:hidden border-t border-primary-foreground/20 py-4">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <div key={link.path}>
-                  <Link
-                    to={link.path}
+                <div key={link.key}>
+                  <NavAnchor
+                    link={link}
+                    onClick={() => setIsOpen(false)}
                     className={`block font-medium py-2 transition-colors ${
                       isActive(link.path) ? "text-accent" : "text-primary-foreground"
                     }`}
-                    onClick={() => setIsOpen(false)}
                   >
                     {link.name}
-                  </Link>
+                  </NavAnchor>
                   {link.submenu && (
                     <div className="pl-4 flex flex-col gap-2 mt-2">
                       {link.submenu.map((sublink) => (
-                        <Link
-                          key={sublink.path}
-                          to={sublink.path}
-                          className="text-primary-foreground/80 hover:text-accent transition-colors py-1"
+                        <NavAnchor
+                          key={sublink.key}
+                          link={sublink}
                           onClick={() => setIsOpen(false)}
+                          className="text-primary-foreground/80 hover:text-accent transition-colors py-1"
                         >
                           {sublink.name}
-                        </Link>
+                        </NavAnchor>
                       ))}
                     </div>
                   )}

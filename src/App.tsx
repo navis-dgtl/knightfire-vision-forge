@@ -85,6 +85,14 @@ const App = () => (
                   </RequireAdmin>
                 }
               />
+              <Route
+                path="/admin/allowlist"
+                element={
+                  <RequireAdmin>
+                    <Allowlist />
+                  </RequireAdmin>
+                }
+              />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

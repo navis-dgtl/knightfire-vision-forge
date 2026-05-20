@@ -13,7 +13,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { LogOut, Mail, Phone, Building, Calendar, Eye, FileText } from "lucide-react";
+import { LogOut, Mail, Phone, Building, Calendar, Eye, FileText, ShieldCheck } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Seo from "@/components/Seo";

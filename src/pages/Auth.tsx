@@ -113,7 +113,13 @@ const Auth = () => {
                   {submitting ? "Signing in…" : "Sign In"}
                 </Button>
                 <p className="text-xs text-muted-foreground text-center">
-                  Restricted access. Accounts are provisioned by KnightTek administrators only — public sign-ups are disabled.
+                  Restricted access. Only allowlisted KnightTek team emails can register.
+                </p>
+                <p className="text-xs text-center">
+                  Need an account?{" "}
+                  <Link to="/signup" className="text-primary hover:underline">
+                    Sign up
+                  </Link>
                 </p>
                 <p className="text-xs text-center">
                   <Link to="/" className="text-primary hover:underline">

@@ -22,6 +22,7 @@ const Suppressit = lazy(() => import("./pages/Suppressit"));
 const FireQuit = lazy(() => import("./pages/FireQuit"));
 const Elixir5 = lazy(() => import("./pages/Elixir5"));
 const Auth = lazy(() => import("./pages/Auth"));
+const SignUp = lazy(() => import("./pages/SignUp"));
 const Admin = lazy(() => import("./pages/Admin"));
 const PostDetail = lazy(() => import("./pages/PostDetail"));
 const PostsList = lazy(() => import("./pages/admin/PostsList"));
@@ -57,6 +58,7 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/rsvp-mesquite" element={<RsvpMesquite />} />
               <Route path="/auth" element={<Auth />} />
+              <Route path="/signup" element={<SignUp />} />
               <Route path="/admin" element={<Admin />} />
               <Route
                 path="/admin/posts"

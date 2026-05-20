@@ -115,7 +115,7 @@ export default function SiteSettings() {
         setting={editing}
         existingKeys={new Set(settings.map((s) => s.key))}
         onSave={async ({ key, value }) => {
-          await save.mutateAsync({ key, value });
+          await save.mutateAsync({ key, value: value as never });
           setCreating(false);
           setEditing(null);
         }}

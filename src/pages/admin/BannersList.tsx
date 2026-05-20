@@ -59,7 +59,7 @@ export default function BannersList() {
   };
 
   const toggleActive = (banner: Banner) =>
-    save.mutate({ id: banner.id, values: { is_active: !banner.is_active } });
+    save.mutate({ id: banner.id, values: { is_active: !banner.is_active } as never });
 
   const confirmDelete = async () => {
     if (!pendingDelete) return;

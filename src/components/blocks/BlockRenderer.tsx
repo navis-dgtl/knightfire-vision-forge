@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SafeHtml } from "@/components/SafeHtml";
 import { cn } from "@/lib/utils";
-import { getVideoEmbedUrl, type Block, type InnerBlock } from "@/lib/blocks";
+import { getVideoEmbedUrl, type Block } from "@/lib/blocks";
 import { ContactFormInline } from "./ContactFormInline";
 
 const isExternal = (url: string) => /^https?:\/\//i.test(url);
@@ -12,7 +12,7 @@ const isExternal = (url: string) => /^https?:\/\//i.test(url);
  * Inner blocks (inside columns) pass through this same renderer — columns
  * just feed it the left/right arrays.
  */
-export function BlockRenderer({ block }: { block: Block | InnerBlock }) {
+export function BlockRenderer({ block }: { block: Block }) {
   switch (block.type) {
     case "heading":
       return <HeadingView block={block} />;

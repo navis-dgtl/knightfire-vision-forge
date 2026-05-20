@@ -194,14 +194,14 @@ export function parseBlocks(value: unknown): Block[] {
   const out: Block[] = [];
   for (const raw of value) {
     const parsed = blockSchema.safeParse(raw);
-    if (parsed.success) out.push(parsed.data);
+    if (parsed.success) out.push(parsed.data as Block);
   }
   return out;
 }
 
 /** Strict validate — throws if any block is malformed. Used at save time. */
 export function validateBlocks(blocks: unknown): Block[] {
-  return z.array(blockSchema).parse(blocks);
+  return z.array(blockSchema).parse(blocks) as Block[];
 }
 
 const PROVIDER_HOSTS: Record<string, string> = {

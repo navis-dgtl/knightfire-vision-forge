@@ -110,8 +110,17 @@ export const blockSchema = z.discriminatedUnion("type", [
   embedSchema,
 ]);
 
-export type Block = z.infer<typeof blockSchema>;
-export type InnerBlock = z.infer<typeof innerBlockSchema>;
+export type HeadingBlock = { id: string; type: "heading"; props: { text: string; level: 1 | 2 | 3; align: "left" | "center" } };
+export type RichTextBlock = { id: string; type: "rich_text"; props: { html: string } };
+export type ImageBlock = { id: string; type: "image"; props: { url: string; alt: string; caption: string; width: "narrow" | "wide" | "full" } };
+export type ButtonBlock = { id: string; type: "button"; props: { label: string; url: string; variant: "primary" | "secondary"; align: "left" | "center" | "right" } };
+export type VideoBlock = { id: string; type: "video"; props: { url: string; caption: string } };
+export type SpacerBlock = { id: string; type: "spacer"; props: { size: "sm" | "md" | "lg" } };
+export type ContactFormBlock = { id: string; type: "contact_form"; props: { heading: string; subheading: string } };
+export type EmbedBlock = { id: string; type: "embed"; props: { url: string; height: number; caption: string } };
+export type InnerBlock = HeadingBlock | RichTextBlock | ImageBlock | ButtonBlock | VideoBlock | SpacerBlock;
+export type ColumnsBlock = { id: string; type: "columns"; props: { left: InnerBlock[]; right: InnerBlock[]; ratio: "50-50" | "33-67" | "67-33" } };
+export type Block = InnerBlock | ColumnsBlock | ContactFormBlock | EmbedBlock;
 export type BlockType = Block["type"];
 
 export const BLOCK_TYPES: BlockType[] = [

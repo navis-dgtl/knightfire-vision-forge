@@ -33,7 +33,7 @@ const ZERO: Counts = {
 };
 
 const head = (table: string) =>
-  supabase.from(table).select("*", { count: "exact", head: true });
+  (supabase.from as (t: string) => ReturnType<typeof supabase.from>)(table).select("*", { count: "exact", head: true });
 
 export default function Dashboard() {
   const [counts, setCounts] = useState<Counts>(ZERO);

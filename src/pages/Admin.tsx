@@ -171,6 +171,12 @@ const Admin = () => {
                 Manage Publications
               </Link>
             </Button>
+            <Button asChild variant="outline" className="bg-transparent">
+              <Link to="/admin/allowlist">
+                <ShieldCheck className="h-4 w-4 mr-2" />
+                Allowlist
+              </Link>
+            </Button>
             <Button onClick={signOut} variant="outline" className="bg-transparent">
               <LogOut className="h-4 w-4 mr-2" />
               Sign out

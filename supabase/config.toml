@@ -5,3 +5,10 @@ verify_jwt = true
 
 [functions.process-email-queue]
 verify_jwt = true
+
+# The sync-outrank function handles its own auth: it accepts either a
+# signed-in Ktek admin JWT (from the in-app "Sync from Outrank" button) or
+# the service-role JWT (from the pg_cron daily job). JWT verification is
+# disabled here so the function itself can branch on which caller it is.
+[functions.sync-outrank]
+verify_jwt = false

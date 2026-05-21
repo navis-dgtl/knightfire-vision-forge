@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useQueryClient } from "@tanstack/react-query";
 import {
   Plus,
   Pencil,
@@ -8,9 +9,11 @@ import {
   Newspaper,
   Video,
   BookOpen,
+  RefreshCw,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { supabase } from "@/integrations/supabase/client";
 import {
   Table,
   TableBody,
@@ -75,12 +78,45 @@ const formatDate = (iso: string | null) =>
 
 const PostsList = () => {
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
   const { data: posts = [], isLoading } = useAllPosts();
   const deletePost = useDeletePost();
 
   const [typeFilter, setTypeFilter] = useState<"all" | PostType>("all");
   const [statusFilter, setStatusFilter] = useState<"all" | PostStatus>("all");
   const [pendingDelete, setPendingDelete] = useState<Post | null>(null);
+  const [syncing, setSyncing] = useState(false);
+
+  const handleOutrankSync = async () => {
+    setSyncing(true);
+    try {
+      const { data, error } = await supabase.functions.invoke<{
+        imported: number;
+        updated: number;
+        skipped: number;
+        errors: { id: string; message: string }[];
+      }>("sync-outrank", { body: { mode: "backfill" } });
+      if (error) throw error;
+      const imported = data?.imported ?? 0;
+      const updated = data?.updated ?? 0;
+      const errors = data?.errors?.length ?? 0;
+      const parts = [
+        imported ? `${imported} new` : null,
+        updated ? `${updated} updated` : null,
+        errors ? `${errors} errors` : null,
+      ].filter(Boolean);
+      toast.success(
+        parts.length ? `Outrank sync: ${parts.join(" · ")}` : "Outrank sync: nothing new.",
+      );
+      queryClient.invalidateQueries({ queryKey: ["posts"] });
+    } catch (e) {
+      toast.error(
+        e instanceof Error ? e.message : "Outrank sync failed. Check the function logs.",
+      );
+    } finally {
+      setSyncing(false);
+    }
+  };
 
   const filtered = useMemo(
     () =>
@@ -113,12 +149,25 @@ const PostsList = () => {
             Write and publish articles, news, videos, and publications.
           </p>
         </div>
-        <Button asChild>
-          <Link to="/admin/posts/new">
-            <Plus className="h-4 w-4 mr-2" />
-            New post
-          </Link>
-        </Button>
+        <div className="flex gap-2">
+          <Button
+            variant="outline"
+            onClick={handleOutrankSync}
+            disabled={syncing}
+            title="Pull every article from Outrank and import it as a published article."
+          >
+            <RefreshCw
+              className={`h-4 w-4 mr-2${syncing ? " animate-spin" : ""}`}
+            />
+            {syncing ? "Syncing…" : "Sync from Outrank"}
+          </Button>
+          <Button asChild>
+            <Link to="/admin/posts/new">
+              <Plus className="h-4 w-4 mr-2" />
+              New post
+            </Link>
+          </Button>
+        </div>
       </div>
 
       <div>
@@ -194,7 +243,16 @@ const PostsList = () => {
                         className="cursor-pointer"
                         onClick={() => navigate(`/admin/posts/${post.id}`)}
                       >
-                        <TableCell className="font-medium">{post.title}</TableCell>
+                        <TableCell className="font-medium">
+                          <span className="flex items-center gap-2">
+                            {post.title}
+                            {post.external_source === "outrank" && (
+                              <Badge variant="outline" className="text-xs">
+                                Outrank
+                              </Badge>
+                            )}
+                          </span>
+                        </TableCell>
                         <TableCell>
                           <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
                             <Icon className="h-4 w-4" />

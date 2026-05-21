@@ -44,20 +44,28 @@ const SignUp = () => {
       return;
     }
     setSubmitting(true);
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email: parsed.data.email,
       password: parsed.data.password,
       options: { emailRedirectTo: `${window.location.origin}/auth` },
     });
-    setSubmitting(false);
     if (error) {
+      setSubmitting(false);
       const msg = /allowlist|restricted|Database error/i.test(error.message)
         ? "This email isn't approved for sign-up. Contact your KnightTek administrator to be added to the allowlist."
         : error.message;
       toast({ title: "Sign up failed", description: msg, variant: "destructive" });
       return;
     }
-    setDone(true);
+    // Auto-confirm is on; if no session was returned, sign in directly.
+    if (!data.session) {
+      await supabase.auth.signInWithPassword({
+        email: parsed.data.email,
+        password: parsed.data.password,
+      });
+    }
+    setSubmitting(false);
+    navigate("/admin", { replace: true });
   };
 
   return (

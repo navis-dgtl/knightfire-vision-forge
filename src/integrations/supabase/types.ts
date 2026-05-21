@@ -623,6 +623,7 @@ export type Database = {
           read_ct: number
         }[]
       }
+      trigger_outrank_daily_sync: { Args: never; Returns: number }
     }
     Enums: {
       app_role: "admin" | "user"

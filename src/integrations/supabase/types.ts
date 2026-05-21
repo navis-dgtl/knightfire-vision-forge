@@ -372,6 +372,8 @@ export type Database = {
           body: string | null
           created_at: string
           excerpt: string | null
+          external_id: string | null
+          external_source: string | null
           external_url: string | null
           featured_image_url: string | null
           id: string
@@ -391,6 +393,8 @@ export type Database = {
           body?: string | null
           created_at?: string
           excerpt?: string | null
+          external_id?: string | null
+          external_source?: string | null
           external_url?: string | null
           featured_image_url?: string | null
           id?: string
@@ -410,6 +414,8 @@ export type Database = {
           body?: string | null
           created_at?: string
           excerpt?: string | null
+          external_id?: string | null
+          external_source?: string | null
           external_url?: string | null
           featured_image_url?: string | null
           id?: string

@@ -107,7 +107,7 @@ export default function NavigationEditor() {
   };
 
   const toggleVisible = (item: NavItem) =>
-    save.mutate({ id: item.id, values: { is_visible: !item.is_visible } });
+    save.mutate({ id: item.id, values: { is_visible: !item.is_visible } as never });
 
   const confirmDelete = async () => {
     if (!pendingDelete) return;

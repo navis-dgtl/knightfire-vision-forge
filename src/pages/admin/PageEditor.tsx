@@ -111,7 +111,7 @@ export default function PageEditor() {
       return;
     }
     const result = validateSlug(form.slug);
-    setSlugError(result.ok ? null : result.reason);
+    setSlugError(result.ok === true ? null : (result as { ok: false; reason: string }).reason);
   }, [form.slug]);
 
   const update = <K extends keyof FormState>(key: K, value: FormState[K]) =>

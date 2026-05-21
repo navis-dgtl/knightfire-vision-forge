@@ -3,6 +3,9 @@ project_id = "xkpkxsxkpydoxzsankyj"
 [functions.improve-article]
 verify_jwt = true
 
+[functions.process-email-queue]
+verify_jwt = true
+
 # The sync-outrank function handles its own auth: it accepts either a
 # signed-in Ktek admin JWT (from the in-app "Sync from Outrank" button) or
 # the service-role JWT (from the pg_cron daily job). JWT verification is

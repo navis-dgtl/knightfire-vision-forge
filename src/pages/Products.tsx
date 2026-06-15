@@ -274,7 +274,7 @@ const Products = () => {
 
           {/* Redline attribution */}
           <p className="text-sm text-muted-foreground text-center max-w-7xl mx-auto mb-16 italic">
-            Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Exclusive Global Distributor.
+            Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Global Distributor.
           </p>
 
           {/* Coming Soon Products */}

@@ -37,7 +37,7 @@ const Index = () => {
                 Protecting Lives with Advanced Fire Suppression Technology
               </h2>
               <p className="text-lg mb-4 text-foreground/80">
-                KnightTek is the exclusive global distributor of Thermal Stop™ and Thermal Shield™, revolutionary
+                KnightTek is the global distributor of Thermal Stop™ and Thermal Shield™, revolutionary
                 lithium-ion battery fire suppression solutions developed through 7+ years of dedicated research and
                 development.
               </p>

@@ -29,7 +29,7 @@ const About = () => {
             url: "https://ktekglobal.com/",
             telephone: "+1-833-466-5835",
             description:
-              "Exclusive global distributor of Redline Fire Solutions™ lithium-ion battery fire suppression products.",
+              "Global distributor of Redline Fire Solutions™ lithium-ion battery fire suppression products.",
           },
         }}
       />

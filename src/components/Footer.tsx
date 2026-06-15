@@ -18,7 +18,7 @@ const Footer = () => {
               </h3>
             </div>
             <p className="text-sm text-primary-foreground/80 mb-4">
-              Exclusive Global Distributor of Redline Fire Solutions™ lithium-ion battery fire suppression products, including Thermal Stop™, Thermal Shield™, Suppressit™, Fire Quit™, and Elixir 5™.
+              Global Distributor of Redline Fire Solutions™ lithium-ion battery fire suppression products, including Thermal Stop™, Thermal Shield™, Suppressit™, Fire Quit™, and Elixir 5™.
             </p>
             <div className="flex gap-4">
               <a href="https://www.facebook.com/share/1c5Tfhwg5v/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">

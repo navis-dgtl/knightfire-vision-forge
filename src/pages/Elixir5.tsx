@@ -96,7 +96,7 @@ const Elixir5 = () => {
                   Designed for use from an extinguisher, Elixir 5™ is a pre-measured, ready-to-use solution that enhances water's ability to spread and penetrate. It ensures optimal wetting and coating of surfaces, leading to improved cooling and fire suppression without the risk of conductivity.
                 </p>
                 <p className="text-sm text-muted-foreground italic">
-                  Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Exclusive Global Distributor.
+                  Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Global Distributor.
                 </p>
               </div>
             </div>

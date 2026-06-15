@@ -15,7 +15,7 @@ const About = () => {
     <div className="min-h-screen flex flex-col">
       <Seo
         title="About KnightTek | Lithium-Ion Battery Fire Suppression Experts"
-        description="KnightTek, LLC is the exclusive global distributor of Redline Fire Solutions™ NFPA 18 certified lithium-ion battery fire suppression products. Meet our team."
+        description="KnightTek, LLC is the global distributor of Redline Fire Solutions™ NFPA 18 certified lithium-ion battery fire suppression products. Meet our team."
         canonical="/about"
         jsonLd={{
           "@context": "https://schema.org",
@@ -38,7 +38,7 @@ const About = () => {
       <section className="pt-32 pb-16 bg-gradient-navy text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">About KnightTek</h1>
-          <p className="text-xl text-primary-foreground/90">Exclusive Global Distributor of Thermal Stop™, Thermal Shield™, Suppressit™, Fire Quit™, and Elixir 5™ Fire Suppression Products</p>
+          <p className="text-xl text-primary-foreground/90">Global Distributor of Thermal Stop™, Thermal Shield™, Suppressit™, Fire Quit™, and Elixir 5™ Fire Suppression Products</p>
         </div>
       </section>
 
@@ -46,7 +46,7 @@ const About = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-heading font-bold mb-6 text-primary">Our Mission</h2>
           <p className="text-lg text-foreground/80 mb-4">
-            KnightTek, LLC is the Exclusive Global Distributor of Redline Fire Solutions™ lithium-ion battery fire suppression products. We are dedicated to providing the most advanced fire suppression solutions to first responders and industry professionals worldwide.
+            KnightTek, LLC is the Global Distributor of Redline Fire Solutions™ lithium-ion battery fire suppression products. We are dedicated to providing the most advanced fire suppression solutions to first responders and industry professionals worldwide.
           </p>
           <p className="text-lg text-foreground/80 mb-8">
             Backed by 7+ years of R&D by Redline Fire Solutions, these products represent purpose-built technology specifically engineered for lithium-ion battery fires, proven effective across all battery chemistries.

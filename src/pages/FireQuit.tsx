@@ -92,7 +92,7 @@ const FireQuit = () => {
                   Fire Quit™ enhances water's ability to wet and coat surfaces, significantly improving the effectiveness of firefighting operations in wildland firefighting and structural fire suppression. It stands alone as a solution that does not require combination with other firefighting chemicals to maximize effectiveness.
                 </p>
                 <p className="text-sm text-muted-foreground italic">
-                  Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Exclusive Global Distributor.
+                  Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Global Distributor.
                 </p>
               </div>
             </div>

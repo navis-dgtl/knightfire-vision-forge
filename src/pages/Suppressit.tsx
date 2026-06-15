@@ -96,7 +96,7 @@ const Suppressit = () => {
                   With non-toxic ingredients, Suppressit™ eliminates the concerns associated with PFAS and PFOS, offering zero health effects on first responders and minimal environmental impact. Whether deployed from aircraft, helicopters, ground crews, firetrucks, or CAFS systems, Suppressit™ penetrates faster, clings longer, and stops fire in its tracks.
                 </p>
                 <p className="text-sm text-muted-foreground italic">
-                  Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Exclusive Global Distributor.
+                  Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Global Distributor.
                 </p>
               </div>
             </div>

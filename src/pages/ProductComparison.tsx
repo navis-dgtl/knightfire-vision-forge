@@ -73,7 +73,7 @@ const ProductComparison = () => {
               Our product lineup covers the full spectrum of fire suppression needs — from lithium-ion battery thermal runaway to AFFF replacement, wildland firefighting, and all-class extinguisher solutions. Contact us to find the right combination for your operations.
             </p>
             <p className="text-sm text-muted-foreground mb-6 italic">
-              Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Exclusive Global Distributor.
+              Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Global Distributor.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">

@@ -18,19 +18,40 @@ const Footer = () => {
               </h3>
             </div>
             <p className="text-sm text-primary-foreground/80 mb-4">
-              Global Distributor of Redline Fire Solutions™ lithium-ion battery fire suppression products, including Thermal Stop™, Thermal Shield™, Suppressit™, Fire Quit™, and Elixir 5™.
+              Global Distributor of Redline Fire Solutions™ lithium-ion battery fire suppression products, including
+              Thermal Stop™, Thermal Shield™, Suppressit™, Fire Quit™, and Elixir 5™.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.facebook.com/share/1c5Tfhwg5v/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+              <a
+                href="https://www.facebook.com/ktekglobal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://www.linkedin.com/company/knightfiretek/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+              <a
+                href="https://www.linkedin.com/company/knightfiretek/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="https://youtube.com/@knightfiretek?si=jGQOicCEPHZcgQHY" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+              <a
+                href="https://youtube.com/@knightfiretek?si=jGQOicCEPHZcgQHY"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+              >
                 <Youtube className="h-5 w-5" />
               </a>
-              <a href="https://www.instagram.com/thermalstop?igsh=bGx1aWpkNHVjeWwz" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+              <a
+                href="https://www.instagram.com/thermalstop?igsh=bGx1aWpkNHVjeWwz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
             </div>

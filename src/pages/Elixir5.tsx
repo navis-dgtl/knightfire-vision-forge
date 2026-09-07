@@ -7,14 +7,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { BadgeCheck, Zap, ChevronRight } from "lucide-react";
 import ProductGallery from "@/components/ProductGallery";
-import elixir5Img from "@/assets/elixir5.webp";
 import elixir501 from "@/assets/elixir5_3i_01.webp";
 import elixir502 from "@/assets/elixir5_3j_02.webp";
 import elixir503 from "@/assets/elixir5_3k_03.webp";
 import elixir504 from "@/assets/elixir5_3l_04.webp";
 
 const elixir5Gallery = [
-  { src: elixir5Img, alt: "Elixir 5™ Extinguisher Solution" },
   { src: elixir501, alt: "Elixir 5™ overview" },
   { src: elixir502, alt: "Elixir 5™ key features" },
   { src: elixir503, alt: "Elixir 5™ applications" },

@@ -7,14 +7,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { BadgeCheck, Shield, ChevronRight, Droplets } from "lucide-react";
 import ProductGallery from "@/components/ProductGallery";
-import suppressitImg from "@/assets/suppressit.webp";
 import suppressit01 from "@/assets/suppressit_3a_01.webp";
 import suppressit02 from "@/assets/suppressit_3b_02.webp";
 import suppressit03 from "@/assets/suppressit_3c_03.webp";
 import suppressit04 from "@/assets/suppressit_3d_04.webp";
 
 const suppressitGallery = [
-  { src: suppressitImg, alt: "Suppressit™ Non-Fluorinated Foam" },
   { src: suppressit01, alt: "Suppressit™ overview" },
   { src: suppressit02, alt: "Suppressit™ key features" },
   { src: suppressit03, alt: "Suppressit™ applications" },

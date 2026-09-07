@@ -7,14 +7,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { BadgeCheck, Flame, ChevronRight } from "lucide-react";
 import ProductGallery from "@/components/ProductGallery";
-import firequitImg from "@/assets/firequit.webp";
 import firequit01 from "@/assets/firequit_3e_01.webp";
 import firequit02 from "@/assets/firequit_3f_02.webp";
 import firequit03 from "@/assets/firequit_3g_03.webp";
 import firequit04 from "@/assets/firequit_3h_04.webp";
 
 const fireQuitGallery = [
-  { src: firequitImg, alt: "Fire Quit™ Wetting Agent" },
   { src: firequit01, alt: "Fire Quit™ overview" },
   { src: firequit02, alt: "Fire Quit™ key features" },
   { src: firequit03, alt: "Fire Quit™ applications" },

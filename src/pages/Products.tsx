@@ -41,7 +41,7 @@ const Products = () => {
               Purpose-Built Lithium-Ion Battery Fire Solutions
             </p>
             <p className="text-lg text-primary-foreground/80 max-w-3xl mx-auto">
-              7+ years of development by Redline Fire Solutions, specifically designed for lithium-ion battery thermal runaway fire solutions. NFPA 18 certified. EPA Safer Choice listed. Additional certifications and testing are ongoing globally.
+              7+ years of development, specifically designed for lithium-ion battery thermal runaway fire solutions. NFPA 18 certified. EPA Safer Choice listed. Additional certifications and testing are ongoing globally.
             </p>
           </div>
         </div>
@@ -274,7 +274,7 @@ const Products = () => {
 
           {/* Redline attribution */}
           <p className="text-sm text-muted-foreground text-center max-w-7xl mx-auto mb-16 italic">
-            Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Global Distributor.
+            Patented technology distributed by KnightTEK, Global Distributor.
           </p>
 
           {/* Coming Soon Products */}

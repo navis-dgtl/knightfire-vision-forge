@@ -28,8 +28,8 @@ const ThermalStop = () => {
           name: "Thermal Stop™",
           description:
             "NFPA 18 certified lithium-ion battery fire extinguishing agent. Stops thermal runaway in seconds across all battery chemistries. EPA Safer Choice listed, PFAS-free.",
-          brand: { "@type": "Brand", name: "Redline Fire Solutions" },
-          manufacturer: { "@type": "Organization", name: "Redline Fire Solutions" },
+          brand: { "@type": "Brand", name: "KnightTek" },
+          manufacturer: { "@type": "Organization", name: "KnightTek, LLC" },
           category: "Fire Suppression Equipment",
           url: "https://ktekglobal.com/products/thermal-stop",
         }}
@@ -108,7 +108,7 @@ const ThermalStop = () => {
                   This all-natural, non-hazardous solution operates in three powerful ways: its superior endothermic properties provide super-fast cooling, effectively halting thermal runaway within just 30 seconds. By interrupting the chemical reactions within the battery, Thermal Stop™ blocks dangerous off-gassing and encapsulates harmful PFAS chemicals found in some lithium-ion batteries.
                 </p>
                 <p>
-                  Designed for efficiency, Thermal Stop™ requires only a small amount to tackle large fires, making cleanup simple. Featuring patented formulation technology developed and owned by Redline Fire Solutions, Thermal Stop™ delivers exceptional performance when needed most.
+                  Designed for efficiency, Thermal Stop™ requires only a small amount to tackle large fires, making cleanup simple. Featuring patented formulation technology, Thermal Stop™ delivers exceptional performance when needed most.
                 </p>
               </div>
             </div>

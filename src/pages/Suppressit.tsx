@@ -33,7 +33,7 @@ const Suppressit = () => {
           name: "Suppressit™",
           description:
             "Non-fluorinated, PFAS-free firefighting foam designed as a direct AFFF replacement.",
-          brand: { "@type": "Brand", name: "Redline Fire Solutions" },
+          brand: { "@type": "Brand", name: "KnightTek" },
           category: "Fire Suppression Equipment",
           url: "https://ktekglobal.com/products/suppressit",
         }}
@@ -101,7 +101,7 @@ const Suppressit = () => {
                   With non-toxic ingredients, Suppressit™ eliminates the concerns associated with PFAS and PFOS, offering zero health effects on first responders and minimal environmental impact. Whether deployed from aircraft, helicopters, ground crews, firetrucks, or CAFS systems, Suppressit™ penetrates faster, clings longer, and stops fire in its tracks.
                 </p>
                 <p className="text-sm text-muted-foreground italic">
-                  Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Global Distributor.
+                  Patented technology distributed by KnightTEK, Global Distributor.
                 </p>
               </div>
             </div>
@@ -159,7 +159,7 @@ const Suppressit = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">Patented Technology</h4>
-                      <p>Patent-pending formulation developed and owned by Redline Fire Solutions.</p>
+                      <p>Patent-pending formulation technology.</p>
                     </div>
                   </div>
                 </CardContent>

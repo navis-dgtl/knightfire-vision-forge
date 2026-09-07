@@ -33,7 +33,7 @@ const Elixir5 = () => {
           name: "Elixir 5™",
           description:
             "All-class wetting agent for Class A, B, C, D, and K fires. Safe and effective for every challenge.",
-          brand: { "@type": "Brand", name: "Redline Fire Solutions" },
+          brand: { "@type": "Brand", name: "KnightTek" },
           category: "Fire Suppression Equipment",
           url: "https://ktekglobal.com/products/elixir-5",
         }}
@@ -101,7 +101,7 @@ const Elixir5 = () => {
                   Designed for use from an extinguisher, Elixir 5™ is a pre-measured, ready-to-use solution that enhances water's ability to spread and penetrate. It ensures optimal wetting and coating of surfaces, leading to improved cooling and fire suppression without the risk of conductivity.
                 </p>
                 <p className="text-sm text-muted-foreground italic">
-                  Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Global Distributor.
+                  Patented technology distributed by KnightTEK, Global Distributor.
                 </p>
               </div>
             </div>
@@ -153,7 +153,7 @@ const Elixir5 = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">Patented Technology</h4>
-                      <p>Patented formulation developed and owned by Redline Fire Solutions.</p>
+                      <p>Patented formulation technology.</p>
                     </div>
                   </div>
                 </CardContent>

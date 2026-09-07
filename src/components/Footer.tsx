@@ -72,6 +72,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/products/thermal-runaway-box" className="hover:text-accent transition-colors">
+                  Thermal Runaway Box™
+                </Link>
+              </li>
+              <li>
                 <Link to="/products/suppressit" className="hover:text-accent transition-colors">
                   Suppressit™
                 </Link>

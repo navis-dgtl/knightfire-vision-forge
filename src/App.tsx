@@ -12,6 +12,7 @@ import { AdminShell } from "@/components/admin/AdminShell";
 
 const ThermalStop = lazy(() => import("./pages/ThermalStop"));
 const ThermalShield = lazy(() => import("./pages/ThermalShield"));
+const ThermalRunawayBox = lazy(() => import("./pages/ThermalRunawayBox"));
 const ProductComparison = lazy(() => import("./pages/ProductComparison"));
 const Products = lazy(() => import("./pages/Products"));
 const Publications = lazy(() => import("./pages/Publications"));

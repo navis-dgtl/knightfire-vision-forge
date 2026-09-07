@@ -9,14 +9,11 @@ import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import extinguishersGroup from "@/assets/extinguishers-group.webp";
 import thermalShieldProduct from "@/assets/thermal-shield-new.webp";
-import suppressitImg from "@/assets/suppressit.webp";
-import firequitImg from "@/assets/firequit.webp";
-import elixir5Img from "@/assets/elixir5.webp";
+import suppressitImg from "@/assets/suppressit_3a_01.webp";
+import firequitImg from "@/assets/firequit_3e_01.webp";
+import elixir5Img from "@/assets/elixir5_3i_01.webp";
 import thermalBoxMain from "@/assets/thermal-box-main.webp";
 import personalTravelPack from "@/assets/personal-travel-pack.webp";
-import thermalBoxOpen from "@/assets/thermal-box-open.webp";
-import thermalBoxBack from "@/assets/thermal-box-back.webp";
-import thermalBoxLid from "@/assets/thermal-box-lid.webp";
 
 const Products = () => {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
@@ -41,7 +38,7 @@ const Products = () => {
               Purpose-Built Lithium-Ion Battery Fire Solutions
             </p>
             <p className="text-lg text-primary-foreground/80 max-w-3xl mx-auto">
-              7+ years of development by Redline Fire Solutions, specifically designed for lithium-ion battery thermal runaway fire solutions. NFPA 18 certified. EPA Safer Choice listed. Additional certifications and testing are ongoing globally.
+              7+ years of development, specifically designed for lithium-ion battery thermal runaway fire solutions. NFPA 18 certified. EPA Safer Choice listed. Additional certifications and testing are ongoing globally.
             </p>
           </div>
         </div>
@@ -133,6 +130,50 @@ const Products = () => {
                 </ul>
                 <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90 group-hover:shadow-lg transition-all">
                   <Link to="/products/thermal-shield" className="flex items-center justify-center gap-2">
+                    Learn More <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Thermal Runaway Box Card */}
+            <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow group">
+              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+                <img
+                  src={thermalBoxMain}
+                  alt="KnightTek™ Lithium-Ion Thermal Runaway Box"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <Box className="h-6 w-6 text-accent" />
+                  <h3 className="text-2xl font-heading font-bold text-primary">Thermal Runaway Box™</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4 font-semibold">Containment &amp; Suppression Kit</p>
+                <p className="text-foreground/80 mb-6">
+                  A portable, fire-rated containment unit for small lithium-ion batteries. Works in two modes: pre-runaway intervention and post-ignition suppression. No special training required.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Fire-rated containment box</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Integrated Thermal Stop™ suppression pouch</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Includes gloves and a 2-liter extinguisher</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Ideal for hospitals, schools, offices, and hotels</span>
+                  </li>
+                </ul>
+                <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90 group-hover:shadow-lg transition-all">
+                  <Link to="/products/thermal-runaway-box" className="flex items-center justify-center gap-2">
                     Learn More <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
@@ -274,7 +315,7 @@ const Products = () => {
 
           {/* Redline attribution */}
           <p className="text-sm text-muted-foreground text-center max-w-7xl mx-auto mb-16 italic">
-            Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Global Distributor.
+            Patented technology distributed by KnightTEK, Global Distributor.
           </p>
 
           {/* Coming Soon Products */}
@@ -285,35 +326,7 @@ const Products = () => {
               </h2>
               <p className="text-lg text-foreground/70 mt-2">Our R&D Team Has Been Hard at Work</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Thermal Runaway Containment Box */}
-              <Card className="border-2 border-dashed border-accent/30 bg-gradient-to-br from-accent/5 to-primary/5 relative overflow-hidden">
-                <div className="absolute top-4 right-4 z-10">
-                  <span className="bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-full">
-                    Coming Soon
-                  </span>
-                </div>
-                <div className="p-4 bg-white">
-                  <img src={thermalBoxMain} alt="KnightTek™ Lithium-Ion Thermal Runaway Box" className="w-full h-auto object-contain max-h-64 mx-auto cursor-pointer hover:opacity-90 transition-opacity" onClick={() => setLightboxImage(thermalBoxMain)} />
-                </div>
-                <div className="grid grid-cols-3 gap-1 px-4 pb-4 bg-white">
-                  <img src={thermalBoxOpen} alt="Thermal Runaway Box open view" className="w-full h-20 object-contain bg-muted/20 rounded cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setLightboxImage(thermalBoxOpen)} />
-                  <img src={thermalBoxBack} alt="Thermal Runaway Box back view" className="w-full h-20 object-contain bg-muted/20 rounded cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setLightboxImage(thermalBoxBack)} />
-                  <img src={thermalBoxLid} alt="Thermal Runaway Box lid detail" className="w-full h-20 object-contain bg-muted/20 rounded cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setLightboxImage(thermalBoxLid)} />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-heading font-bold text-primary mb-1">KnightTek™ Lithium-Ion Thermal Runaway Box</h3>
-                  <p className="text-sm text-accent font-semibold mb-2">Patent Pending</p>
-                  <p className="text-sm text-foreground/70 italic mb-3">Rapid Containment. Immediate Suppression. Proactive Protection.</p>
-                  <p className="text-foreground/80 mb-4 text-sm">
-                    A portable, fire-rated containment unit designed for small lithium-ion batteries. Works in two modes: pre-runaway intervention and post-ignition suppression. Ships with an integrated Thermal Stop™ suppression pouch, fire-rated containment box, fire-protective gloves, a 2-liter extinguisher, and clear instructional labeling. No special training required.
-                  </p>
-                  <p className="text-xs text-muted-foreground mb-2">Dimensions: 18" × 10" × 15"</p>
-                  <p className="text-xs text-muted-foreground mb-4">Target: Hospitals, schools, offices, hotels, and commercial facilities.</p>
-                  <p className="text-sm font-semibold text-primary">Available to order soon.</p>
-                </CardContent>
-              </Card>
-
+            <div className="grid md:grid-cols-2 gap-8 max-w-md mx-auto">
               {/* Personal Handheld Canister */}
               <Card className="border-2 border-dashed border-accent/30 bg-gradient-to-br from-accent/5 to-primary/5 relative overflow-hidden">
                 <div className="absolute top-4 right-4 z-10">

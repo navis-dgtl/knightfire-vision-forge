@@ -29,8 +29,8 @@ const ThermalShield = () => {
           name: "Thermal Shield™",
           description:
             "NFPA 18 certified containment and thermal shielding solution. Prevents thermal runaway propagation. Safe for lithium-ion battery storage and transport.",
-          brand: { "@type": "Brand", name: "Redline Fire Solutions" },
-          manufacturer: { "@type": "Organization", name: "Redline Fire Solutions" },
+          brand: { "@type": "Brand", name: "KnightTek" },
+          manufacturer: { "@type": "Organization", name: "KnightTek, LLC" },
           category: "Fire Suppression Equipment",
           url: "https://ktekglobal.com/products/thermal-shield",
         }}
@@ -109,7 +109,7 @@ const ThermalShield = () => {
                   "Traps hazardous PFAS vapors",
                   "All-natural, non-hazardous gel formula",
                   "NFPA 18 certified",
-                  "Patented formulation by Redline Fire Solutions",
+                  "Patented formulation technology",
                   "Easy application with minimal product needed",
                   "Quick and simple cleanup",
                   "Non-toxic and biodegradable",

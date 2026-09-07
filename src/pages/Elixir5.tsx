@@ -7,14 +7,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { BadgeCheck, Zap, ChevronRight } from "lucide-react";
 import ProductGallery from "@/components/ProductGallery";
-import elixir5Img from "@/assets/elixir5.webp";
 import elixir501 from "@/assets/elixir5_3i_01.webp";
 import elixir502 from "@/assets/elixir5_3j_02.webp";
 import elixir503 from "@/assets/elixir5_3k_03.webp";
 import elixir504 from "@/assets/elixir5_3l_04.webp";
 
 const elixir5Gallery = [
-  { src: elixir5Img, alt: "Elixir 5™ Extinguisher Solution" },
   { src: elixir501, alt: "Elixir 5™ overview" },
   { src: elixir502, alt: "Elixir 5™ key features" },
   { src: elixir503, alt: "Elixir 5™ applications" },
@@ -35,7 +33,7 @@ const Elixir5 = () => {
           name: "Elixir 5™",
           description:
             "All-class wetting agent for Class A, B, C, D, and K fires. Safe and effective for every challenge.",
-          brand: { "@type": "Brand", name: "Redline Fire Solutions" },
+          brand: { "@type": "Brand", name: "KnightTek" },
           category: "Fire Suppression Equipment",
           url: "https://ktekglobal.com/products/elixir-5",
         }}
@@ -103,7 +101,7 @@ const Elixir5 = () => {
                   Designed for use from an extinguisher, Elixir 5™ is a pre-measured, ready-to-use solution that enhances water's ability to spread and penetrate. It ensures optimal wetting and coating of surfaces, leading to improved cooling and fire suppression without the risk of conductivity.
                 </p>
                 <p className="text-sm text-muted-foreground italic">
-                  Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Global Distributor.
+                  Patented technology distributed by KnightTEK, Global Distributor.
                 </p>
               </div>
             </div>
@@ -155,7 +153,7 @@ const Elixir5 = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">Patented Technology</h4>
-                      <p>Patented formulation developed and owned by Redline Fire Solutions.</p>
+                      <p>Patented formulation technology.</p>
                     </div>
                   </div>
                 </CardContent>

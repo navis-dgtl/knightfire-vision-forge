@@ -7,14 +7,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { BadgeCheck, Flame, ChevronRight } from "lucide-react";
 import ProductGallery from "@/components/ProductGallery";
-import firequitImg from "@/assets/firequit.webp";
 import firequit01 from "@/assets/firequit_3e_01.webp";
 import firequit02 from "@/assets/firequit_3f_02.webp";
 import firequit03 from "@/assets/firequit_3g_03.webp";
 import firequit04 from "@/assets/firequit_3h_04.webp";
 
 const fireQuitGallery = [
-  { src: firequitImg, alt: "Fire Quit™ Wetting Agent" },
   { src: firequit01, alt: "Fire Quit™ overview" },
   { src: firequit02, alt: "Fire Quit™ key features" },
   { src: firequit03, alt: "Fire Quit™ applications" },
@@ -35,7 +33,7 @@ const FireQuit = () => {
           name: "Fire Quit™",
           description:
             "Advanced wetting agent for efficient firefighting across Class A, B, D, and K fires.",
-          brand: { "@type": "Brand", name: "Redline Fire Solutions" },
+          brand: { "@type": "Brand", name: "KnightTek" },
           category: "Fire Suppression Equipment",
           url: "https://ktekglobal.com/products/fire-quit",
         }}
@@ -99,7 +97,7 @@ const FireQuit = () => {
                   Fire Quit™ enhances water's ability to wet and coat surfaces, significantly improving the effectiveness of firefighting operations in wildland firefighting and structural fire suppression. It stands alone as a solution that does not require combination with other firefighting chemicals to maximize effectiveness.
                 </p>
                 <p className="text-sm text-muted-foreground italic">
-                  Patented technology developed and owned by Redline Fire Solutions. Distributed by KnightTEK, Global Distributor.
+                  Patented technology distributed by KnightTEK, Global Distributor.
                 </p>
               </div>
             </div>
@@ -152,7 +150,7 @@ const FireQuit = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">Patented Technology</h4>
-                      <p>Patented formulation developed and owned by Redline Fire Solutions.</p>
+                      <p>Patented formulation technology.</p>
                     </div>
                   </div>
                 </CardContent>

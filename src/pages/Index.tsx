@@ -5,10 +5,11 @@ import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Shield, Flame, Leaf, Gauge, Users, Award, BadgeCheck, Droplet, Zap, Wrench, Settings } from "lucide-react";
+import { Shield, Flame, Leaf, Gauge, Users, Award, BadgeCheck, Droplet, Zap, Wrench, Box } from "lucide-react";
 import extinguishersGroup from "@/assets/extinguishers-group.webp";
 import thermalShieldProduct from "@/assets/thermal-shield-new.webp";
-import customSolutionsImg from "@/assets/custom-solutions.webp";
+import customSolutionsImg from "@/assets/custom-solutions-iso-tank.webp";
+import thermalBoxMain from "@/assets/thermal-box-main.webp";
 import evFireImg from "@/assets/ev-fire-demo.webp";
 import publicSafetyImg from "@/assets/fire-department-team.webp";
 import maritimeImg from "@/assets/maritime-port.webp";
@@ -162,10 +163,53 @@ const Index = () => {
               </CardContent>
             </Card>
 
+            {/* Thermal Runaway Box Card */}
+            <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
+              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+                <img
+                  src={thermalBoxMain}
+                  alt="KnightTek™ Lithium-Ion Thermal Runaway Box"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <Box className="h-6 w-6 text-accent" />
+                  <h3 className="text-2xl font-heading font-bold text-primary">Thermal Runaway Box™</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4 font-semibold">Containment &amp; Suppression Kit</p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Fire-rated portable containment box</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Integrated Thermal Stop™ suppression pouch</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">Includes gloves and a 2-liter extinguisher</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80">No special training required</span>
+                  </li>
+                </ul>
+                <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                  <Link to="/products/thermal-runaway-box">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
             {/* Custom Engineered Solutions Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
               <div className="aspect-square bg-muted flex items-center justify-center p-8">
-                <Settings className="w-32 h-32 text-accent" strokeWidth={1.5} />
+                <img
+                  src={customSolutionsImg}
+                  alt="Custom engineered KnightTEK ISO bulk tank fire suppression solution"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-4">

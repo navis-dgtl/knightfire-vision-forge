@@ -182,11 +182,11 @@ const Products = () => {
 
             {/* Suppressit Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow group">
-              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
+              <div className="aspect-square bg-muted flex items-center justify-center p-8">
                 <img 
                   src={suppressitImg} 
                   alt="Suppressit™ Non-Fluorinated Foam" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <CardContent className="p-6">
@@ -226,11 +226,11 @@ const Products = () => {
 
             {/* Fire Quit Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow group">
-              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
+              <div className="aspect-square bg-muted flex items-center justify-center p-8">
                 <img 
                   src={firequitImg} 
                   alt="Fire Quit™ Wetting Agent" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <CardContent className="p-6">
@@ -270,11 +270,11 @@ const Products = () => {
 
             {/* Elixir 5 Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow group">
-              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
+              <div className="aspect-square bg-muted flex items-center justify-center p-8">
                 <img 
                   src={elixir5Img} 
                   alt="Elixir 5™ Extinguisher Solution" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <CardContent className="p-6">

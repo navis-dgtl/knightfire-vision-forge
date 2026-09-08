@@ -127,11 +127,11 @@ const Index = () => {
 
             {/* Thermal Shield Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
-              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
                 <img
                   src={thermalShieldProduct}
                   alt="Thermal Shield™ Containment Solution"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-6">

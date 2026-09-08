@@ -204,11 +204,11 @@ const Index = () => {
 
             {/* Custom Engineered Solutions Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
-              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
                 <img
                   src={customSolutionsImg}
                   alt="Custom engineered KnightTEK ISO bulk tank fire suppression solution"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-6">

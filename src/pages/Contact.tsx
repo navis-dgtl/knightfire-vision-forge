@@ -13,6 +13,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { notifyFormspree } from "@/lib/formspree";
 import { z } from "zod";
+import brochureAsset from "@/assets/knighttek-product-brochure.pdf.asset.json";
 
 const contactSchema = z.object({
   firstName: z.string().trim().min(1, "First name is required").max(100),
@@ -172,7 +173,7 @@ const Contact = () => {
       intendedUse: parsed.data.intendedUse || "",
     });
     setBrochureForm(initialBrochure);
-    window.open("/brochures/thermal-stop-thermal-shield-brochure.pdf", "_blank");
+    window.open(brochureAsset.url, "_blank");
   };
 
   return (

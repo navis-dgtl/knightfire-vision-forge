@@ -50,11 +50,11 @@ const Products = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-8">
             {/* Thermal Stop Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow group">
-              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
                 <img 
                   src={extinguishersGroup} 
                   alt="Thermal Stop™ and Thermal Shield™ Extinguisher Range" 
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-6">
@@ -62,7 +62,7 @@ const Products = () => {
                   <Flame className="h-6 w-6 text-accent" />
                   <h3 className="text-2xl font-heading font-bold text-primary">Thermal Stop™</h3>
                 </div>
-                <p className="text-sm text-muted-foreground mb-4 font-semibold">Extinguishing Agent</p>
+                <p className="text-sm text-muted-foreground mb-4 font-semibold">Extinguishes the Fire</p>
                 <p className="text-foreground/80 mb-6">
                   Revolutionary liquid agent that penetrates battery cells to halt thermal runaway in under 30 seconds. The only suppressant specifically designed to eliminate lithium-ion battery fires.
                 </p>
@@ -94,11 +94,11 @@ const Products = () => {
 
             {/* Thermal Shield Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow group">
-              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
                 <img 
                   src={thermalShieldProduct} 
                   alt="Thermal Shield™ Containment Solution" 
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-6">
@@ -106,7 +106,7 @@ const Products = () => {
                   <Shield className="h-6 w-6 text-accent" />
                   <h3 className="text-2xl font-heading font-bold text-primary">Thermal Shield™</h3>
                 </div>
-                <p className="text-sm text-muted-foreground mb-4 font-semibold">Containment Gel</p>
+                <p className="text-sm text-muted-foreground mb-4 font-semibold">Prevents a Re-ignition</p>
                 <p className="text-foreground/80 mb-6">
                   High-performance gel barrier that locks down compromised batteries, preventing re-ignition and trapping toxic gases during transport or storage. The final containment solution.
                 </p>
@@ -138,11 +138,11 @@ const Products = () => {
 
             {/* Thermal Runaway Box Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow group">
-              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
                 <img
                   src={thermalBoxMain}
                   alt="KnightTek™ Lithium-Ion Thermal Runaway Box"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-6">
@@ -182,11 +182,11 @@ const Products = () => {
 
             {/* Suppressit Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow group">
-              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
                 <img 
                   src={suppressitImg} 
                   alt="Suppressit™ Non-Fluorinated Foam" 
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-6">
@@ -226,11 +226,11 @@ const Products = () => {
 
             {/* Fire Quit Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow group">
-              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
                 <img 
                   src={firequitImg} 
                   alt="Fire Quit™ Wetting Agent" 
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-6">
@@ -270,11 +270,11 @@ const Products = () => {
 
             {/* Elixir 5 Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow group">
-              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
                 <img 
                   src={elixir5Img} 
                   alt="Elixir 5™ Extinguisher Solution" 
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-6">
@@ -334,8 +334,8 @@ const Products = () => {
                     Coming Soon
                   </span>
                 </div>
-                <div className="aspect-square bg-muted/50 flex items-center justify-center p-4">
-                  <img src={personalTravelPack} alt="Thermal Stop™ Personal Travel Pack" className="w-full h-full object-contain" />
+                <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted/50">
+                  <img src={personalTravelPack} alt="Thermal Stop™ Personal Travel Pack" className="w-full h-full object-cover" />
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-heading font-bold text-primary mb-1">Thermal Stop™ Personal Travel Pack</h3>

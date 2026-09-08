@@ -88,11 +88,11 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {/* Thermal Stop Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
-              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
                 <img
                   src={extinguishersGroup}
                   alt="Thermal Stop™ and Thermal Shield™ Extinguisher Range"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-6">

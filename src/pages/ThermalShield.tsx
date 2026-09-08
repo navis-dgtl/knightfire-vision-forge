@@ -9,11 +9,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Snowflake, Lock, Wind } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import thermalStop2ltr from "@/assets/thermal-stop-2ltr.png";
-import thermalStop5gal from "@/assets/thermal-stop-5gal.png";
-import thermalStop6ltr from "@/assets/thermal-stop-6ltr.png";
-import thermalStop9ltr from "@/assets/thermal-stop-9ltr.png";
+import thermalStop20oz from "@/assets/thermal-stop-20oz.webp";
+import thermalStop2ltr from "@/assets/thermal-stop-2ltr.webp";
+import thermalStop5gal from "@/assets/thermal-shield-5gal.webp";
+import thermalStop6ltr from "@/assets/thermal-stop-6ltr.webp";
+import thermalStop9ltr from "@/assets/thermal-stop-9ltr.webp";
 import thermalStop55gal from "@/assets/thermal-stop-55gal.png";
+import thermalStop275gal from "@/assets/thermal-stop-275gal-tote.webp";
+import thermalStop6400gal from "@/assets/thermal-stop-6400gal-iso-tank.webp";
 
 const ThermalShield = () => {
   return (

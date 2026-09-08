@@ -214,6 +214,17 @@ const ThermalStop = () => {
                   <p className="text-sm text-foreground/60 mb-4">Click on each size to view product image</p>
                   
                   <Accordion type="single" collapsible className="w-full">
+                    <AccordionItem value="20oz">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        20 oz Can
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop20oz} alt="Thermal Stop™ 20 oz Can" className="h-64 w-auto object-contain" loading="lazy" decoding="async" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+
                     <AccordionItem value="2ltr">
                       <AccordionTrigger className="text-foreground/80 hover:text-primary">
                         2 Liter

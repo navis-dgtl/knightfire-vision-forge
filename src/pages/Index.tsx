@@ -100,7 +100,7 @@ const Index = () => {
                   <Flame className="h-6 w-6 text-accent" />
                   <h3 className="text-2xl font-heading font-bold text-primary">Thermal Stop™</h3>
                 </div>
-                <p className="text-sm text-muted-foreground mb-4 font-semibold">Extinguishing Agent</p>
+                <p className="text-sm text-muted-foreground mb-4 font-semibold">Extinguishes the Fire</p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start gap-2">
                     <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
@@ -135,10 +135,11 @@ const Index = () => {
                 />
               </div>
               <CardContent className="p-6">
-                <div className="flex items-center gap-2 mb-4">
+                <div className="flex items-center gap-2 mb-2">
                   <Shield className="h-6 w-6 text-accent" />
                   <h3 className="text-2xl font-heading font-bold text-primary">Thermal Shield™</h3>
                 </div>
+                <p className="text-sm text-muted-foreground mb-4 font-semibold">Prevents a Re-ignition</p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start gap-2">
                     <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />

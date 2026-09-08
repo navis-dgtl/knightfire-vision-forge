@@ -262,6 +262,28 @@ const ThermalShield = () => {
                         </div>
                       </AccordionContent>
                     </AccordionItem>
+
+                    <AccordionItem value="275gal">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        275 Gallon Tote
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop275gal} alt="Thermal Shield™ 275 Gallon Tote" className="h-64 w-auto object-contain" loading="lazy" decoding="async" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="6400gal">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        6,400 Gallon ISO Bulk Tank
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop6400gal} alt="Thermal Shield™ 6,400 Gallon ISO Bulk Tank" className="h-64 w-auto object-contain" loading="lazy" decoding="async" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
                   </Accordion>
                   <h3 className="text-xl font-heading font-bold mt-6 mb-4 text-primary">Storage & Handling</h3>
                   <ul className="space-y-2 text-foreground/80">

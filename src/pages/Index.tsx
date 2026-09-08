@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { Shield, Flame, Leaf, Gauge, Users, Award, BadgeCheck, Droplet, Zap, Wrench, Box } from "lucide-react";
 import extinguishersGroup from "@/assets/extinguishers-group.webp";
 import thermalShieldProduct from "@/assets/thermal-shield-new.webp";
-import customSolutionsImg from "@/assets/custom-solutions-iso-tank.webp";
+import customSolutionsImg from "@/assets/thermal-stop-6400gal-iso-tank.webp";
 import thermalBoxMain from "@/assets/thermal-box-main.webp";
 import evFireImg from "@/assets/ev-fire-demo.webp";
 import publicSafetyImg from "@/assets/fire-department-team.webp";
@@ -88,11 +88,11 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {/* Thermal Stop Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
-              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
                 <img
                   src={extinguishersGroup}
                   alt="Thermal Stop™ and Thermal Shield™ Extinguisher Range"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-6">
@@ -127,11 +127,11 @@ const Index = () => {
 
             {/* Thermal Shield Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
-              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
                 <img
                   src={thermalShieldProduct}
                   alt="Thermal Shield™ Containment Solution"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-6">
@@ -165,11 +165,11 @@ const Index = () => {
 
             {/* Thermal Runaway Box Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
-              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
                 <img
                   src={thermalBoxMain}
                   alt="KnightTek™ Lithium-Ion Thermal Runaway Box"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-6">
@@ -204,11 +204,11 @@ const Index = () => {
 
             {/* Custom Engineered Solutions Card */}
             <Card className="bg-card border-0 overflow-hidden hover:shadow-2xl transition-shadow">
-              <div className="aspect-square bg-muted flex items-center justify-center p-8">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-muted">
                 <img
                   src={customSolutionsImg}
                   alt="Custom engineered KnightTEK ISO bulk tank fire suppression solution"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-6">

@@ -23,17 +23,6 @@ interface RenderedSlide {
 
 const FALLBACK: RenderedSlide[] = [
   {
-    id: "fallback-0",
-    title: "Become a KnightTek™ Distributor",
-    subtitle:
-      "We're expanding our U.S. distribution network. Partner with us to bring advanced lithium-ion fire suppression solutions to your region.",
-    imageUrl: heroBackground,
-    ctaLabel: "Apply Now",
-    ctaUrl: "/distributors",
-    secondaryLabel: "Learn More",
-    secondaryUrl: "/distributors",
-  },
-  {
     id: "fallback-1",
     title: "Advanced Lithium-Ion Battery Fire Solutions",
     subtitle: "NFPA 18 Certified. EPA Safer Choice Listed.",
@@ -58,6 +47,17 @@ const FALLBACK: RenderedSlide[] = [
     imageUrl: heroBackground,
     ctaLabel: "Learn More About Thermal Shield™",
     ctaUrl: "/products/thermal-shield",
+  },
+  {
+    id: "fallback-0",
+    title: "Become a KnightTek™ Distributor",
+    subtitle:
+      "We're expanding our U.S. distribution network. Partner with us to bring advanced lithium-ion fire suppression solutions to your region.",
+    imageUrl: heroBackground,
+    ctaLabel: "Apply Now",
+    ctaUrl: "/distributors",
+    secondaryLabel: "Learn More",
+    secondaryUrl: "/distributors",
   },
   {
     id: "fallback-4",

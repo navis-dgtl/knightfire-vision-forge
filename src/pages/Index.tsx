@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { Shield, Flame, Leaf, Gauge, Users, Award, BadgeCheck, Droplet, Zap, Wrench, Box } from "lucide-react";
 import extinguishersGroup from "@/assets/extinguishers-group.webp";
 import thermalShieldProduct from "@/assets/thermal-shield-new.webp";
-import customSolutionsImg from "@/assets/custom-solutions-iso-tank.webp";
+import customSolutionsImg from "@/assets/thermal-stop-6400gal-iso-tank.webp";
 import thermalBoxMain from "@/assets/thermal-box-main.webp";
 import evFireImg from "@/assets/ev-fire-demo.webp";
 import publicSafetyImg from "@/assets/fire-department-team.webp";

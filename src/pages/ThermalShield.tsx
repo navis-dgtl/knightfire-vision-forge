@@ -9,11 +9,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Snowflake, Lock, Wind } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import thermalStop2ltr from "@/assets/thermal-stop-2ltr.png";
-import thermalStop5gal from "@/assets/thermal-stop-5gal.png";
-import thermalStop6ltr from "@/assets/thermal-stop-6ltr.png";
-import thermalStop9ltr from "@/assets/thermal-stop-9ltr.png";
+import thermalStop20oz from "@/assets/thermal-stop-20oz.webp";
+import thermalStop2ltr from "@/assets/thermal-stop-2ltr.webp";
+import thermalStop5gal from "@/assets/thermal-shield-5gal.webp";
+import thermalStop6ltr from "@/assets/thermal-stop-6ltr.webp";
+import thermalStop9ltr from "@/assets/thermal-stop-9ltr.webp";
 import thermalStop55gal from "@/assets/thermal-stop-55gal.png";
+import thermalStop275gal from "@/assets/thermal-stop-275gal-tote.webp";
+import thermalStop6400gal from "@/assets/thermal-stop-6400gal-iso-tank.webp";
 
 const ThermalShield = () => {
   return (
@@ -194,6 +197,17 @@ const ThermalShield = () => {
                   <p className="text-sm text-foreground/60 mb-4">Click on each size to view product image</p>
                   
                   <Accordion type="single" collapsible className="w-full mb-6">
+                    <AccordionItem value="20oz">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        20 oz Can
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop20oz} alt="Thermal Shield™ 20 oz Can" className="h-64 w-auto object-contain" loading="lazy" decoding="async" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+
                     <AccordionItem value="2ltr">
                       <AccordionTrigger className="text-foreground/80 hover:text-primary">
                         2 Liter
@@ -245,6 +259,28 @@ const ThermalShield = () => {
                       <AccordionContent>
                         <div className="flex justify-center py-4">
                           <img src={thermalStop55gal} alt="Thermal Shield™ 55 Gallon" className="h-64 w-auto object-contain" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="275gal">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        275 Gallon Tote
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop275gal} alt="Thermal Shield™ 275 Gallon Tote" className="h-64 w-auto object-contain" loading="lazy" decoding="async" />
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="6400gal">
+                      <AccordionTrigger className="text-foreground/80 hover:text-primary">
+                        6,400 Gallon ISO Bulk Tank
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex justify-center py-4">
+                          <img src={thermalStop6400gal} alt="Thermal Shield™ 6,400 Gallon ISO Bulk Tank" className="h-64 w-auto object-contain" loading="lazy" decoding="async" />
                         </div>
                       </AccordionContent>
                     </AccordionItem>

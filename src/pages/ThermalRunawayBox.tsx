@@ -13,10 +13,10 @@ import thermalBoxBack from "@/assets/thermal-box-back.webp";
 import thermalBoxLid from "@/assets/thermal-box-lid.webp";
 
 const boxGallery = [
-  { src: thermalBoxMain, alt: "KnightTek™ Lithium-Ion Thermal Runaway Box" },
-  { src: thermalBoxOpen, alt: "Thermal Runaway Box open view" },
-  { src: thermalBoxBack, alt: "Thermal Runaway Box back view" },
-  { src: thermalBoxLid, alt: "Thermal Runaway Box lid detail" },
+  { src: thermalBoxMain, alt: "KnightTek™ Lithium-Ion Thermal Runaway Box with Thermal Stop™ extinguisher" },
+  { src: thermalBoxOpen, alt: "Thermal Runaway Box open with contents and Thermal Stop™ extinguisher" },
+  { src: thermalBoxBack, alt: "Thermal Runaway Box end view with safety warning label" },
+  { src: thermalBoxLid, alt: "Thermal Stop™ extinguisher mounted on Thermal Runaway Box lid" },
 ];
 
 const ThermalRunawayBox = () => {

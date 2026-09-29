@@ -12,6 +12,7 @@ import { useState, useRef } from "react";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import { notifyFormspree } from "@/lib/formspree";
+import { sendInquiryAutoReply } from "@/lib/autoReply";
 
 const distributorSchema = z.object({
   businessName: z.string().trim().min(1, "Legal Business Name is required").max(200),
@@ -181,6 +182,11 @@ const Distributors = () => {
     toast({
       title: "Thank you for your application!",
       description: "Our team will review your submission and contact you soon.",
+    });
+    void sendInquiryAutoReply({
+      email: parsed.data.contactEmail,
+      firstName: parsed.data.contactName.split(" ")[0] || parsed.data.contactName,
+      formType: "distributor",
     });
     void notifyFormspree({
       _subject: `Distributor application — ${parsed.data.businessName}`,

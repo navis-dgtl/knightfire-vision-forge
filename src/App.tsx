@@ -28,6 +28,7 @@ const SignUp = lazy(() => import("./pages/SignUp"));
 const PostDetail = lazy(() => import("./pages/PostDetail"));
 const CustomPage = lazy(() => import("./pages/CustomPage"));
 const RsvpMesquite = lazy(() => import("./pages/RsvpMesquite"));
+const Unsubscribe = lazy(() => import("./pages/Unsubscribe"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Admin routes
@@ -73,6 +74,7 @@ const App = () => (
               <Route path="/distributors" element={<Distributors />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/rsvp-mesquite" element={<RsvpMesquite />} />
+              <Route path="/unsubscribe" element={<Unsubscribe />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/signup" element={<SignUp />} />
 

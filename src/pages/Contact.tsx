@@ -12,6 +12,7 @@ import { useSearchParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { notifyFormspree } from "@/lib/formspree";
+import { sendInquiryAutoReply } from "@/lib/autoReply";
 import { z } from "zod";
 import brochureAsset from "@/assets/knighttek-product-brochure.pdf.asset.json";
 
@@ -110,6 +111,11 @@ const Contact = () => {
       title: "Message received",
       description: "Thanks for reaching out! Our team will be in touch soon.",
     });
+    void sendInquiryAutoReply({
+      email: parsed.data.email,
+      firstName: parsed.data.firstName,
+      formType: "contact",
+    });
     void notifyFormspree({
       _subject: `New contact request — ${parsed.data.firstName} ${parsed.data.lastName} (${parsed.data.company || "no company"})`,
       _replyto: parsed.data.email,
@@ -159,6 +165,11 @@ const Contact = () => {
     toast({
       title: "Thank you!",
       description: "Your brochure download will begin shortly.",
+    });
+    void sendInquiryAutoReply({
+      email: parsed.data.email,
+      firstName: parsed.data.firstName,
+      formType: "brochure",
     });
     void notifyFormspree({
       _subject: `Brochure request — ${parsed.data.company}`,

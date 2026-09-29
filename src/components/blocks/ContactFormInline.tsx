@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { notifyFormspree } from "@/lib/formspree";
+import { sendInquiryAutoReply } from "@/lib/autoReply";
 
 const contactSchema = z.object({
   firstName: z.string().trim().min(1, "First name is required").max(100),
@@ -69,6 +70,11 @@ export function ContactFormInline() {
     toast({
       title: "Message received",
       description: "Thanks for reaching out! Our team will be in touch soon.",
+    });
+    void sendInquiryAutoReply({
+      email: parsed.data.email,
+      firstName: parsed.data.firstName,
+      formType: "contact-inline",
     });
     void notifyFormspree({
       _subject: `New contact request — ${parsed.data.firstName} ${parsed.data.lastName} (${parsed.data.company || "no company"})`,
